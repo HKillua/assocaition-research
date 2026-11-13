@@ -1,5 +1,7 @@
 # MTAD 在线系统基线重选
 
+> 历史候选及排序。当前阶段从[来源重新筛选](../surveys/2026-11-14-online-baseline-reselection.md)进入，回退依据见[重启审计](2026-11-14-online-baseline-restart-audit.md)。
+
 2026-11-14。按用户修订标准，在线主基线来自 2025–2026 年多传感器在线跟踪或融合，原任务有可核的竞争结果，能从授权作者代码或完整算法独立重建，且核心机制可在 MTAD 的因果输入下运行。文末给出深核后的选型。MTAD 尚无同协议的近期完整同行结果。 [首轮原文与代码审查](../surveys/2026-10-26_mtad_actual_use/online_peer_baseline_sources_20261114.md) · [Mode C v76](../surveys/2026-10-26_mtad_actual_use/online_causal_replay_mode_c_20261111.md#v76-持续在线系统基线资格)
 
 ## 既有比较能回答的问题

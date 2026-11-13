@@ -2,11 +2,12 @@
 
 当前研究目标见[在线研究状态](../research_status.md)，实际执行见[在线交接](../../HandOver/Handover.md)。
 
+- [在线观测基线重启审计](2026-11-14-online-baseline-restart-audit.md)
 - [MTAD 接回前的单轨预测偏差与连续报文](2026-11-14-online-rejoin-track-history.md)
 - [MTAD 固定接回前的后报与单次更新消融](2026-11-14-online-rejoin-next-report.md)
 - [MTAD 原接回批的局部翻转与全局指派](2026-11-14-online-rejoin-global-assignment.md)
 - [MTAD 原接回触发报与同刻预测对照](2026-11-14-online-rejoin-boundary-report.md)
-- [MTAD 在线系统基线重选](2026-11-14-online-peer-baseline-review.md)
+- [MTAD 在线系统基线重选历史记录](2026-11-14-online-peer-baseline-review.md)
 - [单锚跨目标迁移与正确接回](2026-11-13-online-single-anchor-transfer.md)
 - [MTAD 接回的严格批前对侧见证](2026-11-13-online-rejoin-witness.md)
 - [MTAD 当批几何增量的尺度和真边残差](2026-11-13-online-rejoin-geometry.md)
@@ -32,7 +33,7 @@
 - [固定 4–8 km 候选的历史证据与在线确认](2026-11-12-online-expansion-confirmation.md)
 - [接回换源的预测均值、方差与历史参照](2026-11-12-online-cross-source-calibration.md)
 - [在线持续身份四臂真实回放](2026-11-12-online-continuous-factorial.md)
-- [在线多源航迹关联基线选型](2026-11-12-online-continuous-baseline-selection.md)
+- [在线多源航迹关联基线选型历史记录](2026-11-12-online-continuous-baseline-selection.md)
 - [原有竞争边的后续报文与持续错配](2026-11-12-online-competing-reports.md)
 - [因果配准锚与共同过去位移的门外真边对照](2026-11-12-online-causal-recovery.md)
 - [异步实报与预测不确定性的接回诊断](2026-11-12-online-async-report.md)

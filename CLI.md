@@ -26,6 +26,8 @@ python -m unittest discover -s online_observation/tests
 
 ## 严格输入与开发诊断
 
+以下为历史开发诊断和工程核验入口。新基线复建及科研运行按[研究状态](docs/research_status.md)和[完整流程](docs/research_workflow.md)确定。
+
 这些诊断从已到的位置、时间和片段等同性计算，量测速航既不参与预测，也不筛选位置。训练场的 A-B 标签和参考位置只进入评价。输入字段权限、真实回放结果和方法资格见[在线研究报告](docs/reports/2026-11-11-online-field-and-method-review.md)。
 
 |入口|用途|

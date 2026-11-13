@@ -1,5 +1,7 @@
 # 在线多源航迹关联基线选型
 
+> 历史选型。该轮默认基线已撤销，当前阶段见[研究状态](../research_status.md)及[重启审计](2026-11-14-online-baseline-restart-audit.md)。
+
 2026-11-12，文献选型与行为规格。来自 Mode C v17，C-ON24/25/26。此页记录选型与取舍，实验入口及正式冻结设计尚待独立计划。 [原文审查](../surveys/2026-10-26_mtad_actual_use/online_literature_continuous_baselines_20261112.md) · [证据矩阵](../surveys/2026-10-26_mtad_actual_use/online_causal_replay_mode_c_20261111.md#v17-持续在线基线的选择依据)
 
 ## 当前差距

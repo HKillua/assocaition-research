@@ -1,13 +1,13 @@
 # 在线观测文献与 Mode C
 
-逐篇分析保留来源、作者主张、直接证据、分析推断和未知事项。通过 [Mode C 矩阵](2026-10-26_mtad_actual_use/online_causal_replay_mode_c_20261111.md) 查问题、现象、机制、证据与实验回流。
+当前基线选型从[重新筛选](2026-11-14-online-baseline-reselection.md)进入。逐篇分析保留来源、作者主张、直接证据、分析推断和未知事项。[历史 Mode C 矩阵](2026-10-26_mtad_actual_use/online_causal_replay_mode_c_20261111.md)记录往轮问题、现象、机制、证据与实验回流。
 
 [在线研究状态](../research_status.md) · [实验报告](../reports/README.md) · [证据目录](../evidence/README.md) · [外部原件](source-provenance.md) · [科研流程](../research_workflow.md)
 
 | 分析 | 文件 |
 |---|---|
 | 异步到达、预测时距与报文证据 | [阅读](2026-10-26_mtad_actual_use/online_async_report_sources_20261112.md) |
-| Mode C 在线关联与融合 | [阅读](2026-10-26_mtad_actual_use/online_causal_replay_mode_c_20261111.md) |
+| 历史 Mode C 在线关联与融合 | [阅读](2026-10-26_mtad_actual_use/online_causal_replay_mode_c_20261111.md) |
 | 纯传感器跨源误差的均值、离散与参照 | [阅读](2026-10-26_mtad_actual_use/online_cross_source_calibration_sources_20261112.md) |
 | 双报证据与历史复用 | [阅读](2026-10-26_mtad_actual_use/online_disjoint_report_sources_20261113.md) |
 | 在线融合的数据处理与公开实现核验 | [阅读](2026-10-26_mtad_actual_use/online_fusion_dataset_code_audit_20261112.md) |

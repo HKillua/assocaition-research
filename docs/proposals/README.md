@@ -2,6 +2,7 @@
 
 当前研究目标见[在线研究状态](../research_status.md)，实际执行见[在线交接](../../HandOver/Handover.md)。
 
+- [MTAD 在线同行方法的适配与复建设计](online_peer_adaptation_20261114.md)
 - [MTAD 接回前单轨预测偏差与连续报文](online_rejoin_track_history_20261114.md)
 - [MTAD 固定接回前的后报与单次更新消融](online_rejoin_next_report_20261114.md)
 - [MTAD 原接回批的局部翻转与全局指派](online_rejoin_global_assignment_20261114.md)

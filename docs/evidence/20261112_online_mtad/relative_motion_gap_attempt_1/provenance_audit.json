@@ -1,0 +1,64 @@
+{
+  "scene_01": {
+    "all_four_refresh": 0
+  },
+  "scene_02": {},
+  "scene_03": {
+    "all_four_refresh": 1,
+    "common_right_at_least_20s_after_start": 0
+  },
+  "scene_04": {},
+  "scene_05": {},
+  "scene_06": {},
+  "scene_07": {},
+  "scene_08": {},
+  "scene_09": {},
+  "scene_10": {
+    "all_four_refresh": 0
+  },
+  "scene_11": {},
+  "scene_12": {
+    "all_four_refresh": 0
+  },
+  "scene_13": {
+    "all_four_refresh": 13,
+    "common_right_at_least_20s_after_start": 3,
+    "two_disjoint": 1
+  },
+  "scene_14": {},
+  "scene_15": {
+    "all_four_refresh": 0
+  },
+  "scene_16": {},
+  "scene_17": {
+    "all_four_refresh": 0
+  },
+  "scene_18": {},
+  "scene_19": {
+    "all_four_refresh": 7,
+    "common_right_at_least_20s_after_start": 0
+  },
+  "scene_20": {
+    "all_four_refresh": 3,
+    "common_right_at_least_20s_after_start": 1
+  },
+  "scene_21": {},
+  "scene_22": {},
+  "scene_23": {},
+  "scene_24": {},
+  "scene_25": {
+    "all_four_refresh": 3,
+    "common_right_at_least_20s_after_start": 0
+  },
+  "scene_26": {
+    "all_four_refresh": 1,
+    "common_right_at_least_20s_after_start": 0
+  },
+  "scene_27": {
+    "all_four_refresh": 1,
+    "common_right_at_least_20s_after_start": 0
+  },
+  "scene_28": {
+    "all_four_refresh": 0
+  }
+}

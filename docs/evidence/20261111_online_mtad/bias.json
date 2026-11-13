@@ -1,0 +1,21 @@
+{
+  "scenes": {
+    "0": {
+      "coincident_pairs": 8,
+      "targets": 7,
+      "ambiguous_target_times": 0
+    },
+    "3": {
+      "coincident_pairs": 39,
+      "targets": 27,
+      "ambiguous_target_times": 0
+    },
+    "7": {
+      "coincident_pairs": 1,
+      "targets": 1,
+      "ambiguous_target_times": 0
+    }
+  },
+  "wall_seconds": 1.494079000025522,
+  "purpose": "truth_conditioned_coincident_relative_translation"
+}

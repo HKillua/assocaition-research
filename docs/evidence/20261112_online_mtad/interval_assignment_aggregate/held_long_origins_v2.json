@@ -1,0 +1,3614 @@
+{
+  "phase": "held",
+  "scenes": [
+    {
+      "component": "component-c7082a697d934f0004db48b9",
+      "sparse": false,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 2,
+            "right_censored": 0,
+            "overlaps_only_short": 6,
+            "overlaps_multiple_short": 6
+          },
+          "seconds": {
+            "original_long": 130.21900010108948,
+            "original_short": 360.8009991645813,
+            "outside_original_wrong": 159.14100050926208
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {
+            "overlaps_only_short": 10,
+            "overlaps_multiple_short": 10,
+            "right_censored": 0,
+            "overlaps_long": 2
+          },
+          "seconds": {
+            "original_long": 130.21900010108948,
+            "original_short": 1034.0799996852875,
+            "outside_original_wrong": 592.1480007171631
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {
+            "overlaps_only_short": 5,
+            "overlaps_multiple_short": 5,
+            "right_censored": 0,
+            "overlaps_long": 7
+          },
+          "seconds": {
+            "original_long": 485.5699996948242,
+            "original_short": 791.0989999771118,
+            "outside_original_wrong": 479.778000831604
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 2,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 130.21900010108948,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 2,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 130.21900010108948,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {
+            "overlaps_long": 2,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 130.21900010108948,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {
+          "1_to_0_complete": 4,
+          "0_to_1_complete": 4,
+          "0_to_2_complete": 1,
+          "2_to_0_complete": 1
+        },
+        "interval_swap": {
+          "1_to_0_complete": 4,
+          "0_to_1_complete": 4,
+          "0_to_2_complete": 1,
+          "2_to_0_complete": 1
+        },
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-e08b792544e4e00fc0ec7592",
+      "sparse": false,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0,
+            "overlaps_only_short": 2,
+            "overlaps_multiple_short": 2
+          },
+          "seconds": {
+            "original_long": 243.24799990653992,
+            "original_short": 55.08000087738037,
+            "outside_original_wrong": 65.27799892425537
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0,
+            "overlaps_only_short": 2,
+            "overlaps_multiple_short": 2
+          },
+          "seconds": {
+            "original_long": 243.24799990653992,
+            "original_short": 100.26200103759766,
+            "outside_original_wrong": 140.45199871063232
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {
+            "overlaps_long": 3,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 363.60599970817566,
+            "original_short": 40.11999988555908,
+            "outside_original_wrong": 80.23600006103516
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 243.24799990653992,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 243.24799990653992,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 243.24799990653992,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {
+          "0_to_2_complete": 2,
+          "2_to_0_complete": 2
+        },
+        "interval_swap": {
+          "0_to_2_complete": 2,
+          "2_to_0_complete": 2
+        },
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-4eb65272866a82b14a0055d6",
+      "sparse": false,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {
+          "0_to_2_complete": 2,
+          "2_to_0_complete": 2
+        },
+        "interval_swap": {
+          "0_to_2_complete": 2
+        },
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-c7082a697d934f0004db48b9",
+      "sparse": false,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 125.92799997329712,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 125.92799997329712,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 125.92799997329712,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 125.92799997329712,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 125.92799997329712,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 125.92799997329712,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {
+          "0_to_2_complete": 4,
+          "1_to_0_complete": 1,
+          "0_to_1_complete": 1
+        },
+        "interval_swap": {
+          "0_to_2_complete": 4,
+          "1_to_0_complete": 1
+        },
+        "point_null": {},
+        "interval_null": {
+          "0_to_1_complete": 1,
+          "0_to_1_incomplete": 1
+        }
+      }
+    },
+    {
+      "component": "component-6168d795e66f68b6ea6c3b7a",
+      "sparse": false,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-23608a7a22c5322f7254ffc1",
+      "sparse": false,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 2,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 259.8129999637604,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 2,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 259.8129999637604,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {
+            "overlaps_long": 2,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 259.8129999637604,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 2,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 259.8129999637604,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 2,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 259.8129999637604,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {
+            "overlaps_long": 2,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 259.8129999637604,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-0b71187a53d6235c8f81020b",
+      "sparse": false,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {
+          "2_to_0_incomplete": 1
+        },
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-bb5e7865a08ab8b082d75d42",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 5,
+            "right_censored": 0,
+            "overlaps_only_short": 2,
+            "overlaps_multiple_short": 2
+          },
+          "seconds": {
+            "original_long": 534.3739995956421,
+            "original_short": 89.81600046157837,
+            "outside_original_wrong": 70.73199939727783
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 5,
+            "right_censored": 0,
+            "overlaps_only_short": 4,
+            "overlaps_multiple_short": 4
+          },
+          "seconds": {
+            "original_long": 534.3739995956421,
+            "original_short": 125.99599933624268,
+            "outside_original_wrong": 245.32200050354004
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {
+            "overlaps_long": 7,
+            "right_censored": 0,
+            "overlaps_only_short": 2,
+            "overlaps_multiple_short": 2
+          },
+          "seconds": {
+            "original_long": 654.7839994430542,
+            "original_short": 51.739999771118164,
+            "outside_original_wrong": 199.16800022125244
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 5,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 534.3739995956421,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 5,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 534.3739995956421,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {
+            "overlaps_long": 5,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 534.3739995956421,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {
+          "1_to_0_complete": 1,
+          "0_to_1_complete": 4,
+          "0_to_2_complete": 6,
+          "2_to_0_complete": 3
+        },
+        "interval_swap": {
+          "0_to_1_complete": 3,
+          "0_to_2_complete": 6,
+          "2_to_0_complete": 2
+        },
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-1b1f203455b684a1df052695",
+      "sparse": false,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 29,
+            "right_censored": 0,
+            "overlaps_only_short": 1,
+            "overlaps_multiple_short": 1
+          },
+          "seconds": {
+            "original_long": 5028.462000608444,
+            "original_short": 130.31499981880188,
+            "outside_original_wrong": 30.011000156402588
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {
+            "overlaps_only_short": 5,
+            "overlaps_multiple_short": 5,
+            "right_censored": 0,
+            "overlaps_long": 28
+          },
+          "seconds": {
+            "original_long": 5011.352000713348,
+            "original_short": 472.8890001773834,
+            "outside_original_wrong": 329.8639998435974
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {
+            "overlaps_only_short": 4,
+            "overlaps_multiple_short": 2,
+            "right_censored": 0,
+            "overlaps_long": 29
+          },
+          "seconds": {
+            "original_long": 5082.055000305176,
+            "original_short": 413.8020005226135,
+            "outside_original_wrong": 318.2479999065399
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 29,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 5089.194000959396,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 29,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 5089.194000959396,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {
+            "overlaps_long": 29,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 5089.194000959396,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {
+          "1_to_0_complete": 9,
+          "0_to_1_complete": 10,
+          "0_to_2_complete": 11,
+          "0_to_0_complete": 1,
+          "2_to_0_complete": 5
+        },
+        "interval_swap": {
+          "1_to_0_complete": 12,
+          "0_to_1_complete": 6,
+          "0_to_2_complete": 11,
+          "0_to_0_complete": 1
+        },
+        "point_null": {
+          "0_to_1_incomplete": 8
+        },
+        "interval_null": {
+          "0_to_1_incomplete": 8,
+          "0_to_1_both": 1,
+          "0_to_0_incomplete": 1,
+          "1_to_0_both": 1
+        }
+      }
+    },
+    {
+      "component": "component-805a0d28ca2328b9fac2c2f2",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-e0806a8adaabe25cf8917cc1",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-bd4ec25110eee573d35c6746",
+      "sparse": false,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {
+          "0_to_2_complete": 1
+        },
+        "interval_swap": {
+          "0_to_2_complete": 1
+        },
+        "point_null": {
+          "2_to_0_incomplete": 1,
+          "0_to_1_incomplete": 1
+        },
+        "interval_null": {
+          "0_to_1_both": 1,
+          "0_to_1_complete": 1,
+          "0_to_1_incomplete": 2
+        }
+      }
+    },
+    {
+      "component": "component-e08b792544e4e00fc0ec7592",
+      "sparse": false,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 13,
+            "right_censored": 0,
+            "overlaps_only_short": 1,
+            "overlaps_multiple_short": 1
+          },
+          "seconds": {
+            "original_long": 1707.2940006256104,
+            "original_short": 109.47499966621399,
+            "outside_original_wrong": 92.01999974250793
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 9,
+            "right_censored": 0,
+            "overlaps_only_short": 1,
+            "overlaps_multiple_short": 1
+          },
+          "seconds": {
+            "original_long": 1808.8140003681183,
+            "original_short": 185.3659999370575,
+            "outside_original_wrong": 102.63199996948242
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {
+            "overlaps_long": 9,
+            "right_censored": 0,
+            "overlaps_only_short": 1,
+            "overlaps_multiple_short": 1
+          },
+          "seconds": {
+            "original_long": 1847.8029999732971,
+            "original_short": 127.83800029754639,
+            "outside_original_wrong": 121.1710000038147
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 11,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 1745.2940003871918,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 11,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 1745.2940003871918,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {
+            "overlaps_long": 11,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 1745.2940003871918,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {
+          "0_to_2_complete": 17,
+          "2_to_0_complete": 10,
+          "0_to_1_complete": 14,
+          "1_to_0_complete": 12
+        },
+        "interval_swap": {
+          "0_to_2_complete": 18,
+          "0_to_1_complete": 12,
+          "1_to_0_complete": 10,
+          "0_to_0_complete": 1,
+          "2_to_0_complete": 3
+        },
+        "point_null": {
+          "0_to_1_complete": 3,
+          "1_to_0_complete": 1,
+          "2_to_0_incomplete": 1,
+          "0_to_1_both": 6,
+          "1_to_0_incomplete": 1,
+          "1_to_0_both": 1,
+          "0_to_1_incomplete": 1
+        },
+        "interval_null": {
+          "0_to_1_complete": 4,
+          "0_to_1_both": 10,
+          "1_to_0_both": 1,
+          "0_to_0_complete": 1,
+          "0_to_0_both": 1,
+          "0_to_0_incomplete": 1
+        }
+      }
+    },
+    {
+      "component": "component-805a0d28ca2328b9fac2c2f2",
+      "sparse": false,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {
+            "overlaps_only_short": 2,
+            "overlaps_multiple_short": 2,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 47.00999975204468,
+            "outside_original_wrong": 142.45800018310547
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {
+          "0_to_2_complete": 1,
+          "2_to_0_complete": 1
+        },
+        "interval_swap": {
+          "0_to_2_complete": 1,
+          "2_to_0_complete": 1
+        },
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-e0806a8adaabe25cf8917cc1",
+      "sparse": false,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {
+            "overlaps_only_short": 3,
+            "overlaps_multiple_short": 3,
+            "right_censored": 0,
+            "overlaps_long": 2
+          },
+          "seconds": {
+            "original_long": 200.77699995040894,
+            "original_short": 251.20400023460388,
+            "outside_original_wrong": 74.0479998588562
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {
+            "overlaps_only_short": 10,
+            "overlaps_multiple_short": 10,
+            "right_censored": 0,
+            "overlaps_long": 2
+          },
+          "seconds": {
+            "original_long": 185.45900011062622,
+            "original_short": 785.6680011749268,
+            "outside_original_wrong": 569.0129988193512
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {
+            "overlaps_only_short": 9,
+            "overlaps_multiple_short": 9,
+            "right_censored": 0,
+            "overlaps_long": 3
+          },
+          "seconds": {
+            "original_long": 370.76799988746643,
+            "original_short": 655.8530006408691,
+            "outside_original_wrong": 513.5189995765686
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 2,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 205.5220000743866,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 2,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 205.5220000743866,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {
+            "overlaps_long": 2,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 205.5220000743866,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {
+          "1_to_0_complete": 49,
+          "2_to_0_complete": 15,
+          "0_to_2_complete": 16,
+          "0_to_1_complete": 61,
+          "0_to_0_complete": 21
+        },
+        "interval_swap": {
+          "1_to_0_complete": 25,
+          "0_to_2_complete": 17,
+          "0_to_1_complete": 51,
+          "0_to_0_complete": 17,
+          "2_to_0_complete": 8
+        },
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-5fb27466478758819ffefd1e",
+      "sparse": false,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {
+            "overlaps_only_short": 1,
+            "overlaps_multiple_short": 1,
+            "right_censored": 0,
+            "overlaps_long": 3
+          },
+          "seconds": {
+            "original_long": 1276.3620002269745,
+            "original_short": 81.44299983978271,
+            "outside_original_wrong": 1.8260002136230469
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {
+            "overlaps_only_short": 1,
+            "overlaps_multiple_short": 1,
+            "right_censored": 0,
+            "overlaps_long": 3
+          },
+          "seconds": {
+            "original_long": 1276.3620002269745,
+            "original_short": 81.44299983978271,
+            "outside_original_wrong": 1.8260002136230469
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {
+            "overlaps_long": 4,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 1359.6310002803802,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 3,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 1276.3620002269745,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {
+            "overlaps_only_short": 1,
+            "overlaps_multiple_short": 1,
+            "right_censored": 0,
+            "overlaps_long": 3
+          },
+          "seconds": {
+            "original_long": 1276.3620002269745,
+            "original_short": 81.44299983978271,
+            "outside_original_wrong": 1.8260002136230469
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {
+            "overlaps_only_short": 1,
+            "overlaps_multiple_short": 1,
+            "right_censored": 0,
+            "overlaps_long": 3
+          },
+          "seconds": {
+            "original_long": 1276.3620002269745,
+            "original_short": 78.00399994850159,
+            "outside_original_wrong": 5.265000104904175
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {
+          "1_to_0_complete": 1,
+          "0_to_2_complete": 2,
+          "2_to_0_complete": 1
+        },
+        "interval_swap": {
+          "1_to_0_complete": 1,
+          "0_to_2_complete": 2,
+          "2_to_0_complete": 1
+        },
+        "point_null": {
+          "0_to_1_incomplete": 2,
+          "1_to_0_incomplete": 1,
+          "1_to_0_complete": 1
+        },
+        "interval_null": {
+          "0_to_1_incomplete": 1,
+          "1_to_0_complete": 1
+        }
+      }
+    },
+    {
+      "component": "component-9ea441151d6468bd21826aea",
+      "sparse": false,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 83.02899980545044,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 83.02899980545044,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 83.02899980545044,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 83.02899980545044,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 83.02899980545044,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 83.02899980545044,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {
+          "0_to_2_complete": 1
+        },
+        "interval_swap": {
+          "0_to_2_complete": 1
+        },
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-568f84fe210a79894feac892",
+      "sparse": false,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {
+            "overlaps_only_short": 4,
+            "overlaps_multiple_short": 4,
+            "right_censored": 0,
+            "overlaps_long": 1
+          },
+          "seconds": {
+            "original_long": 240.8329999446869,
+            "original_short": 187.1619997024536,
+            "outside_original_wrong": 86.98999977111816
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {
+            "overlaps_only_short": 4,
+            "overlaps_multiple_short": 4,
+            "right_censored": 0,
+            "overlaps_long": 1
+          },
+          "seconds": {
+            "original_long": 240.8329999446869,
+            "original_short": 267.3359999656677,
+            "outside_original_wrong": 312.94000005722046
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {
+            "overlaps_long": 3,
+            "right_censored": 0,
+            "overlaps_only_short": 2,
+            "overlaps_multiple_short": 2
+          },
+          "seconds": {
+            "original_long": 361.1769998073578,
+            "original_short": 235.45800018310547,
+            "outside_original_wrong": 224.47399997711182
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 240.8329999446869,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 240.8329999446869,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 240.8329999446869,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {
+          "2_to_0_complete": 2,
+          "0_to_2_complete": 2
+        },
+        "interval_swap": {
+          "0_to_2_complete": 2,
+          "2_to_0_complete": 2
+        },
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-5ee24adf22c874beaf8d076d",
+      "sparse": false,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 469.60199999809265,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 469.60199999809265,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 469.60199999809265,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 469.60199999809265,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 469.60199999809265,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 469.60199999809265,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {
+          "0_to_2_complete": 1,
+          "2_to_0_complete": 1
+        },
+        "interval_swap": {
+          "0_to_2_complete": 1
+        },
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-e062a18f3a426eba715c16d2",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-d091361fb95b75d6d2a1a9c5",
+      "sparse": false,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0,
+            "overlaps_only_short": 2,
+            "overlaps_multiple_short": 2
+          },
+          "seconds": {
+            "original_long": 88.0,
+            "original_short": 102.7000002861023,
+            "outside_original_wrong": 47.44399976730347
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0,
+            "overlaps_only_short": 2,
+            "overlaps_multiple_short": 2
+          },
+          "seconds": {
+            "original_long": 88.0,
+            "original_short": 57.60200023651123,
+            "outside_original_wrong": 62.83399963378906
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0,
+            "overlaps_only_short": 2,
+            "overlaps_multiple_short": 2
+          },
+          "seconds": {
+            "original_long": 88.0,
+            "original_short": 69.16000032424927,
+            "outside_original_wrong": 51.275999546051025
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 88.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 88.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 88.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {
+          "0_to_2_complete": 15,
+          "2_to_0_complete": 13,
+          "1_to_0_complete": 2,
+          "0_to_1_complete": 2
+        },
+        "interval_swap": {
+          "0_to_2_complete": 15,
+          "2_to_0_complete": 5,
+          "1_to_0_complete": 2,
+          "0_to_1_complete": 2
+        },
+        "point_null": {},
+        "interval_null": {
+          "1_to_0_incomplete": 1
+        }
+      }
+    },
+    {
+      "component": "component-a976e938a5d6c85e19e75148",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {
+            "overlaps_only_short": 2,
+            "overlaps_multiple_short": 2,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 31.965999603271484,
+            "outside_original_wrong": 130.25600004196167
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {
+            "overlaps_only_short": 2,
+            "overlaps_multiple_short": 2,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 76.1879997253418,
+            "outside_original_wrong": 86.03399991989136
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {
+          "0_to_2_complete": 2,
+          "2_to_0_complete": 2
+        },
+        "interval_swap": {
+          "2_to_0_complete": 2,
+          "0_to_2_complete": 2
+        },
+        "point_null": {
+          "0_to_1_both": 1,
+          "2_to_0_both": 1,
+          "0_to_1_incomplete": 1,
+          "2_to_0_incomplete": 1
+        },
+        "interval_null": {
+          "2_to_0_complete": 1
+        }
+      }
+    },
+    {
+      "component": "component-fde3da10230624198088bd00",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-e043376fcec558cddc17efc9",
+      "sparse": false,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {
+          "0_to_2_complete": 1
+        },
+        "interval_swap": {
+          "0_to_2_complete": 1
+        },
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-a077aa3eb774a8b670334e7c",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-e897d9ac78e38d080ce57c79",
+      "sparse": false,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-a83dc25f641a5649492e3924",
+      "sparse": false,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 5,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 1364.9419996738434,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 5,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 1364.9419996738434,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {
+            "overlaps_long": 5,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 1364.9419996738434,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 5,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 1364.9419996738434,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 5,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 1364.9419996738434,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {
+            "overlaps_long": 5,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 1364.9419996738434,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {
+          "0_to_1_incomplete": 1
+        },
+        "interval_null": {
+          "0_to_1_incomplete": 1
+        }
+      }
+    },
+    {
+      "component": "component-d65004ec52f1c36587c77027",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0,
+            "overlaps_only_short": 1,
+            "overlaps_multiple_short": 1
+          },
+          "seconds": {
+            "original_long": 85.39499998092651,
+            "original_short": 31.516000270843506,
+            "outside_original_wrong": 30.140999794006348
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0,
+            "overlaps_only_short": 2,
+            "overlaps_multiple_short": 2
+          },
+          "seconds": {
+            "original_long": 85.39499998092651,
+            "original_short": 98.28900098800659,
+            "outside_original_wrong": 100.33999919891357
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {
+            "overlaps_long": 2,
+            "right_censored": 0,
+            "overlaps_only_short": 1,
+            "overlaps_multiple_short": 1
+          },
+          "seconds": {
+            "original_long": 147.05200004577637,
+            "original_short": 74.09000015258789,
+            "outside_original_wrong": 62.88199996948242
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 85.39499998092651,
+            "original_short": 53.847999811172485,
+            "outside_original_wrong": 7.604000091552734
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 85.39499998092651,
+            "original_short": 53.847999811172485,
+            "outside_original_wrong": 7.604000091552734
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 146.84699988365173,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {
+          "2_to_0_complete": 1,
+          "0_to_2_complete": 1
+        },
+        "interval_swap": {
+          "0_to_2_complete": 1,
+          "2_to_0_complete": 1
+        },
+        "point_null": {
+          "1_to_0_incomplete": 1
+        },
+        "interval_null": {
+          "1_to_0_incomplete": 1
+        }
+      }
+    },
+    {
+      "component": "component-5ee24adf22c874beaf8d076d",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-d784c25f6ac4208b0a38e796",
+      "sparse": false,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 140.17599987983704,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 140.17599987983704,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 140.17599987983704,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 140.17599987983704,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 140.17599987983704,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 140.17599987983704,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {
+          "0_to_2_complete": 3
+        },
+        "interval_swap": {
+          "0_to_2_complete": 3
+        },
+        "point_null": {
+          "0_to_1_complete": 1
+        },
+        "interval_null": {
+          "0_to_1_incomplete": 1
+        }
+      }
+    },
+    {
+      "component": "component-e897d9ac78e38d080ce57c79",
+      "sparse": false,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-101d585a7e8b163b87ead01f",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-9ec9c2b8d5ac2b679aa6b8c0",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-75391b641c3cd7287e382451",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-dbb02c2cd61c746138a6dc64",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-9ea441151d6468bd21826aea",
+      "sparse": false,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 2,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 355.4140000343323,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 2,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 355.4140000343323,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {
+            "overlaps_long": 2,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 355.4140000343323,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 2,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 355.4140000343323,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 2,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 355.4140000343323,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {
+            "overlaps_long": 2,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 355.4140000343323,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-0b71187a53d6235c8f81020b",
+      "sparse": false,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-5acb181fd8d75db014b018e5",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 510.8440001010895,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 510.8440001010895,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 510.8440001010895,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 510.8440001010895,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 510.8440001010895,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 510.8440001010895,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-99bde609acdcfd5bcc1d7e7c",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-e043376fcec558cddc17efc9",
+      "sparse": false,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 3,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 763.8309998512268,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 3,
+            "right_censored": 0,
+            "overlaps_only_short": 2,
+            "overlaps_multiple_short": 0
+          },
+          "seconds": {
+            "original_long": 713.3580000400543,
+            "original_short": 60.08600044250488,
+            "outside_original_wrong": 117.80799961090088
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {
+            "overlaps_long": 3,
+            "right_censored": 0,
+            "overlaps_only_short": 2,
+            "overlaps_multiple_short": 0
+          },
+          "seconds": {
+            "original_long": 713.3580000400543,
+            "original_short": 76.94800043106079,
+            "outside_original_wrong": 100.94599962234497
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 3,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 772.2619998455048,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 3,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 772.2619998455048,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {
+            "overlaps_long": 3,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 772.2619998455048,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {
+          "0_to_2_complete": 1,
+          "1_to_0_complete": 1
+        },
+        "interval_swap": {
+          "0_to_2_complete": 1,
+          "1_to_0_complete": 1
+        },
+        "point_null": {
+          "0_to_1_incomplete": 1
+        },
+        "interval_null": {
+          "0_to_1_incomplete": 1
+        }
+      }
+    },
+    {
+      "component": "component-75391b641c3cd7287e382451",
+      "sparse": false,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 3,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 979.8010001182556,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 3,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 979.8010001182556,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {
+            "overlaps_long": 3,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 979.8010001182556,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 3,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 979.8010001182556,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 3,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 979.8010001182556,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {
+            "overlaps_long": 3,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 979.8010001182556,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {
+          "0_to_1_incomplete": 1
+        },
+        "interval_null": {
+          "0_to_1_incomplete": 1
+        }
+      }
+    },
+    {
+      "component": "component-6168d795e66f68b6ea6c3b7a",
+      "sparse": false,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-5acb181fd8d75db014b018e5",
+      "sparse": false,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-e062a18f3a426eba715c16d2",
+      "sparse": false,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 5,
+            "right_censored": 0,
+            "overlaps_only_short": 1,
+            "overlaps_multiple_short": 1
+          },
+          "seconds": {
+            "original_long": 1780.9359998703003,
+            "original_short": 78.32699990272522,
+            "outside_original_wrong": 2.693000078201294
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 5,
+            "right_censored": 0,
+            "overlaps_only_short": 4,
+            "overlaps_multiple_short": 4
+          },
+          "seconds": {
+            "original_long": 1780.9359998703003,
+            "original_short": 189.53200006484985,
+            "outside_original_wrong": 92.86600017547607
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {
+            "overlaps_long": 6,
+            "right_censored": 0,
+            "overlaps_only_short": 3,
+            "overlaps_multiple_short": 3
+          },
+          "seconds": {
+            "original_long": 1861.9559998512268,
+            "original_short": 132.89299964904785,
+            "outside_original_wrong": 68.48500061035156
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 5,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 1780.9359998703003,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 5,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 1780.9359998703003,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {
+            "overlaps_long": 5,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 1780.9359998703003,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {
+          "0_to_2_complete": 10,
+          "2_to_0_complete": 8,
+          "1_to_0_complete": 7,
+          "0_to_1_complete": 6
+        },
+        "interval_swap": {
+          "0_to_2_complete": 10,
+          "2_to_0_complete": 2,
+          "0_to_1_complete": 4,
+          "1_to_0_complete": 6
+        },
+        "point_null": {
+          "1_to_0_incomplete": 1
+        },
+        "interval_null": {
+          "1_to_0_incomplete": 1
+        }
+      }
+    },
+    {
+      "component": "component-23608a7a22c5322f7254ffc1",
+      "sparse": false,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-d091361fb95b75d6d2a1a9c5",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 176.38399982452393,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 176.38399982452393,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 176.38399982452393,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 176.38399982452393,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 176.38399982452393,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 176.38399982452393,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {
+          "0_to_2_complete": 1
+        },
+        "interval_swap": {
+          "0_to_2_complete": 1
+        },
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-99bde609acdcfd5bcc1d7e7c",
+      "sparse": false,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 7,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 2627.266000032425,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 7,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 2627.266000032425,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {
+            "overlaps_long": 7,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 2627.266000032425,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 7,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 2627.266000032425,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 7,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 2627.266000032425,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {
+            "overlaps_long": 7,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 2627.266000032425,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {
+          "2_to_0_incomplete": 3,
+          "1_to_0_incomplete": 2
+        },
+        "interval_null": {
+          "1_to_0_incomplete": 1
+        }
+      }
+    },
+    {
+      "component": "component-a077aa3eb774a8b670334e7c",
+      "sparse": false,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {},
+        "interval_null": {}
+      }
+    }
+  ]
+}

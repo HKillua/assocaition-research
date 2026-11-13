@@ -1,0 +1,411 @@
+{
+  "audit": "independent C37 native clocks, C42 roles, C45 cache keys, C50 controls and C51 frozen score arithmetic; no raw coordinate reread",
+  "checks": {
+    "frozen_scenes": 28,
+    "empty_scenes": 15,
+    "fixed_windows": 482,
+    "legal_rejoins": 416,
+    "new_action_comparisons": 1664,
+    "classified_excess_gaps": 254,
+    "selected_native_reports": 102,
+    "prior_native_times": 612,
+    "supported_report_views": 204,
+    "action_arm_population_counts": 70
+  },
+  "opportunities": {
+    "windows": 71,
+    "native_supported": 71,
+    "violations": 141,
+    "deleted_reports_per_gap": {
+      "4": 141
+    },
+    "offending_roles_by_window": {
+      "release+retain": 70,
+      "release": 1
+    }
+  },
+  "dual": {
+    "windows": 31,
+    "native_supported": 31,
+    "violations": 61,
+    "deleted_reports_per_gap": {
+      "4": 61
+    },
+    "offending_roles_by_window": {
+      "release+retain": 30,
+      "release": 1
+    }
+  },
+  "comparisons": {
+    "dual": {
+      "full": {
+        "denominators": [
+          8,
+          22
+        ],
+        "hits_false": {
+          "original": [
+            0,
+            0
+          ],
+          "geometry_masked": [
+            7,
+            17
+          ],
+          "current": [
+            4,
+            2
+          ],
+          "native_masked": [
+            7,
+            13
+          ],
+          "native_actual": [
+            8,
+            21
+          ],
+          "native_increment": [
+            5,
+            18
+          ],
+          "native_confirmed": [
+            5,
+            13
+          ]
+        }
+      },
+      "common_support": {
+        "denominators": [
+          8,
+          22
+        ],
+        "hits_false": {
+          "original": [
+            0,
+            0
+          ],
+          "geometry_masked": [
+            7,
+            17
+          ],
+          "current": [
+            4,
+            2
+          ],
+          "native_masked": [
+            7,
+            13
+          ],
+          "native_actual": [
+            8,
+            21
+          ],
+          "native_increment": [
+            5,
+            18
+          ],
+          "native_confirmed": [
+            5,
+            13
+          ]
+        }
+      }
+    },
+    "opportunities": {
+      "full": {
+        "denominators": [
+          18,
+          49
+        ],
+        "hits_false": {
+          "original": [
+            0,
+            0
+          ],
+          "geometry_masked": [
+            13,
+            24
+          ],
+          "current": [
+            6,
+            2
+          ],
+          "native_masked": [
+            9,
+            13
+          ],
+          "native_actual": [
+            10,
+            21
+          ],
+          "native_increment": [
+            7,
+            18
+          ],
+          "native_confirmed": [
+            7,
+            13
+          ]
+        }
+      },
+      "common_support": {
+        "denominators": [
+          8,
+          22
+        ],
+        "hits_false": {
+          "original": [
+            0,
+            0
+          ],
+          "geometry_masked": [
+            7,
+            17
+          ],
+          "current": [
+            4,
+            2
+          ],
+          "native_masked": [
+            7,
+            13
+          ],
+          "native_actual": [
+            8,
+            21
+          ],
+          "native_increment": [
+            5,
+            18
+          ],
+          "native_confirmed": [
+            5,
+            13
+          ]
+        }
+      }
+    },
+    "primary": {
+      "full": {
+        "denominators": [
+          28,
+          142
+        ],
+        "hits_false": {
+          "original": [
+            0,
+            0
+          ],
+          "geometry_masked": [
+            13,
+            36
+          ],
+          "current": [
+            5,
+            1
+          ],
+          "native_masked": [
+            5,
+            4
+          ],
+          "native_actual": [
+            5,
+            9
+          ],
+          "native_increment": [
+            5,
+            10
+          ],
+          "native_confirmed": [
+            5,
+            7
+          ]
+        }
+      },
+      "common_support": {
+        "denominators": [
+          2,
+          9
+        ],
+        "hits_false": {
+          "original": [
+            0,
+            0
+          ],
+          "geometry_masked": [
+            2,
+            6
+          ],
+          "current": [
+            2,
+            0
+          ],
+          "native_masked": [
+            2,
+            3
+          ],
+          "native_actual": [
+            2,
+            8
+          ],
+          "native_increment": [
+            2,
+            9
+          ],
+          "native_confirmed": [
+            2,
+            6
+          ]
+        }
+      }
+    },
+    "broad": {
+      "full": {
+        "denominators": [
+          67,
+          308
+        ],
+        "hits_false": {
+          "original": [
+            0,
+            0
+          ],
+          "geometry_masked": [
+            40,
+            89
+          ],
+          "current": [
+            8,
+            8
+          ],
+          "native_masked": [
+            11,
+            19
+          ],
+          "native_actual": [
+            12,
+            27
+          ],
+          "native_increment": [
+            9,
+            24
+          ],
+          "native_confirmed": [
+            9,
+            19
+          ]
+        }
+      },
+      "common_support": {
+        "denominators": [
+          8,
+          22
+        ],
+        "hits_false": {
+          "original": [
+            0,
+            0
+          ],
+          "geometry_masked": [
+            7,
+            17
+          ],
+          "current": [
+            4,
+            2
+          ],
+          "native_masked": [
+            7,
+            13
+          ],
+          "native_actual": [
+            8,
+            21
+          ],
+          "native_increment": [
+            5,
+            18
+          ],
+          "native_confirmed": [
+            5,
+            13
+          ]
+        }
+      }
+    },
+    "broad_sparse": {
+      "full": {
+        "denominators": [
+          32,
+          148
+        ],
+        "hits_false": {
+          "original": [
+            0,
+            0
+          ],
+          "geometry_masked": [
+            15,
+            40
+          ],
+          "current": [
+            7,
+            2
+          ],
+          "native_masked": [
+            7,
+            5
+          ],
+          "native_actual": [
+            7,
+            10
+          ],
+          "native_increment": [
+            6,
+            11
+          ],
+          "native_confirmed": [
+            7,
+            8
+          ]
+        }
+      },
+      "common_support": {
+        "denominators": [
+          3,
+          9
+        ],
+        "hits_false": {
+          "original": [
+            0,
+            0
+          ],
+          "geometry_masked": [
+            3,
+            6
+          ],
+          "current": [
+            3,
+            0
+          ],
+          "native_masked": [
+            3,
+            3
+          ],
+          "native_actual": [
+            3,
+            8
+          ],
+          "native_increment": [
+            2,
+            9
+          ],
+          "native_confirmed": [
+            3,
+            6
+          ]
+        }
+      }
+    }
+  }
+}

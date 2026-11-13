@@ -1,0 +1,52 @@
+{
+  "audit": "independent_read_only_reconstruction_from_C37_clock_C42_roles_C45_cache_C49_frozen_provenance_C50_R1",
+  "checks": {
+    "scenes": 28,
+    "frozen_windows": 482,
+    "eligible_windows": 416,
+    "contributing_role_time_pairs": 1990,
+    "predicted_coordinate_masks": 0,
+    "new_action_comparisons": 1248,
+    "outside_cache_post_onset_opportunities": 71,
+    "outside_cache_both_sides": 31,
+    "outside_cache_post_onset_reports": 102,
+    "full_arm_populations": 45
+  },
+  "cohort": {
+    "other": 164,
+    "other_original_post_onset": 23,
+    "farther": 131,
+    "farther_original_post_onset": 10,
+    "closer": 121,
+    "closer_original_post_onset": 12
+  },
+  "cache_disjoint_status": {
+    "stale": 239,
+    "gap_too_wide": 127,
+    "missing_cache_provenance": 49,
+    "missing_window": 1
+  },
+  "missing_cache_reasons": {
+    "no_scored_cache": 49
+  },
+  "outside_cache_post_onset_status": {
+    "gap_too_wide": 71
+  },
+  "focus_status": {
+    "stale": 6,
+    "gap_too_wide": 3,
+    "missing_cache_provenance": 1
+  },
+  "focus_original_post_onset_reports": {
+    "in_scored_cache": 17,
+    "no_scored_cache": 1
+  },
+  "all_qualified_fresh_gap_too_wide_windows_largest_gap_s": {
+    "count": 71,
+    "minimum": 50.0699999332428,
+    "maximum": 50.22800016403198
+  },
+  "original_clock_cohort_reconstructed": true,
+  "existing_arms_reproduced": true,
+  "current_or_future_contributor_count": 0
+}

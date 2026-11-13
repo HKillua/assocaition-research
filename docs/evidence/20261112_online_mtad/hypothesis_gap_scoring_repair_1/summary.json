@@ -1,0 +1,291 @@
+{
+  "scenes": {
+    "scene_01": {
+      "component": "component-c8161c1679f5abb00c5cd1aa",
+      "sparse": false,
+      "counts": {
+        "events": 4780,
+        "reports": 4781,
+        "candidate_edge_events": 17841
+      },
+      "focal_windows": 4
+    },
+    "scene_02": {
+      "component": "component-6b3c238ebcf1f3c07cf0e556",
+      "sparse": true,
+      "counts": {
+        "events": 4722,
+        "reports": 4725,
+        "candidate_edge_events": 31697
+      },
+      "focal_windows": 0
+    },
+    "scene_03": {
+      "component": "component-8ad8dcc9e0897e41bf85dce3",
+      "sparse": true,
+      "counts": {
+        "events": 4608,
+        "reports": 4609,
+        "candidate_edge_events": 19317
+      },
+      "focal_windows": 82
+    },
+    "scene_04": {
+      "component": "component-f24f1a64b591544a871284bd",
+      "sparse": true,
+      "counts": {
+        "events": 2586,
+        "reports": 2586,
+        "candidate_edge_events": 1221
+      },
+      "focal_windows": 0
+    },
+    "scene_05": {
+      "component": "component-bed3d5a960ea9b52f944185f",
+      "sparse": true,
+      "counts": {
+        "events": 1750,
+        "reports": 1752,
+        "candidate_edge_events": 3929
+      },
+      "focal_windows": 0
+    },
+    "scene_06": {
+      "component": "component-6fb7e5c36b795834bb97c592",
+      "sparse": true,
+      "counts": {
+        "events": 3250,
+        "reports": 3254,
+        "candidate_edge_events": 9970
+      },
+      "focal_windows": 0
+    },
+    "scene_07": {
+      "component": "component-0b0e65ad5d79d6e032d0889a",
+      "sparse": true,
+      "counts": {
+        "events": 2438,
+        "reports": 2438,
+        "candidate_edge_events": 5253
+      },
+      "focal_windows": 0
+    },
+    "scene_08": {
+      "component": "component-fdbc675a9f9f6a7e1c67e3bb",
+      "sparse": true,
+      "counts": {
+        "events": 2838,
+        "reports": 2839,
+        "candidate_edge_events": 7199
+      },
+      "focal_windows": 0
+    },
+    "scene_09": {
+      "component": "component-730c48a331ac192d8b823213",
+      "sparse": true,
+      "counts": {
+        "events": 3651,
+        "reports": 3651,
+        "candidate_edge_events": 13010
+      },
+      "focal_windows": 0
+    },
+    "scene_10": {
+      "component": "component-5f2aedadc99ed44ea4633c75",
+      "sparse": true,
+      "counts": {
+        "events": 2761,
+        "reports": 2763,
+        "candidate_edge_events": 10809
+      },
+      "focal_windows": 32
+    },
+    "scene_11": {
+      "component": "component-c1a6cda61b669e76e0888803",
+      "sparse": true,
+      "counts": {
+        "events": 817,
+        "reports": 818,
+        "candidate_edge_events": 262
+      },
+      "focal_windows": 0
+    },
+    "scene_12": {
+      "component": "component-0b9d7d23108cbf0a74ed5828",
+      "sparse": true,
+      "counts": {
+        "events": 4347,
+        "reports": 4347,
+        "candidate_edge_events": 21955
+      },
+      "focal_windows": 2
+    },
+    "scene_13": {
+      "component": "component-ffc486623e4d904bd5798230",
+      "sparse": false,
+      "counts": {
+        "events": 7585,
+        "reports": 7591,
+        "candidate_edge_events": 98568
+      },
+      "focal_windows": 261
+    },
+    "scene_14": {
+      "component": "component-6d46b58cb2c5d6878bed71f0",
+      "sparse": true,
+      "counts": {
+        "events": 2532,
+        "reports": 2532,
+        "candidate_edge_events": 5724
+      },
+      "focal_windows": 0
+    },
+    "scene_15": {
+      "component": "component-8a28b16afefb7826fd7973df",
+      "sparse": true,
+      "counts": {
+        "events": 2627,
+        "reports": 2632,
+        "candidate_edge_events": 7737
+      },
+      "focal_windows": 15
+    },
+    "scene_16": {
+      "component": "component-ac135b85f256bd763aed311d",
+      "sparse": true,
+      "counts": {
+        "events": 2724,
+        "reports": 2724,
+        "candidate_edge_events": 7129
+      },
+      "focal_windows": 0
+    },
+    "scene_17": {
+      "component": "component-a51df20ce04238e7cf2bc17a",
+      "sparse": true,
+      "counts": {
+        "events": 4543,
+        "reports": 4546,
+        "candidate_edge_events": 19111
+      },
+      "focal_windows": 15
+    },
+    "scene_18": {
+      "component": "component-5364495b6e5883df8779c524",
+      "sparse": true,
+      "counts": {
+        "events": 2014,
+        "reports": 2014,
+        "candidate_edge_events": 3575
+      },
+      "focal_windows": 0
+    },
+    "scene_19": {
+      "component": "component-4c36c775b818b891dca3ff46",
+      "sparse": false,
+      "counts": {
+        "events": 13729,
+        "reports": 13776,
+        "candidate_edge_events": 541358
+      },
+      "focal_windows": 205
+    },
+    "scene_20": {
+      "component": "component-5317b2d47b0ff76e5ff4bc60",
+      "sparse": true,
+      "counts": {
+        "events": 4112,
+        "reports": 4115,
+        "candidate_edge_events": 26196
+      },
+      "focal_windows": 91
+    },
+    "scene_21": {
+      "component": "component-ceab64951a30f684b7a84bae",
+      "sparse": true,
+      "counts": {
+        "events": 1396,
+        "reports": 1396,
+        "candidate_edge_events": 2032
+      },
+      "focal_windows": 0
+    },
+    "scene_22": {
+      "component": "component-9e7036dffb28c24c629363a6",
+      "sparse": true,
+      "counts": {
+        "events": 2225,
+        "reports": 2225,
+        "candidate_edge_events": 4762
+      },
+      "focal_windows": 0
+    },
+    "scene_23": {
+      "component": "component-0edd6c90e78d7d840cc9637a",
+      "sparse": true,
+      "counts": {
+        "events": 2505,
+        "reports": 2505,
+        "candidate_edge_events": 2272
+      },
+      "focal_windows": 0
+    },
+    "scene_24": {
+      "component": "component-74e6aaca08d871c01ac5c399",
+      "sparse": false,
+      "counts": {
+        "events": 5396,
+        "reports": 5398,
+        "candidate_edge_events": 21051
+      },
+      "focal_windows": 0
+    },
+    "scene_25": {
+      "component": "component-9b9449afa258e2e53c16d960",
+      "sparse": true,
+      "counts": {
+        "events": 4011,
+        "reports": 4011,
+        "candidate_edge_events": 24971
+      },
+      "focal_windows": 171
+    },
+    "scene_26": {
+      "component": "component-f16592d12000ffca0f115928",
+      "sparse": true,
+      "counts": {
+        "events": 3534,
+        "reports": 3534,
+        "candidate_edge_events": 22647
+      },
+      "focal_windows": 20
+    },
+    "scene_27": {
+      "component": "component-abc1a2cc10831a510dffd3e3",
+      "sparse": true,
+      "counts": {
+        "events": 2239,
+        "reports": 2239,
+        "candidate_edge_events": 5652
+      },
+      "focal_windows": 30
+    },
+    "scene_28": {
+      "component": "component-e3687e2a32b9939f07829f7b",
+      "sparse": true,
+      "counts": {
+        "events": 2684,
+        "reports": 2684,
+        "candidate_edge_events": 5445
+      },
+      "focal_windows": 4
+    }
+  },
+  "clock": "ideal_native_measurement_time",
+  "window_seconds": 60.0,
+  "graph_unchanged": true,
+  "publications_unchanged": true,
+  "training_updates": 0,
+  "resumed_frozen_capture": true,
+  "wall_seconds": 3.4934597079991363
+}

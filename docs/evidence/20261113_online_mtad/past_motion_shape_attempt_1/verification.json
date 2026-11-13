@@ -1,0 +1,9 @@
+{
+  "supported": 1320,
+  "decomposition": 2640,
+  "quiet_mask_equal": 676,
+  "missing": 157,
+  "target_primary_current_used": 1,
+  "target_primary_post_onset_used": 2,
+  "target_primary_post_onset_available": 2
+}

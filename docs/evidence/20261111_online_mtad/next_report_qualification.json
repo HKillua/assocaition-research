@@ -1,0 +1,3809 @@
+{
+  "scene_ids": [
+    "0",
+    "3",
+    "7"
+  ],
+  "scenes": {
+    "0": {
+      "population": {
+        "births": 49,
+        "returned": 49,
+        "timeout": 0,
+        "right_censored": 0
+      },
+      "whole": {
+        "birth": {
+          "correct": 32,
+          "wrong": 13,
+          "reject": 4,
+          "no_decision": 0,
+          "candidate_pairs": 1849,
+          "in_gate_pairs": 367,
+          "true_opportunity": 39,
+          "true_in_gate": 39,
+          "false_in_gate": 38,
+          "no_candidate_in_gate": 4,
+          "nearest_exact_ties": 0
+        },
+        "expiry": {
+          "correct": 32,
+          "wrong": 13,
+          "reject": 4,
+          "no_decision": 0,
+          "candidate_pairs": 1847,
+          "in_gate_pairs": 366,
+          "true_opportunity": 39,
+          "true_in_gate": 39,
+          "false_in_gate": 38,
+          "no_candidate_in_gate": 4,
+          "nearest_exact_ties": 0
+        },
+        "query": {
+          "correct": 31,
+          "wrong": 14,
+          "reject": 4,
+          "no_decision": 0,
+          "candidate_pairs": 1847,
+          "in_gate_pairs": 366,
+          "true_opportunity": 39,
+          "true_in_gate": 39,
+          "false_in_gate": 38,
+          "no_candidate_in_gate": 4,
+          "nearest_exact_ties": 0
+        },
+        "peer_freshness": {
+          "correct": 31,
+          "wrong": 14,
+          "reject": 4,
+          "no_decision": 0,
+          "candidate_pairs": 1847,
+          "in_gate_pairs": 366,
+          "true_opportunity": 39,
+          "true_in_gate": 39,
+          "false_in_gate": 38,
+          "no_candidate_in_gate": 4,
+          "nearest_exact_ties": 0
+        },
+        "peer_position": {
+          "correct": 32,
+          "wrong": 13,
+          "reject": 4,
+          "no_decision": 0,
+          "candidate_pairs": 1847,
+          "in_gate_pairs": 366,
+          "true_opportunity": 39,
+          "true_in_gate": 39,
+          "false_in_gate": 38,
+          "no_candidate_in_gate": 4,
+          "nearest_exact_ties": 0
+        },
+        "open": {
+          "correct": 32,
+          "wrong": 13,
+          "reject": 4,
+          "no_decision": 0,
+          "candidate_pairs": 1848,
+          "in_gate_pairs": 366,
+          "true_opportunity": 39,
+          "true_in_gate": 39,
+          "false_in_gate": 38,
+          "no_candidate_in_gate": 4,
+          "nearest_exact_ties": 0
+        }
+      },
+      "paired": {
+        "n": 49,
+        "arms": {
+          "birth": {
+            "correct": 32,
+            "wrong": 13,
+            "reject": 4,
+            "no_decision": 0,
+            "candidate_pairs": 1849,
+            "in_gate_pairs": 367,
+            "true_opportunity": 39,
+            "true_in_gate": 39,
+            "false_in_gate": 38,
+            "no_candidate_in_gate": 4,
+            "nearest_exact_ties": 0
+          },
+          "expiry": {
+            "correct": 32,
+            "wrong": 13,
+            "reject": 4,
+            "no_decision": 0,
+            "candidate_pairs": 1847,
+            "in_gate_pairs": 366,
+            "true_opportunity": 39,
+            "true_in_gate": 39,
+            "false_in_gate": 38,
+            "no_candidate_in_gate": 4,
+            "nearest_exact_ties": 0
+          },
+          "query": {
+            "correct": 31,
+            "wrong": 14,
+            "reject": 4,
+            "no_decision": 0,
+            "candidate_pairs": 1847,
+            "in_gate_pairs": 366,
+            "true_opportunity": 39,
+            "true_in_gate": 39,
+            "false_in_gate": 38,
+            "no_candidate_in_gate": 4,
+            "nearest_exact_ties": 0
+          },
+          "peer_freshness": {
+            "correct": 31,
+            "wrong": 14,
+            "reject": 4,
+            "no_decision": 0,
+            "candidate_pairs": 1847,
+            "in_gate_pairs": 366,
+            "true_opportunity": 39,
+            "true_in_gate": 39,
+            "false_in_gate": 38,
+            "no_candidate_in_gate": 4,
+            "nearest_exact_ties": 0
+          },
+          "peer_position": {
+            "correct": 32,
+            "wrong": 13,
+            "reject": 4,
+            "no_decision": 0,
+            "candidate_pairs": 1847,
+            "in_gate_pairs": 366,
+            "true_opportunity": 39,
+            "true_in_gate": 39,
+            "false_in_gate": 38,
+            "no_candidate_in_gate": 4,
+            "nearest_exact_ties": 0
+          },
+          "open": {
+            "correct": 32,
+            "wrong": 13,
+            "reject": 4,
+            "no_decision": 0,
+            "candidate_pairs": 1848,
+            "in_gate_pairs": 366,
+            "true_opportunity": 39,
+            "true_in_gate": 39,
+            "false_in_gate": 38,
+            "no_candidate_in_gate": 4,
+            "nearest_exact_ties": 0
+          }
+        },
+        "comparisons": {
+          "expiry_minus_birth": {
+            "n": 49,
+            "transitions": {
+              "correct": {
+                "correct": 32,
+                "wrong": 0,
+                "reject": 0
+              },
+              "wrong": {
+                "correct": 0,
+                "wrong": 13,
+                "reject": 0
+              },
+              "reject": {
+                "correct": 0,
+                "wrong": 0,
+                "reject": 4
+              }
+            },
+            "delta": {
+              "correct": 0,
+              "wrong": 0,
+              "reject": 0
+            }
+          },
+          "query_minus_expiry": {
+            "n": 49,
+            "transitions": {
+              "correct": {
+                "correct": 30,
+                "wrong": 2,
+                "reject": 0
+              },
+              "wrong": {
+                "correct": 1,
+                "wrong": 12,
+                "reject": 0
+              },
+              "reject": {
+                "correct": 0,
+                "wrong": 0,
+                "reject": 4
+              }
+            },
+            "delta": {
+              "correct": -1,
+              "wrong": 1,
+              "reject": 0
+            }
+          },
+          "peer_freshness_minus_query": {
+            "n": 49,
+            "transitions": {
+              "correct": {
+                "correct": 31,
+                "wrong": 0,
+                "reject": 0
+              },
+              "wrong": {
+                "correct": 0,
+                "wrong": 14,
+                "reject": 0
+              },
+              "reject": {
+                "correct": 0,
+                "wrong": 0,
+                "reject": 4
+              }
+            },
+            "delta": {
+              "correct": 0,
+              "wrong": 0,
+              "reject": 0
+            }
+          },
+          "peer_position_minus_peer_freshness": {
+            "n": 49,
+            "transitions": {
+              "correct": {
+                "correct": 30,
+                "wrong": 1,
+                "reject": 0
+              },
+              "wrong": {
+                "correct": 2,
+                "wrong": 12,
+                "reject": 0
+              },
+              "reject": {
+                "correct": 0,
+                "wrong": 0,
+                "reject": 4
+              }
+            },
+            "delta": {
+              "correct": 1,
+              "wrong": -1,
+              "reject": 0
+            }
+          },
+          "open_minus_peer_position": {
+            "n": 49,
+            "transitions": {
+              "correct": {
+                "correct": 32,
+                "wrong": 0,
+                "reject": 0
+              },
+              "wrong": {
+                "correct": 0,
+                "wrong": 13,
+                "reject": 0
+              },
+              "reject": {
+                "correct": 0,
+                "wrong": 0,
+                "reject": 4
+              }
+            },
+            "delta": {
+              "correct": 0,
+              "wrong": 0,
+              "reject": 0
+            }
+          },
+          "open_minus_expiry": {
+            "n": 49,
+            "transitions": {
+              "correct": {
+                "correct": 30,
+                "wrong": 2,
+                "reject": 0
+              },
+              "wrong": {
+                "correct": 2,
+                "wrong": 11,
+                "reject": 0
+              },
+              "reject": {
+                "correct": 0,
+                "wrong": 0,
+                "reject": 4
+              }
+            },
+            "delta": {
+              "correct": 0,
+              "wrong": 0,
+              "reject": 0
+            }
+          },
+          "open_minus_birth": {
+            "n": 49,
+            "transitions": {
+              "correct": {
+                "correct": 30,
+                "wrong": 2,
+                "reject": 0
+              },
+              "wrong": {
+                "correct": 2,
+                "wrong": 11,
+                "reject": 0
+              },
+              "reject": {
+                "correct": 0,
+                "wrong": 0,
+                "reject": 4
+              }
+            },
+            "delta": {
+              "correct": 0,
+              "wrong": 0,
+              "reject": 0
+            }
+          }
+        }
+      },
+      "birth_groups": {
+        "correct": {
+          "birth": {
+            "correct": 32,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 1232,
+            "in_gate_pairs": 244,
+            "true_opportunity": 32,
+            "true_in_gate": 32,
+            "false_in_gate": 25,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "expiry": {
+            "correct": 32,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 1230,
+            "in_gate_pairs": 243,
+            "true_opportunity": 32,
+            "true_in_gate": 32,
+            "false_in_gate": 25,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "query": {
+            "correct": 30,
+            "wrong": 2,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 1230,
+            "in_gate_pairs": 246,
+            "true_opportunity": 32,
+            "true_in_gate": 32,
+            "false_in_gate": 25,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "peer_freshness": {
+            "correct": 30,
+            "wrong": 2,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 1230,
+            "in_gate_pairs": 246,
+            "true_opportunity": 32,
+            "true_in_gate": 32,
+            "false_in_gate": 25,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "peer_position": {
+            "correct": 30,
+            "wrong": 2,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 1230,
+            "in_gate_pairs": 243,
+            "true_opportunity": 32,
+            "true_in_gate": 32,
+            "false_in_gate": 25,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "open": {
+            "correct": 30,
+            "wrong": 2,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 1230,
+            "in_gate_pairs": 243,
+            "true_opportunity": 32,
+            "true_in_gate": 32,
+            "false_in_gate": 25,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          }
+        },
+        "wrong_true_in_gate": {
+          "birth": {
+            "correct": 0,
+            "wrong": 7,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 272,
+            "in_gate_pairs": 95,
+            "true_opportunity": 7,
+            "true_in_gate": 7,
+            "false_in_gate": 7,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "expiry": {
+            "correct": 0,
+            "wrong": 7,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 272,
+            "in_gate_pairs": 95,
+            "true_opportunity": 7,
+            "true_in_gate": 7,
+            "false_in_gate": 7,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "query": {
+            "correct": 1,
+            "wrong": 6,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 272,
+            "in_gate_pairs": 93,
+            "true_opportunity": 7,
+            "true_in_gate": 7,
+            "false_in_gate": 7,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "peer_freshness": {
+            "correct": 1,
+            "wrong": 6,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 272,
+            "in_gate_pairs": 93,
+            "true_opportunity": 7,
+            "true_in_gate": 7,
+            "false_in_gate": 7,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "peer_position": {
+            "correct": 2,
+            "wrong": 5,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 272,
+            "in_gate_pairs": 96,
+            "true_opportunity": 7,
+            "true_in_gate": 7,
+            "false_in_gate": 7,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "open": {
+            "correct": 2,
+            "wrong": 5,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 272,
+            "in_gate_pairs": 96,
+            "true_opportunity": 7,
+            "true_in_gate": 7,
+            "false_in_gate": 7,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          }
+        },
+        "wrong_true_only_outside_gate": {
+          "birth": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 0,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "expiry": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 0,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "query": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 0,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "peer_freshness": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 0,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "peer_position": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 0,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "open": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 0,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          }
+        },
+        "wrong_no_fresh_true": {
+          "birth": {
+            "correct": 0,
+            "wrong": 6,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 201,
+            "in_gate_pairs": 28,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 6,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "expiry": {
+            "correct": 0,
+            "wrong": 6,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 201,
+            "in_gate_pairs": 28,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 6,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "query": {
+            "correct": 0,
+            "wrong": 6,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 201,
+            "in_gate_pairs": 27,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 6,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "peer_freshness": {
+            "correct": 0,
+            "wrong": 6,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 201,
+            "in_gate_pairs": 27,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 6,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "peer_position": {
+            "correct": 0,
+            "wrong": 6,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 201,
+            "in_gate_pairs": 27,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 6,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "open": {
+            "correct": 0,
+            "wrong": 6,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 202,
+            "in_gate_pairs": 27,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 6,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          }
+        },
+        "reject": {
+          "birth": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 4,
+            "no_decision": 0,
+            "candidate_pairs": 144,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 4,
+            "nearest_exact_ties": 0
+          },
+          "expiry": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 4,
+            "no_decision": 0,
+            "candidate_pairs": 144,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 4,
+            "nearest_exact_ties": 0
+          },
+          "query": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 4,
+            "no_decision": 0,
+            "candidate_pairs": 144,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 4,
+            "nearest_exact_ties": 0
+          },
+          "peer_freshness": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 4,
+            "no_decision": 0,
+            "candidate_pairs": 144,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 4,
+            "nearest_exact_ties": 0
+          },
+          "peer_position": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 4,
+            "no_decision": 0,
+            "candidate_pairs": 144,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 4,
+            "nearest_exact_ties": 0
+          },
+          "open": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 4,
+            "no_decision": 0,
+            "candidate_pairs": 144,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 4,
+            "nearest_exact_ties": 0
+          }
+        }
+      },
+      "wrong_no_fresh_at_birth": {
+        "prior_seen_stale": {
+          "population": {
+            "births": 1,
+            "returned": 1,
+            "timeout": 0,
+            "right_censored": 0
+          },
+          "open": {
+            "correct": 0,
+            "wrong": 1,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 31,
+            "in_gate_pairs": 12,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 1,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "entrants": {
+            "renewed": {
+              "births_with_keys": 0,
+              "births_with_true_keys": 0,
+              "births_with_true_in_gate_keys": 0,
+              "keys": 0,
+              "true_keys": 0,
+              "in_gate_keys": 0,
+              "true_in_gate_keys": 0,
+              "selected_true": 0,
+              "selected_wrong": 0,
+              "first_true_report_after_birth_seconds": {
+                "n": 0,
+                "min": null,
+                "median": null,
+                "p95": null,
+                "max": null
+              }
+            },
+            "unseen": {
+              "births_with_keys": 0,
+              "births_with_true_keys": 0,
+              "births_with_true_in_gate_keys": 0,
+              "keys": 0,
+              "true_keys": 0,
+              "in_gate_keys": 0,
+              "true_in_gate_keys": 0,
+              "selected_true": 0,
+              "selected_wrong": 0,
+              "first_true_report_after_birth_seconds": {
+                "n": 0,
+                "min": null,
+                "median": null,
+                "p95": null,
+                "max": null
+              }
+            }
+          },
+          "first_recovered_true_report_after_birth_seconds": {
+            "n": 0,
+            "min": null,
+            "median": null,
+            "p95": null,
+            "max": null
+          }
+        },
+        "never_seen": {
+          "population": {
+            "births": 5,
+            "returned": 5,
+            "timeout": 0,
+            "right_censored": 0
+          },
+          "open": {
+            "correct": 0,
+            "wrong": 5,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 171,
+            "in_gate_pairs": 15,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 5,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "entrants": {
+            "renewed": {
+              "births_with_keys": 0,
+              "births_with_true_keys": 0,
+              "births_with_true_in_gate_keys": 0,
+              "keys": 0,
+              "true_keys": 0,
+              "in_gate_keys": 0,
+              "true_in_gate_keys": 0,
+              "selected_true": 0,
+              "selected_wrong": 0,
+              "first_true_report_after_birth_seconds": {
+                "n": 0,
+                "min": null,
+                "median": null,
+                "p95": null,
+                "max": null
+              }
+            },
+            "unseen": {
+              "births_with_keys": 1,
+              "births_with_true_keys": 0,
+              "births_with_true_in_gate_keys": 0,
+              "keys": 1,
+              "true_keys": 0,
+              "in_gate_keys": 0,
+              "true_in_gate_keys": 0,
+              "selected_true": 0,
+              "selected_wrong": 0,
+              "first_true_report_after_birth_seconds": {
+                "n": 0,
+                "min": null,
+                "median": null,
+                "p95": null,
+                "max": null
+              }
+            }
+          },
+          "first_recovered_true_report_after_birth_seconds": {
+            "n": 0,
+            "min": null,
+            "median": null,
+            "p95": null,
+            "max": null
+          }
+        }
+      },
+      "open_entrants": {
+        "renewed": {
+          "births_with_keys": 0,
+          "births_with_true_keys": 0,
+          "births_with_true_in_gate_keys": 0,
+          "keys": 0,
+          "true_keys": 0,
+          "in_gate_keys": 0,
+          "true_in_gate_keys": 0,
+          "selected_true": 0,
+          "selected_wrong": 0,
+          "first_true_report_after_birth_seconds": {
+            "n": 0,
+            "min": null,
+            "median": null,
+            "p95": null,
+            "max": null
+          }
+        },
+        "unseen": {
+          "births_with_keys": 1,
+          "births_with_true_keys": 0,
+          "births_with_true_in_gate_keys": 0,
+          "keys": 1,
+          "true_keys": 0,
+          "in_gate_keys": 0,
+          "true_in_gate_keys": 0,
+          "selected_true": 0,
+          "selected_wrong": 0,
+          "first_true_report_after_birth_seconds": {
+            "n": 0,
+            "min": null,
+            "median": null,
+            "p95": null,
+            "max": null
+          }
+        }
+      },
+      "waiting": {
+        "seconds": {
+          "n": 49,
+          "min": 10.013999938964844,
+          "median": 10.039999961853027,
+          "p95": 20.2739999294281,
+          "max": 20.526000022888184
+        },
+        "grid_seconds": {
+          "n": 49,
+          "min": 10,
+          "median": 10,
+          "p95": 21,
+          "max": 21
+        }
+      },
+      "fit": {
+        "status": "fitted",
+        "reason": null
+      }
+    },
+    "3": {
+      "population": {
+        "births": 219,
+        "returned": 219,
+        "timeout": 0,
+        "right_censored": 0
+      },
+      "whole": {
+        "birth": {
+          "correct": 158,
+          "wrong": 46,
+          "reject": 15,
+          "no_decision": 0,
+          "candidate_pairs": 28590,
+          "in_gate_pairs": 747,
+          "true_opportunity": 169,
+          "true_in_gate": 168,
+          "false_in_gate": 166,
+          "no_candidate_in_gate": 15,
+          "nearest_exact_ties": 0
+        },
+        "expiry": {
+          "correct": 156,
+          "wrong": 47,
+          "reject": 16,
+          "no_decision": 0,
+          "candidate_pairs": 28450,
+          "in_gate_pairs": 743,
+          "true_opportunity": 166,
+          "true_in_gate": 165,
+          "false_in_gate": 166,
+          "no_candidate_in_gate": 16,
+          "nearest_exact_ties": 0
+        },
+        "query": {
+          "correct": 152,
+          "wrong": 52,
+          "reject": 15,
+          "no_decision": 0,
+          "candidate_pairs": 28450,
+          "in_gate_pairs": 752,
+          "true_opportunity": 166,
+          "true_in_gate": 165,
+          "false_in_gate": 169,
+          "no_candidate_in_gate": 15,
+          "nearest_exact_ties": 0
+        },
+        "peer_freshness": {
+          "correct": 152,
+          "wrong": 52,
+          "reject": 15,
+          "no_decision": 0,
+          "candidate_pairs": 28450,
+          "in_gate_pairs": 752,
+          "true_opportunity": 166,
+          "true_in_gate": 165,
+          "false_in_gate": 169,
+          "no_candidate_in_gate": 15,
+          "nearest_exact_ties": 0
+        },
+        "peer_position": {
+          "correct": 151,
+          "wrong": 53,
+          "reject": 15,
+          "no_decision": 0,
+          "candidate_pairs": 28450,
+          "in_gate_pairs": 758,
+          "true_opportunity": 166,
+          "true_in_gate": 166,
+          "false_in_gate": 171,
+          "no_candidate_in_gate": 15,
+          "nearest_exact_ties": 0
+        },
+        "open": {
+          "correct": 154,
+          "wrong": 51,
+          "reject": 14,
+          "no_decision": 0,
+          "candidate_pairs": 28505,
+          "in_gate_pairs": 761,
+          "true_opportunity": 169,
+          "true_in_gate": 169,
+          "false_in_gate": 171,
+          "no_candidate_in_gate": 14,
+          "nearest_exact_ties": 0
+        }
+      },
+      "paired": {
+        "n": 219,
+        "arms": {
+          "birth": {
+            "correct": 158,
+            "wrong": 46,
+            "reject": 15,
+            "no_decision": 0,
+            "candidate_pairs": 28590,
+            "in_gate_pairs": 747,
+            "true_opportunity": 169,
+            "true_in_gate": 168,
+            "false_in_gate": 166,
+            "no_candidate_in_gate": 15,
+            "nearest_exact_ties": 0
+          },
+          "expiry": {
+            "correct": 156,
+            "wrong": 47,
+            "reject": 16,
+            "no_decision": 0,
+            "candidate_pairs": 28450,
+            "in_gate_pairs": 743,
+            "true_opportunity": 166,
+            "true_in_gate": 165,
+            "false_in_gate": 166,
+            "no_candidate_in_gate": 16,
+            "nearest_exact_ties": 0
+          },
+          "query": {
+            "correct": 152,
+            "wrong": 52,
+            "reject": 15,
+            "no_decision": 0,
+            "candidate_pairs": 28450,
+            "in_gate_pairs": 752,
+            "true_opportunity": 166,
+            "true_in_gate": 165,
+            "false_in_gate": 169,
+            "no_candidate_in_gate": 15,
+            "nearest_exact_ties": 0
+          },
+          "peer_freshness": {
+            "correct": 152,
+            "wrong": 52,
+            "reject": 15,
+            "no_decision": 0,
+            "candidate_pairs": 28450,
+            "in_gate_pairs": 752,
+            "true_opportunity": 166,
+            "true_in_gate": 165,
+            "false_in_gate": 169,
+            "no_candidate_in_gate": 15,
+            "nearest_exact_ties": 0
+          },
+          "peer_position": {
+            "correct": 151,
+            "wrong": 53,
+            "reject": 15,
+            "no_decision": 0,
+            "candidate_pairs": 28450,
+            "in_gate_pairs": 758,
+            "true_opportunity": 166,
+            "true_in_gate": 166,
+            "false_in_gate": 171,
+            "no_candidate_in_gate": 15,
+            "nearest_exact_ties": 0
+          },
+          "open": {
+            "correct": 154,
+            "wrong": 51,
+            "reject": 14,
+            "no_decision": 0,
+            "candidate_pairs": 28505,
+            "in_gate_pairs": 761,
+            "true_opportunity": 169,
+            "true_in_gate": 169,
+            "false_in_gate": 171,
+            "no_candidate_in_gate": 14,
+            "nearest_exact_ties": 0
+          }
+        },
+        "comparisons": {
+          "expiry_minus_birth": {
+            "n": 219,
+            "transitions": {
+              "correct": {
+                "correct": 156,
+                "wrong": 1,
+                "reject": 1
+              },
+              "wrong": {
+                "correct": 0,
+                "wrong": 46,
+                "reject": 0
+              },
+              "reject": {
+                "correct": 0,
+                "wrong": 0,
+                "reject": 15
+              }
+            },
+            "delta": {
+              "correct": -2,
+              "wrong": 1,
+              "reject": 1
+            }
+          },
+          "query_minus_expiry": {
+            "n": 219,
+            "transitions": {
+              "correct": {
+                "correct": 149,
+                "wrong": 7,
+                "reject": 0
+              },
+              "wrong": {
+                "correct": 3,
+                "wrong": 44,
+                "reject": 0
+              },
+              "reject": {
+                "correct": 0,
+                "wrong": 1,
+                "reject": 15
+              }
+            },
+            "delta": {
+              "correct": -4,
+              "wrong": 5,
+              "reject": -1
+            }
+          },
+          "peer_freshness_minus_query": {
+            "n": 219,
+            "transitions": {
+              "correct": {
+                "correct": 152,
+                "wrong": 0,
+                "reject": 0
+              },
+              "wrong": {
+                "correct": 0,
+                "wrong": 52,
+                "reject": 0
+              },
+              "reject": {
+                "correct": 0,
+                "wrong": 0,
+                "reject": 15
+              }
+            },
+            "delta": {
+              "correct": 0,
+              "wrong": 0,
+              "reject": 0
+            }
+          },
+          "peer_position_minus_peer_freshness": {
+            "n": 219,
+            "transitions": {
+              "correct": {
+                "correct": 149,
+                "wrong": 3,
+                "reject": 0
+              },
+              "wrong": {
+                "correct": 2,
+                "wrong": 50,
+                "reject": 0
+              },
+              "reject": {
+                "correct": 0,
+                "wrong": 0,
+                "reject": 15
+              }
+            },
+            "delta": {
+              "correct": -1,
+              "wrong": 1,
+              "reject": 0
+            }
+          },
+          "open_minus_peer_position": {
+            "n": 219,
+            "transitions": {
+              "correct": {
+                "correct": 151,
+                "wrong": 0,
+                "reject": 0
+              },
+              "wrong": {
+                "correct": 2,
+                "wrong": 51,
+                "reject": 0
+              },
+              "reject": {
+                "correct": 1,
+                "wrong": 0,
+                "reject": 14
+              }
+            },
+            "delta": {
+              "correct": 3,
+              "wrong": -2,
+              "reject": -1
+            }
+          },
+          "open_minus_expiry": {
+            "n": 219,
+            "transitions": {
+              "correct": {
+                "correct": 147,
+                "wrong": 9,
+                "reject": 0
+              },
+              "wrong": {
+                "correct": 6,
+                "wrong": 41,
+                "reject": 0
+              },
+              "reject": {
+                "correct": 1,
+                "wrong": 1,
+                "reject": 14
+              }
+            },
+            "delta": {
+              "correct": -2,
+              "wrong": 4,
+              "reject": -2
+            }
+          },
+          "open_minus_birth": {
+            "n": 219,
+            "transitions": {
+              "correct": {
+                "correct": 147,
+                "wrong": 10,
+                "reject": 1
+              },
+              "wrong": {
+                "correct": 6,
+                "wrong": 40,
+                "reject": 0
+              },
+              "reject": {
+                "correct": 1,
+                "wrong": 1,
+                "reject": 13
+              }
+            },
+            "delta": {
+              "correct": -4,
+              "wrong": 5,
+              "reject": -1
+            }
+          }
+        }
+      },
+      "birth_groups": {
+        "correct": {
+          "birth": {
+            "correct": 158,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 21170,
+            "in_gate_pairs": 582,
+            "true_opportunity": 158,
+            "true_in_gate": 158,
+            "false_in_gate": 120,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "expiry": {
+            "correct": 156,
+            "wrong": 1,
+            "reject": 1,
+            "no_decision": 0,
+            "candidate_pairs": 21057,
+            "in_gate_pairs": 579,
+            "true_opportunity": 156,
+            "true_in_gate": 156,
+            "false_in_gate": 120,
+            "no_candidate_in_gate": 1,
+            "nearest_exact_ties": 0
+          },
+          "query": {
+            "correct": 149,
+            "wrong": 8,
+            "reject": 1,
+            "no_decision": 0,
+            "candidate_pairs": 21057,
+            "in_gate_pairs": 582,
+            "true_opportunity": 156,
+            "true_in_gate": 156,
+            "false_in_gate": 122,
+            "no_candidate_in_gate": 1,
+            "nearest_exact_ties": 0
+          },
+          "peer_freshness": {
+            "correct": 149,
+            "wrong": 8,
+            "reject": 1,
+            "no_decision": 0,
+            "candidate_pairs": 21057,
+            "in_gate_pairs": 582,
+            "true_opportunity": 156,
+            "true_in_gate": 156,
+            "false_in_gate": 122,
+            "no_candidate_in_gate": 1,
+            "nearest_exact_ties": 0
+          },
+          "peer_position": {
+            "correct": 147,
+            "wrong": 10,
+            "reject": 1,
+            "no_decision": 0,
+            "candidate_pairs": 21057,
+            "in_gate_pairs": 587,
+            "true_opportunity": 156,
+            "true_in_gate": 156,
+            "false_in_gate": 124,
+            "no_candidate_in_gate": 1,
+            "nearest_exact_ties": 0
+          },
+          "open": {
+            "correct": 147,
+            "wrong": 10,
+            "reject": 1,
+            "no_decision": 0,
+            "candidate_pairs": 21098,
+            "in_gate_pairs": 587,
+            "true_opportunity": 156,
+            "true_in_gate": 156,
+            "false_in_gate": 124,
+            "no_candidate_in_gate": 1,
+            "nearest_exact_ties": 0
+          }
+        },
+        "wrong_true_in_gate": {
+          "birth": {
+            "correct": 0,
+            "wrong": 10,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 1410,
+            "in_gate_pairs": 45,
+            "true_opportunity": 10,
+            "true_in_gate": 10,
+            "false_in_gate": 10,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "expiry": {
+            "correct": 0,
+            "wrong": 10,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 1405,
+            "in_gate_pairs": 44,
+            "true_opportunity": 9,
+            "true_in_gate": 9,
+            "false_in_gate": 10,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "query": {
+            "correct": 3,
+            "wrong": 7,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 1405,
+            "in_gate_pairs": 46,
+            "true_opportunity": 9,
+            "true_in_gate": 9,
+            "false_in_gate": 10,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "peer_freshness": {
+            "correct": 3,
+            "wrong": 7,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 1405,
+            "in_gate_pairs": 46,
+            "true_opportunity": 9,
+            "true_in_gate": 9,
+            "false_in_gate": 10,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "peer_position": {
+            "correct": 4,
+            "wrong": 6,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 1405,
+            "in_gate_pairs": 47,
+            "true_opportunity": 9,
+            "true_in_gate": 9,
+            "false_in_gate": 10,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "open": {
+            "correct": 4,
+            "wrong": 6,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 1408,
+            "in_gate_pairs": 47,
+            "true_opportunity": 9,
+            "true_in_gate": 9,
+            "false_in_gate": 10,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          }
+        },
+        "wrong_true_only_outside_gate": {
+          "birth": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 0,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "expiry": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 0,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "query": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 0,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "peer_freshness": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 0,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "peer_position": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 0,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "open": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 0,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          }
+        },
+        "wrong_no_fresh_true": {
+          "birth": {
+            "correct": 0,
+            "wrong": 36,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 4242,
+            "in_gate_pairs": 120,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 36,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "expiry": {
+            "correct": 0,
+            "wrong": 36,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 4224,
+            "in_gate_pairs": 120,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 36,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "query": {
+            "correct": 0,
+            "wrong": 36,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 4224,
+            "in_gate_pairs": 120,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 36,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "peer_freshness": {
+            "correct": 0,
+            "wrong": 36,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 4224,
+            "in_gate_pairs": 120,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 36,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "peer_position": {
+            "correct": 0,
+            "wrong": 36,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 4224,
+            "in_gate_pairs": 119,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 36,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "open": {
+            "correct": 2,
+            "wrong": 34,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 4233,
+            "in_gate_pairs": 121,
+            "true_opportunity": 2,
+            "true_in_gate": 2,
+            "false_in_gate": 36,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          }
+        },
+        "reject": {
+          "birth": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 15,
+            "no_decision": 0,
+            "candidate_pairs": 1768,
+            "in_gate_pairs": 0,
+            "true_opportunity": 1,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 15,
+            "nearest_exact_ties": 0
+          },
+          "expiry": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 15,
+            "no_decision": 0,
+            "candidate_pairs": 1764,
+            "in_gate_pairs": 0,
+            "true_opportunity": 1,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 15,
+            "nearest_exact_ties": 0
+          },
+          "query": {
+            "correct": 0,
+            "wrong": 1,
+            "reject": 14,
+            "no_decision": 0,
+            "candidate_pairs": 1764,
+            "in_gate_pairs": 4,
+            "true_opportunity": 1,
+            "true_in_gate": 0,
+            "false_in_gate": 1,
+            "no_candidate_in_gate": 14,
+            "nearest_exact_ties": 0
+          },
+          "peer_freshness": {
+            "correct": 0,
+            "wrong": 1,
+            "reject": 14,
+            "no_decision": 0,
+            "candidate_pairs": 1764,
+            "in_gate_pairs": 4,
+            "true_opportunity": 1,
+            "true_in_gate": 0,
+            "false_in_gate": 1,
+            "no_candidate_in_gate": 14,
+            "nearest_exact_ties": 0
+          },
+          "peer_position": {
+            "correct": 0,
+            "wrong": 1,
+            "reject": 14,
+            "no_decision": 0,
+            "candidate_pairs": 1764,
+            "in_gate_pairs": 5,
+            "true_opportunity": 1,
+            "true_in_gate": 1,
+            "false_in_gate": 1,
+            "no_candidate_in_gate": 14,
+            "nearest_exact_ties": 0
+          },
+          "open": {
+            "correct": 1,
+            "wrong": 1,
+            "reject": 13,
+            "no_decision": 0,
+            "candidate_pairs": 1766,
+            "in_gate_pairs": 6,
+            "true_opportunity": 2,
+            "true_in_gate": 2,
+            "false_in_gate": 1,
+            "no_candidate_in_gate": 13,
+            "nearest_exact_ties": 0
+          }
+        }
+      },
+      "wrong_no_fresh_at_birth": {
+        "prior_seen_stale": {
+          "population": {
+            "births": 13,
+            "returned": 13,
+            "timeout": 0,
+            "right_censored": 0
+          },
+          "open": {
+            "correct": 2,
+            "wrong": 11,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 1767,
+            "in_gate_pairs": 39,
+            "true_opportunity": 2,
+            "true_in_gate": 2,
+            "false_in_gate": 13,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "entrants": {
+            "renewed": {
+              "births_with_keys": 0,
+              "births_with_true_keys": 0,
+              "births_with_true_in_gate_keys": 0,
+              "keys": 0,
+              "true_keys": 0,
+              "in_gate_keys": 0,
+              "true_in_gate_keys": 0,
+              "selected_true": 0,
+              "selected_wrong": 0,
+              "first_true_report_after_birth_seconds": {
+                "n": 0,
+                "min": null,
+                "median": null,
+                "p95": null,
+                "max": null
+              }
+            },
+            "unseen": {
+              "births_with_keys": 4,
+              "births_with_true_keys": 2,
+              "births_with_true_in_gate_keys": 2,
+              "keys": 5,
+              "true_keys": 2,
+              "in_gate_keys": 2,
+              "true_in_gate_keys": 2,
+              "selected_true": 2,
+              "selected_wrong": 0,
+              "first_true_report_after_birth_seconds": {
+                "n": 2,
+                "min": 14.240000009536743,
+                "median": 14.828500032424927,
+                "p95": 15.41700005531311,
+                "max": 15.41700005531311
+              }
+            }
+          },
+          "first_recovered_true_report_after_birth_seconds": {
+            "n": 2,
+            "min": 14.240000009536743,
+            "median": 14.828500032424927,
+            "p95": 15.41700005531311,
+            "max": 15.41700005531311
+          }
+        },
+        "never_seen": {
+          "population": {
+            "births": 23,
+            "returned": 23,
+            "timeout": 0,
+            "right_censored": 0
+          },
+          "open": {
+            "correct": 0,
+            "wrong": 23,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 2466,
+            "in_gate_pairs": 82,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 23,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "entrants": {
+            "renewed": {
+              "births_with_keys": 0,
+              "births_with_true_keys": 0,
+              "births_with_true_in_gate_keys": 0,
+              "keys": 0,
+              "true_keys": 0,
+              "in_gate_keys": 0,
+              "true_in_gate_keys": 0,
+              "selected_true": 0,
+              "selected_wrong": 0,
+              "first_true_report_after_birth_seconds": {
+                "n": 0,
+                "min": null,
+                "median": null,
+                "p95": null,
+                "max": null
+              }
+            },
+            "unseen": {
+              "births_with_keys": 3,
+              "births_with_true_keys": 0,
+              "births_with_true_in_gate_keys": 0,
+              "keys": 4,
+              "true_keys": 0,
+              "in_gate_keys": 0,
+              "true_in_gate_keys": 0,
+              "selected_true": 0,
+              "selected_wrong": 0,
+              "first_true_report_after_birth_seconds": {
+                "n": 0,
+                "min": null,
+                "median": null,
+                "p95": null,
+                "max": null
+              }
+            }
+          },
+          "first_recovered_true_report_after_birth_seconds": {
+            "n": 0,
+            "min": null,
+            "median": null,
+            "p95": null,
+            "max": null
+          }
+        }
+      },
+      "open_entrants": {
+        "renewed": {
+          "births_with_keys": 0,
+          "births_with_true_keys": 0,
+          "births_with_true_in_gate_keys": 0,
+          "keys": 0,
+          "true_keys": 0,
+          "in_gate_keys": 0,
+          "true_in_gate_keys": 0,
+          "selected_true": 0,
+          "selected_wrong": 0,
+          "first_true_report_after_birth_seconds": {
+            "n": 0,
+            "min": null,
+            "median": null,
+            "p95": null,
+            "max": null
+          }
+        },
+        "unseen": {
+          "births_with_keys": 45,
+          "births_with_true_keys": 3,
+          "births_with_true_in_gate_keys": 3,
+          "keys": 55,
+          "true_keys": 3,
+          "in_gate_keys": 3,
+          "true_in_gate_keys": 3,
+          "selected_true": 3,
+          "selected_wrong": 0,
+          "first_true_report_after_birth_seconds": {
+            "n": 3,
+            "min": 3.61899995803833,
+            "median": 14.240000009536743,
+            "p95": 15.41700005531311,
+            "max": 15.41700005531311
+          }
+        }
+      },
+      "waiting": {
+        "seconds": {
+          "n": 219,
+          "min": 10.013999938964844,
+          "median": 10.080999851226807,
+          "p95": 20.282000064849854,
+          "max": 20.57100009918213
+        },
+        "grid_seconds": {
+          "n": 219,
+          "min": 10,
+          "median": 10,
+          "p95": 21,
+          "max": 21
+        }
+      },
+      "fit": {
+        "status": "fitted",
+        "reason": null
+      }
+    },
+    "7": {
+      "population": {
+        "births": 11,
+        "returned": 11,
+        "timeout": 0,
+        "right_censored": 0
+      },
+      "whole": {
+        "birth": {
+          "correct": 8,
+          "wrong": 0,
+          "reject": 3,
+          "no_decision": 0,
+          "candidate_pairs": 58,
+          "in_gate_pairs": 9,
+          "true_opportunity": 8,
+          "true_in_gate": 8,
+          "false_in_gate": 1,
+          "no_candidate_in_gate": 3,
+          "nearest_exact_ties": 0
+        },
+        "expiry": {
+          "correct": 8,
+          "wrong": 0,
+          "reject": 3,
+          "no_decision": 0,
+          "candidate_pairs": 58,
+          "in_gate_pairs": 9,
+          "true_opportunity": 8,
+          "true_in_gate": 8,
+          "false_in_gate": 1,
+          "no_candidate_in_gate": 3,
+          "nearest_exact_ties": 0
+        },
+        "query": {
+          "correct": 8,
+          "wrong": 0,
+          "reject": 3,
+          "no_decision": 0,
+          "candidate_pairs": 58,
+          "in_gate_pairs": 9,
+          "true_opportunity": 8,
+          "true_in_gate": 8,
+          "false_in_gate": 1,
+          "no_candidate_in_gate": 3,
+          "nearest_exact_ties": 0
+        },
+        "peer_freshness": {
+          "correct": 8,
+          "wrong": 0,
+          "reject": 3,
+          "no_decision": 0,
+          "candidate_pairs": 58,
+          "in_gate_pairs": 9,
+          "true_opportunity": 8,
+          "true_in_gate": 8,
+          "false_in_gate": 1,
+          "no_candidate_in_gate": 3,
+          "nearest_exact_ties": 0
+        },
+        "peer_position": {
+          "correct": 8,
+          "wrong": 0,
+          "reject": 3,
+          "no_decision": 0,
+          "candidate_pairs": 58,
+          "in_gate_pairs": 9,
+          "true_opportunity": 8,
+          "true_in_gate": 8,
+          "false_in_gate": 1,
+          "no_candidate_in_gate": 3,
+          "nearest_exact_ties": 0
+        },
+        "open": {
+          "correct": 8,
+          "wrong": 0,
+          "reject": 3,
+          "no_decision": 0,
+          "candidate_pairs": 58,
+          "in_gate_pairs": 9,
+          "true_opportunity": 8,
+          "true_in_gate": 8,
+          "false_in_gate": 1,
+          "no_candidate_in_gate": 3,
+          "nearest_exact_ties": 0
+        }
+      },
+      "paired": {
+        "n": 11,
+        "arms": {
+          "birth": {
+            "correct": 8,
+            "wrong": 0,
+            "reject": 3,
+            "no_decision": 0,
+            "candidate_pairs": 58,
+            "in_gate_pairs": 9,
+            "true_opportunity": 8,
+            "true_in_gate": 8,
+            "false_in_gate": 1,
+            "no_candidate_in_gate": 3,
+            "nearest_exact_ties": 0
+          },
+          "expiry": {
+            "correct": 8,
+            "wrong": 0,
+            "reject": 3,
+            "no_decision": 0,
+            "candidate_pairs": 58,
+            "in_gate_pairs": 9,
+            "true_opportunity": 8,
+            "true_in_gate": 8,
+            "false_in_gate": 1,
+            "no_candidate_in_gate": 3,
+            "nearest_exact_ties": 0
+          },
+          "query": {
+            "correct": 8,
+            "wrong": 0,
+            "reject": 3,
+            "no_decision": 0,
+            "candidate_pairs": 58,
+            "in_gate_pairs": 9,
+            "true_opportunity": 8,
+            "true_in_gate": 8,
+            "false_in_gate": 1,
+            "no_candidate_in_gate": 3,
+            "nearest_exact_ties": 0
+          },
+          "peer_freshness": {
+            "correct": 8,
+            "wrong": 0,
+            "reject": 3,
+            "no_decision": 0,
+            "candidate_pairs": 58,
+            "in_gate_pairs": 9,
+            "true_opportunity": 8,
+            "true_in_gate": 8,
+            "false_in_gate": 1,
+            "no_candidate_in_gate": 3,
+            "nearest_exact_ties": 0
+          },
+          "peer_position": {
+            "correct": 8,
+            "wrong": 0,
+            "reject": 3,
+            "no_decision": 0,
+            "candidate_pairs": 58,
+            "in_gate_pairs": 9,
+            "true_opportunity": 8,
+            "true_in_gate": 8,
+            "false_in_gate": 1,
+            "no_candidate_in_gate": 3,
+            "nearest_exact_ties": 0
+          },
+          "open": {
+            "correct": 8,
+            "wrong": 0,
+            "reject": 3,
+            "no_decision": 0,
+            "candidate_pairs": 58,
+            "in_gate_pairs": 9,
+            "true_opportunity": 8,
+            "true_in_gate": 8,
+            "false_in_gate": 1,
+            "no_candidate_in_gate": 3,
+            "nearest_exact_ties": 0
+          }
+        },
+        "comparisons": {
+          "expiry_minus_birth": {
+            "n": 11,
+            "transitions": {
+              "correct": {
+                "correct": 8,
+                "wrong": 0,
+                "reject": 0
+              },
+              "wrong": {
+                "correct": 0,
+                "wrong": 0,
+                "reject": 0
+              },
+              "reject": {
+                "correct": 0,
+                "wrong": 0,
+                "reject": 3
+              }
+            },
+            "delta": {
+              "correct": 0,
+              "wrong": 0,
+              "reject": 0
+            }
+          },
+          "query_minus_expiry": {
+            "n": 11,
+            "transitions": {
+              "correct": {
+                "correct": 8,
+                "wrong": 0,
+                "reject": 0
+              },
+              "wrong": {
+                "correct": 0,
+                "wrong": 0,
+                "reject": 0
+              },
+              "reject": {
+                "correct": 0,
+                "wrong": 0,
+                "reject": 3
+              }
+            },
+            "delta": {
+              "correct": 0,
+              "wrong": 0,
+              "reject": 0
+            }
+          },
+          "peer_freshness_minus_query": {
+            "n": 11,
+            "transitions": {
+              "correct": {
+                "correct": 8,
+                "wrong": 0,
+                "reject": 0
+              },
+              "wrong": {
+                "correct": 0,
+                "wrong": 0,
+                "reject": 0
+              },
+              "reject": {
+                "correct": 0,
+                "wrong": 0,
+                "reject": 3
+              }
+            },
+            "delta": {
+              "correct": 0,
+              "wrong": 0,
+              "reject": 0
+            }
+          },
+          "peer_position_minus_peer_freshness": {
+            "n": 11,
+            "transitions": {
+              "correct": {
+                "correct": 8,
+                "wrong": 0,
+                "reject": 0
+              },
+              "wrong": {
+                "correct": 0,
+                "wrong": 0,
+                "reject": 0
+              },
+              "reject": {
+                "correct": 0,
+                "wrong": 0,
+                "reject": 3
+              }
+            },
+            "delta": {
+              "correct": 0,
+              "wrong": 0,
+              "reject": 0
+            }
+          },
+          "open_minus_peer_position": {
+            "n": 11,
+            "transitions": {
+              "correct": {
+                "correct": 8,
+                "wrong": 0,
+                "reject": 0
+              },
+              "wrong": {
+                "correct": 0,
+                "wrong": 0,
+                "reject": 0
+              },
+              "reject": {
+                "correct": 0,
+                "wrong": 0,
+                "reject": 3
+              }
+            },
+            "delta": {
+              "correct": 0,
+              "wrong": 0,
+              "reject": 0
+            }
+          },
+          "open_minus_expiry": {
+            "n": 11,
+            "transitions": {
+              "correct": {
+                "correct": 8,
+                "wrong": 0,
+                "reject": 0
+              },
+              "wrong": {
+                "correct": 0,
+                "wrong": 0,
+                "reject": 0
+              },
+              "reject": {
+                "correct": 0,
+                "wrong": 0,
+                "reject": 3
+              }
+            },
+            "delta": {
+              "correct": 0,
+              "wrong": 0,
+              "reject": 0
+            }
+          },
+          "open_minus_birth": {
+            "n": 11,
+            "transitions": {
+              "correct": {
+                "correct": 8,
+                "wrong": 0,
+                "reject": 0
+              },
+              "wrong": {
+                "correct": 0,
+                "wrong": 0,
+                "reject": 0
+              },
+              "reject": {
+                "correct": 0,
+                "wrong": 0,
+                "reject": 3
+              }
+            },
+            "delta": {
+              "correct": 0,
+              "wrong": 0,
+              "reject": 0
+            }
+          }
+        }
+      },
+      "birth_groups": {
+        "correct": {
+          "birth": {
+            "correct": 8,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 46,
+            "in_gate_pairs": 9,
+            "true_opportunity": 8,
+            "true_in_gate": 8,
+            "false_in_gate": 1,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "expiry": {
+            "correct": 8,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 46,
+            "in_gate_pairs": 9,
+            "true_opportunity": 8,
+            "true_in_gate": 8,
+            "false_in_gate": 1,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "query": {
+            "correct": 8,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 46,
+            "in_gate_pairs": 9,
+            "true_opportunity": 8,
+            "true_in_gate": 8,
+            "false_in_gate": 1,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "peer_freshness": {
+            "correct": 8,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 46,
+            "in_gate_pairs": 9,
+            "true_opportunity": 8,
+            "true_in_gate": 8,
+            "false_in_gate": 1,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "peer_position": {
+            "correct": 8,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 46,
+            "in_gate_pairs": 9,
+            "true_opportunity": 8,
+            "true_in_gate": 8,
+            "false_in_gate": 1,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "open": {
+            "correct": 8,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 46,
+            "in_gate_pairs": 9,
+            "true_opportunity": 8,
+            "true_in_gate": 8,
+            "false_in_gate": 1,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          }
+        },
+        "wrong_true_in_gate": {
+          "birth": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 0,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "expiry": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 0,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "query": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 0,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "peer_freshness": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 0,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "peer_position": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 0,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "open": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 0,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          }
+        },
+        "wrong_true_only_outside_gate": {
+          "birth": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 0,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "expiry": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 0,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "query": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 0,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "peer_freshness": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 0,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "peer_position": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 0,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "open": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 0,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          }
+        },
+        "wrong_no_fresh_true": {
+          "birth": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 0,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "expiry": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 0,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "query": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 0,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "peer_freshness": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 0,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "peer_position": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 0,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "open": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 0,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          }
+        },
+        "reject": {
+          "birth": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 3,
+            "no_decision": 0,
+            "candidate_pairs": 12,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 3,
+            "nearest_exact_ties": 0
+          },
+          "expiry": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 3,
+            "no_decision": 0,
+            "candidate_pairs": 12,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 3,
+            "nearest_exact_ties": 0
+          },
+          "query": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 3,
+            "no_decision": 0,
+            "candidate_pairs": 12,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 3,
+            "nearest_exact_ties": 0
+          },
+          "peer_freshness": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 3,
+            "no_decision": 0,
+            "candidate_pairs": 12,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 3,
+            "nearest_exact_ties": 0
+          },
+          "peer_position": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 3,
+            "no_decision": 0,
+            "candidate_pairs": 12,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 3,
+            "nearest_exact_ties": 0
+          },
+          "open": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 3,
+            "no_decision": 0,
+            "candidate_pairs": 12,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 3,
+            "nearest_exact_ties": 0
+          }
+        }
+      },
+      "wrong_no_fresh_at_birth": {
+        "prior_seen_stale": {
+          "population": {
+            "births": 0,
+            "returned": 0,
+            "timeout": 0,
+            "right_censored": 0
+          },
+          "open": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 0,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "entrants": {
+            "renewed": {
+              "births_with_keys": 0,
+              "births_with_true_keys": 0,
+              "births_with_true_in_gate_keys": 0,
+              "keys": 0,
+              "true_keys": 0,
+              "in_gate_keys": 0,
+              "true_in_gate_keys": 0,
+              "selected_true": 0,
+              "selected_wrong": 0,
+              "first_true_report_after_birth_seconds": {
+                "n": 0,
+                "min": null,
+                "median": null,
+                "p95": null,
+                "max": null
+              }
+            },
+            "unseen": {
+              "births_with_keys": 0,
+              "births_with_true_keys": 0,
+              "births_with_true_in_gate_keys": 0,
+              "keys": 0,
+              "true_keys": 0,
+              "in_gate_keys": 0,
+              "true_in_gate_keys": 0,
+              "selected_true": 0,
+              "selected_wrong": 0,
+              "first_true_report_after_birth_seconds": {
+                "n": 0,
+                "min": null,
+                "median": null,
+                "p95": null,
+                "max": null
+              }
+            }
+          },
+          "first_recovered_true_report_after_birth_seconds": {
+            "n": 0,
+            "min": null,
+            "median": null,
+            "p95": null,
+            "max": null
+          }
+        },
+        "never_seen": {
+          "population": {
+            "births": 0,
+            "returned": 0,
+            "timeout": 0,
+            "right_censored": 0
+          },
+          "open": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 0,
+            "no_decision": 0,
+            "candidate_pairs": 0,
+            "in_gate_pairs": 0,
+            "true_opportunity": 0,
+            "true_in_gate": 0,
+            "false_in_gate": 0,
+            "no_candidate_in_gate": 0,
+            "nearest_exact_ties": 0
+          },
+          "entrants": {
+            "renewed": {
+              "births_with_keys": 0,
+              "births_with_true_keys": 0,
+              "births_with_true_in_gate_keys": 0,
+              "keys": 0,
+              "true_keys": 0,
+              "in_gate_keys": 0,
+              "true_in_gate_keys": 0,
+              "selected_true": 0,
+              "selected_wrong": 0,
+              "first_true_report_after_birth_seconds": {
+                "n": 0,
+                "min": null,
+                "median": null,
+                "p95": null,
+                "max": null
+              }
+            },
+            "unseen": {
+              "births_with_keys": 0,
+              "births_with_true_keys": 0,
+              "births_with_true_in_gate_keys": 0,
+              "keys": 0,
+              "true_keys": 0,
+              "in_gate_keys": 0,
+              "true_in_gate_keys": 0,
+              "selected_true": 0,
+              "selected_wrong": 0,
+              "first_true_report_after_birth_seconds": {
+                "n": 0,
+                "min": null,
+                "median": null,
+                "p95": null,
+                "max": null
+              }
+            }
+          },
+          "first_recovered_true_report_after_birth_seconds": {
+            "n": 0,
+            "min": null,
+            "median": null,
+            "p95": null,
+            "max": null
+          }
+        }
+      },
+      "open_entrants": {
+        "renewed": {
+          "births_with_keys": 0,
+          "births_with_true_keys": 0,
+          "births_with_true_in_gate_keys": 0,
+          "keys": 0,
+          "true_keys": 0,
+          "in_gate_keys": 0,
+          "true_in_gate_keys": 0,
+          "selected_true": 0,
+          "selected_wrong": 0,
+          "first_true_report_after_birth_seconds": {
+            "n": 0,
+            "min": null,
+            "median": null,
+            "p95": null,
+            "max": null
+          }
+        },
+        "unseen": {
+          "births_with_keys": 0,
+          "births_with_true_keys": 0,
+          "births_with_true_in_gate_keys": 0,
+          "keys": 0,
+          "true_keys": 0,
+          "in_gate_keys": 0,
+          "true_in_gate_keys": 0,
+          "selected_true": 0,
+          "selected_wrong": 0,
+          "first_true_report_after_birth_seconds": {
+            "n": 0,
+            "min": null,
+            "median": null,
+            "p95": null,
+            "max": null
+          }
+        }
+      },
+      "waiting": {
+        "seconds": {
+          "n": 11,
+          "min": 10.013999938964844,
+          "median": 10.08299994468689,
+          "p95": 20.555999994277954,
+          "max": 20.555999994277954
+        },
+        "grid_seconds": {
+          "n": 11,
+          "min": 10,
+          "median": 10,
+          "p95": 21,
+          "max": 21
+        }
+      },
+      "fit": {
+        "status": "fitted",
+        "reason": null
+      }
+    }
+  },
+  "aggregate": {
+    "population": {
+      "births": 279,
+      "returned": 279,
+      "timeout": 0,
+      "right_censored": 0
+    },
+    "whole": {
+      "birth": {
+        "correct": 198,
+        "wrong": 59,
+        "reject": 22,
+        "no_decision": 0,
+        "candidate_pairs": 30497,
+        "in_gate_pairs": 1123,
+        "true_opportunity": 216,
+        "true_in_gate": 215,
+        "false_in_gate": 205,
+        "no_candidate_in_gate": 22,
+        "nearest_exact_ties": 0
+      },
+      "expiry": {
+        "correct": 196,
+        "wrong": 60,
+        "reject": 23,
+        "no_decision": 0,
+        "candidate_pairs": 30355,
+        "in_gate_pairs": 1118,
+        "true_opportunity": 213,
+        "true_in_gate": 212,
+        "false_in_gate": 205,
+        "no_candidate_in_gate": 23,
+        "nearest_exact_ties": 0
+      },
+      "query": {
+        "correct": 191,
+        "wrong": 66,
+        "reject": 22,
+        "no_decision": 0,
+        "candidate_pairs": 30355,
+        "in_gate_pairs": 1127,
+        "true_opportunity": 213,
+        "true_in_gate": 212,
+        "false_in_gate": 208,
+        "no_candidate_in_gate": 22,
+        "nearest_exact_ties": 0
+      },
+      "peer_freshness": {
+        "correct": 191,
+        "wrong": 66,
+        "reject": 22,
+        "no_decision": 0,
+        "candidate_pairs": 30355,
+        "in_gate_pairs": 1127,
+        "true_opportunity": 213,
+        "true_in_gate": 212,
+        "false_in_gate": 208,
+        "no_candidate_in_gate": 22,
+        "nearest_exact_ties": 0
+      },
+      "peer_position": {
+        "correct": 191,
+        "wrong": 66,
+        "reject": 22,
+        "no_decision": 0,
+        "candidate_pairs": 30355,
+        "in_gate_pairs": 1133,
+        "true_opportunity": 213,
+        "true_in_gate": 213,
+        "false_in_gate": 210,
+        "no_candidate_in_gate": 22,
+        "nearest_exact_ties": 0
+      },
+      "open": {
+        "correct": 194,
+        "wrong": 64,
+        "reject": 21,
+        "no_decision": 0,
+        "candidate_pairs": 30411,
+        "in_gate_pairs": 1136,
+        "true_opportunity": 216,
+        "true_in_gate": 216,
+        "false_in_gate": 210,
+        "no_candidate_in_gate": 21,
+        "nearest_exact_ties": 0
+      }
+    },
+    "paired": {
+      "n": 279,
+      "arms": {
+        "birth": {
+          "correct": 198,
+          "wrong": 59,
+          "reject": 22,
+          "no_decision": 0,
+          "candidate_pairs": 30497,
+          "in_gate_pairs": 1123,
+          "true_opportunity": 216,
+          "true_in_gate": 215,
+          "false_in_gate": 205,
+          "no_candidate_in_gate": 22,
+          "nearest_exact_ties": 0
+        },
+        "expiry": {
+          "correct": 196,
+          "wrong": 60,
+          "reject": 23,
+          "no_decision": 0,
+          "candidate_pairs": 30355,
+          "in_gate_pairs": 1118,
+          "true_opportunity": 213,
+          "true_in_gate": 212,
+          "false_in_gate": 205,
+          "no_candidate_in_gate": 23,
+          "nearest_exact_ties": 0
+        },
+        "query": {
+          "correct": 191,
+          "wrong": 66,
+          "reject": 22,
+          "no_decision": 0,
+          "candidate_pairs": 30355,
+          "in_gate_pairs": 1127,
+          "true_opportunity": 213,
+          "true_in_gate": 212,
+          "false_in_gate": 208,
+          "no_candidate_in_gate": 22,
+          "nearest_exact_ties": 0
+        },
+        "peer_freshness": {
+          "correct": 191,
+          "wrong": 66,
+          "reject": 22,
+          "no_decision": 0,
+          "candidate_pairs": 30355,
+          "in_gate_pairs": 1127,
+          "true_opportunity": 213,
+          "true_in_gate": 212,
+          "false_in_gate": 208,
+          "no_candidate_in_gate": 22,
+          "nearest_exact_ties": 0
+        },
+        "peer_position": {
+          "correct": 191,
+          "wrong": 66,
+          "reject": 22,
+          "no_decision": 0,
+          "candidate_pairs": 30355,
+          "in_gate_pairs": 1133,
+          "true_opportunity": 213,
+          "true_in_gate": 213,
+          "false_in_gate": 210,
+          "no_candidate_in_gate": 22,
+          "nearest_exact_ties": 0
+        },
+        "open": {
+          "correct": 194,
+          "wrong": 64,
+          "reject": 21,
+          "no_decision": 0,
+          "candidate_pairs": 30411,
+          "in_gate_pairs": 1136,
+          "true_opportunity": 216,
+          "true_in_gate": 216,
+          "false_in_gate": 210,
+          "no_candidate_in_gate": 21,
+          "nearest_exact_ties": 0
+        }
+      },
+      "comparisons": {
+        "expiry_minus_birth": {
+          "n": 279,
+          "transitions": {
+            "correct": {
+              "correct": 196,
+              "wrong": 1,
+              "reject": 1
+            },
+            "wrong": {
+              "correct": 0,
+              "wrong": 59,
+              "reject": 0
+            },
+            "reject": {
+              "correct": 0,
+              "wrong": 0,
+              "reject": 22
+            }
+          },
+          "delta": {
+            "correct": -2,
+            "wrong": 1,
+            "reject": 1
+          }
+        },
+        "query_minus_expiry": {
+          "n": 279,
+          "transitions": {
+            "correct": {
+              "correct": 187,
+              "wrong": 9,
+              "reject": 0
+            },
+            "wrong": {
+              "correct": 4,
+              "wrong": 56,
+              "reject": 0
+            },
+            "reject": {
+              "correct": 0,
+              "wrong": 1,
+              "reject": 22
+            }
+          },
+          "delta": {
+            "correct": -5,
+            "wrong": 6,
+            "reject": -1
+          }
+        },
+        "peer_freshness_minus_query": {
+          "n": 279,
+          "transitions": {
+            "correct": {
+              "correct": 191,
+              "wrong": 0,
+              "reject": 0
+            },
+            "wrong": {
+              "correct": 0,
+              "wrong": 66,
+              "reject": 0
+            },
+            "reject": {
+              "correct": 0,
+              "wrong": 0,
+              "reject": 22
+            }
+          },
+          "delta": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 0
+          }
+        },
+        "peer_position_minus_peer_freshness": {
+          "n": 279,
+          "transitions": {
+            "correct": {
+              "correct": 187,
+              "wrong": 4,
+              "reject": 0
+            },
+            "wrong": {
+              "correct": 4,
+              "wrong": 62,
+              "reject": 0
+            },
+            "reject": {
+              "correct": 0,
+              "wrong": 0,
+              "reject": 22
+            }
+          },
+          "delta": {
+            "correct": 0,
+            "wrong": 0,
+            "reject": 0
+          }
+        },
+        "open_minus_peer_position": {
+          "n": 279,
+          "transitions": {
+            "correct": {
+              "correct": 191,
+              "wrong": 0,
+              "reject": 0
+            },
+            "wrong": {
+              "correct": 2,
+              "wrong": 64,
+              "reject": 0
+            },
+            "reject": {
+              "correct": 1,
+              "wrong": 0,
+              "reject": 21
+            }
+          },
+          "delta": {
+            "correct": 3,
+            "wrong": -2,
+            "reject": -1
+          }
+        },
+        "open_minus_expiry": {
+          "n": 279,
+          "transitions": {
+            "correct": {
+              "correct": 185,
+              "wrong": 11,
+              "reject": 0
+            },
+            "wrong": {
+              "correct": 8,
+              "wrong": 52,
+              "reject": 0
+            },
+            "reject": {
+              "correct": 1,
+              "wrong": 1,
+              "reject": 21
+            }
+          },
+          "delta": {
+            "correct": -2,
+            "wrong": 4,
+            "reject": -2
+          }
+        },
+        "open_minus_birth": {
+          "n": 279,
+          "transitions": {
+            "correct": {
+              "correct": 185,
+              "wrong": 12,
+              "reject": 1
+            },
+            "wrong": {
+              "correct": 8,
+              "wrong": 51,
+              "reject": 0
+            },
+            "reject": {
+              "correct": 1,
+              "wrong": 1,
+              "reject": 20
+            }
+          },
+          "delta": {
+            "correct": -4,
+            "wrong": 5,
+            "reject": -1
+          }
+        }
+      }
+    },
+    "birth_groups": {
+      "correct": {
+        "birth": {
+          "correct": 198,
+          "wrong": 0,
+          "reject": 0,
+          "no_decision": 0,
+          "candidate_pairs": 22448,
+          "in_gate_pairs": 835,
+          "true_opportunity": 198,
+          "true_in_gate": 198,
+          "false_in_gate": 146,
+          "no_candidate_in_gate": 0,
+          "nearest_exact_ties": 0
+        },
+        "expiry": {
+          "correct": 196,
+          "wrong": 1,
+          "reject": 1,
+          "no_decision": 0,
+          "candidate_pairs": 22333,
+          "in_gate_pairs": 831,
+          "true_opportunity": 196,
+          "true_in_gate": 196,
+          "false_in_gate": 146,
+          "no_candidate_in_gate": 1,
+          "nearest_exact_ties": 0
+        },
+        "query": {
+          "correct": 187,
+          "wrong": 10,
+          "reject": 1,
+          "no_decision": 0,
+          "candidate_pairs": 22333,
+          "in_gate_pairs": 837,
+          "true_opportunity": 196,
+          "true_in_gate": 196,
+          "false_in_gate": 148,
+          "no_candidate_in_gate": 1,
+          "nearest_exact_ties": 0
+        },
+        "peer_freshness": {
+          "correct": 187,
+          "wrong": 10,
+          "reject": 1,
+          "no_decision": 0,
+          "candidate_pairs": 22333,
+          "in_gate_pairs": 837,
+          "true_opportunity": 196,
+          "true_in_gate": 196,
+          "false_in_gate": 148,
+          "no_candidate_in_gate": 1,
+          "nearest_exact_ties": 0
+        },
+        "peer_position": {
+          "correct": 185,
+          "wrong": 12,
+          "reject": 1,
+          "no_decision": 0,
+          "candidate_pairs": 22333,
+          "in_gate_pairs": 839,
+          "true_opportunity": 196,
+          "true_in_gate": 196,
+          "false_in_gate": 150,
+          "no_candidate_in_gate": 1,
+          "nearest_exact_ties": 0
+        },
+        "open": {
+          "correct": 185,
+          "wrong": 12,
+          "reject": 1,
+          "no_decision": 0,
+          "candidate_pairs": 22374,
+          "in_gate_pairs": 839,
+          "true_opportunity": 196,
+          "true_in_gate": 196,
+          "false_in_gate": 150,
+          "no_candidate_in_gate": 1,
+          "nearest_exact_ties": 0
+        }
+      },
+      "wrong_true_in_gate": {
+        "birth": {
+          "correct": 0,
+          "wrong": 17,
+          "reject": 0,
+          "no_decision": 0,
+          "candidate_pairs": 1682,
+          "in_gate_pairs": 140,
+          "true_opportunity": 17,
+          "true_in_gate": 17,
+          "false_in_gate": 17,
+          "no_candidate_in_gate": 0,
+          "nearest_exact_ties": 0
+        },
+        "expiry": {
+          "correct": 0,
+          "wrong": 17,
+          "reject": 0,
+          "no_decision": 0,
+          "candidate_pairs": 1677,
+          "in_gate_pairs": 139,
+          "true_opportunity": 16,
+          "true_in_gate": 16,
+          "false_in_gate": 17,
+          "no_candidate_in_gate": 0,
+          "nearest_exact_ties": 0
+        },
+        "query": {
+          "correct": 4,
+          "wrong": 13,
+          "reject": 0,
+          "no_decision": 0,
+          "candidate_pairs": 1677,
+          "in_gate_pairs": 139,
+          "true_opportunity": 16,
+          "true_in_gate": 16,
+          "false_in_gate": 17,
+          "no_candidate_in_gate": 0,
+          "nearest_exact_ties": 0
+        },
+        "peer_freshness": {
+          "correct": 4,
+          "wrong": 13,
+          "reject": 0,
+          "no_decision": 0,
+          "candidate_pairs": 1677,
+          "in_gate_pairs": 139,
+          "true_opportunity": 16,
+          "true_in_gate": 16,
+          "false_in_gate": 17,
+          "no_candidate_in_gate": 0,
+          "nearest_exact_ties": 0
+        },
+        "peer_position": {
+          "correct": 6,
+          "wrong": 11,
+          "reject": 0,
+          "no_decision": 0,
+          "candidate_pairs": 1677,
+          "in_gate_pairs": 143,
+          "true_opportunity": 16,
+          "true_in_gate": 16,
+          "false_in_gate": 17,
+          "no_candidate_in_gate": 0,
+          "nearest_exact_ties": 0
+        },
+        "open": {
+          "correct": 6,
+          "wrong": 11,
+          "reject": 0,
+          "no_decision": 0,
+          "candidate_pairs": 1680,
+          "in_gate_pairs": 143,
+          "true_opportunity": 16,
+          "true_in_gate": 16,
+          "false_in_gate": 17,
+          "no_candidate_in_gate": 0,
+          "nearest_exact_ties": 0
+        }
+      },
+      "wrong_true_only_outside_gate": {
+        "birth": {
+          "correct": 0,
+          "wrong": 0,
+          "reject": 0,
+          "no_decision": 0,
+          "candidate_pairs": 0,
+          "in_gate_pairs": 0,
+          "true_opportunity": 0,
+          "true_in_gate": 0,
+          "false_in_gate": 0,
+          "no_candidate_in_gate": 0,
+          "nearest_exact_ties": 0
+        },
+        "expiry": {
+          "correct": 0,
+          "wrong": 0,
+          "reject": 0,
+          "no_decision": 0,
+          "candidate_pairs": 0,
+          "in_gate_pairs": 0,
+          "true_opportunity": 0,
+          "true_in_gate": 0,
+          "false_in_gate": 0,
+          "no_candidate_in_gate": 0,
+          "nearest_exact_ties": 0
+        },
+        "query": {
+          "correct": 0,
+          "wrong": 0,
+          "reject": 0,
+          "no_decision": 0,
+          "candidate_pairs": 0,
+          "in_gate_pairs": 0,
+          "true_opportunity": 0,
+          "true_in_gate": 0,
+          "false_in_gate": 0,
+          "no_candidate_in_gate": 0,
+          "nearest_exact_ties": 0
+        },
+        "peer_freshness": {
+          "correct": 0,
+          "wrong": 0,
+          "reject": 0,
+          "no_decision": 0,
+          "candidate_pairs": 0,
+          "in_gate_pairs": 0,
+          "true_opportunity": 0,
+          "true_in_gate": 0,
+          "false_in_gate": 0,
+          "no_candidate_in_gate": 0,
+          "nearest_exact_ties": 0
+        },
+        "peer_position": {
+          "correct": 0,
+          "wrong": 0,
+          "reject": 0,
+          "no_decision": 0,
+          "candidate_pairs": 0,
+          "in_gate_pairs": 0,
+          "true_opportunity": 0,
+          "true_in_gate": 0,
+          "false_in_gate": 0,
+          "no_candidate_in_gate": 0,
+          "nearest_exact_ties": 0
+        },
+        "open": {
+          "correct": 0,
+          "wrong": 0,
+          "reject": 0,
+          "no_decision": 0,
+          "candidate_pairs": 0,
+          "in_gate_pairs": 0,
+          "true_opportunity": 0,
+          "true_in_gate": 0,
+          "false_in_gate": 0,
+          "no_candidate_in_gate": 0,
+          "nearest_exact_ties": 0
+        }
+      },
+      "wrong_no_fresh_true": {
+        "birth": {
+          "correct": 0,
+          "wrong": 42,
+          "reject": 0,
+          "no_decision": 0,
+          "candidate_pairs": 4443,
+          "in_gate_pairs": 148,
+          "true_opportunity": 0,
+          "true_in_gate": 0,
+          "false_in_gate": 42,
+          "no_candidate_in_gate": 0,
+          "nearest_exact_ties": 0
+        },
+        "expiry": {
+          "correct": 0,
+          "wrong": 42,
+          "reject": 0,
+          "no_decision": 0,
+          "candidate_pairs": 4425,
+          "in_gate_pairs": 148,
+          "true_opportunity": 0,
+          "true_in_gate": 0,
+          "false_in_gate": 42,
+          "no_candidate_in_gate": 0,
+          "nearest_exact_ties": 0
+        },
+        "query": {
+          "correct": 0,
+          "wrong": 42,
+          "reject": 0,
+          "no_decision": 0,
+          "candidate_pairs": 4425,
+          "in_gate_pairs": 147,
+          "true_opportunity": 0,
+          "true_in_gate": 0,
+          "false_in_gate": 42,
+          "no_candidate_in_gate": 0,
+          "nearest_exact_ties": 0
+        },
+        "peer_freshness": {
+          "correct": 0,
+          "wrong": 42,
+          "reject": 0,
+          "no_decision": 0,
+          "candidate_pairs": 4425,
+          "in_gate_pairs": 147,
+          "true_opportunity": 0,
+          "true_in_gate": 0,
+          "false_in_gate": 42,
+          "no_candidate_in_gate": 0,
+          "nearest_exact_ties": 0
+        },
+        "peer_position": {
+          "correct": 0,
+          "wrong": 42,
+          "reject": 0,
+          "no_decision": 0,
+          "candidate_pairs": 4425,
+          "in_gate_pairs": 146,
+          "true_opportunity": 0,
+          "true_in_gate": 0,
+          "false_in_gate": 42,
+          "no_candidate_in_gate": 0,
+          "nearest_exact_ties": 0
+        },
+        "open": {
+          "correct": 2,
+          "wrong": 40,
+          "reject": 0,
+          "no_decision": 0,
+          "candidate_pairs": 4435,
+          "in_gate_pairs": 148,
+          "true_opportunity": 2,
+          "true_in_gate": 2,
+          "false_in_gate": 42,
+          "no_candidate_in_gate": 0,
+          "nearest_exact_ties": 0
+        }
+      },
+      "reject": {
+        "birth": {
+          "correct": 0,
+          "wrong": 0,
+          "reject": 22,
+          "no_decision": 0,
+          "candidate_pairs": 1924,
+          "in_gate_pairs": 0,
+          "true_opportunity": 1,
+          "true_in_gate": 0,
+          "false_in_gate": 0,
+          "no_candidate_in_gate": 22,
+          "nearest_exact_ties": 0
+        },
+        "expiry": {
+          "correct": 0,
+          "wrong": 0,
+          "reject": 22,
+          "no_decision": 0,
+          "candidate_pairs": 1920,
+          "in_gate_pairs": 0,
+          "true_opportunity": 1,
+          "true_in_gate": 0,
+          "false_in_gate": 0,
+          "no_candidate_in_gate": 22,
+          "nearest_exact_ties": 0
+        },
+        "query": {
+          "correct": 0,
+          "wrong": 1,
+          "reject": 21,
+          "no_decision": 0,
+          "candidate_pairs": 1920,
+          "in_gate_pairs": 4,
+          "true_opportunity": 1,
+          "true_in_gate": 0,
+          "false_in_gate": 1,
+          "no_candidate_in_gate": 21,
+          "nearest_exact_ties": 0
+        },
+        "peer_freshness": {
+          "correct": 0,
+          "wrong": 1,
+          "reject": 21,
+          "no_decision": 0,
+          "candidate_pairs": 1920,
+          "in_gate_pairs": 4,
+          "true_opportunity": 1,
+          "true_in_gate": 0,
+          "false_in_gate": 1,
+          "no_candidate_in_gate": 21,
+          "nearest_exact_ties": 0
+        },
+        "peer_position": {
+          "correct": 0,
+          "wrong": 1,
+          "reject": 21,
+          "no_decision": 0,
+          "candidate_pairs": 1920,
+          "in_gate_pairs": 5,
+          "true_opportunity": 1,
+          "true_in_gate": 1,
+          "false_in_gate": 1,
+          "no_candidate_in_gate": 21,
+          "nearest_exact_ties": 0
+        },
+        "open": {
+          "correct": 1,
+          "wrong": 1,
+          "reject": 20,
+          "no_decision": 0,
+          "candidate_pairs": 1922,
+          "in_gate_pairs": 6,
+          "true_opportunity": 2,
+          "true_in_gate": 2,
+          "false_in_gate": 1,
+          "no_candidate_in_gate": 20,
+          "nearest_exact_ties": 0
+        }
+      }
+    },
+    "wrong_no_fresh_at_birth": {
+      "prior_seen_stale": {
+        "population": {
+          "births": 14,
+          "returned": 14,
+          "timeout": 0,
+          "right_censored": 0
+        },
+        "open": {
+          "correct": 2,
+          "wrong": 12,
+          "reject": 0,
+          "no_decision": 0,
+          "candidate_pairs": 1798,
+          "in_gate_pairs": 51,
+          "true_opportunity": 2,
+          "true_in_gate": 2,
+          "false_in_gate": 14,
+          "no_candidate_in_gate": 0,
+          "nearest_exact_ties": 0
+        },
+        "entrants": {
+          "renewed": {
+            "births_with_keys": 0,
+            "births_with_true_keys": 0,
+            "births_with_true_in_gate_keys": 0,
+            "keys": 0,
+            "true_keys": 0,
+            "in_gate_keys": 0,
+            "true_in_gate_keys": 0,
+            "selected_true": 0,
+            "selected_wrong": 0,
+            "first_true_report_after_birth_seconds": {
+              "n": 0,
+              "min": null,
+              "median": null,
+              "p95": null,
+              "max": null
+            }
+          },
+          "unseen": {
+            "births_with_keys": 4,
+            "births_with_true_keys": 2,
+            "births_with_true_in_gate_keys": 2,
+            "keys": 5,
+            "true_keys": 2,
+            "in_gate_keys": 2,
+            "true_in_gate_keys": 2,
+            "selected_true": 2,
+            "selected_wrong": 0,
+            "first_true_report_after_birth_seconds": {
+              "n": 2,
+              "min": 14.240000009536743,
+              "median": 14.828500032424927,
+              "p95": 15.41700005531311,
+              "max": 15.41700005531311
+            }
+          }
+        },
+        "first_recovered_true_report_after_birth_seconds": {
+          "n": 2,
+          "min": 14.240000009536743,
+          "median": 14.828500032424927,
+          "p95": 15.41700005531311,
+          "max": 15.41700005531311
+        }
+      },
+      "never_seen": {
+        "population": {
+          "births": 28,
+          "returned": 28,
+          "timeout": 0,
+          "right_censored": 0
+        },
+        "open": {
+          "correct": 0,
+          "wrong": 28,
+          "reject": 0,
+          "no_decision": 0,
+          "candidate_pairs": 2637,
+          "in_gate_pairs": 97,
+          "true_opportunity": 0,
+          "true_in_gate": 0,
+          "false_in_gate": 28,
+          "no_candidate_in_gate": 0,
+          "nearest_exact_ties": 0
+        },
+        "entrants": {
+          "renewed": {
+            "births_with_keys": 0,
+            "births_with_true_keys": 0,
+            "births_with_true_in_gate_keys": 0,
+            "keys": 0,
+            "true_keys": 0,
+            "in_gate_keys": 0,
+            "true_in_gate_keys": 0,
+            "selected_true": 0,
+            "selected_wrong": 0,
+            "first_true_report_after_birth_seconds": {
+              "n": 0,
+              "min": null,
+              "median": null,
+              "p95": null,
+              "max": null
+            }
+          },
+          "unseen": {
+            "births_with_keys": 4,
+            "births_with_true_keys": 0,
+            "births_with_true_in_gate_keys": 0,
+            "keys": 5,
+            "true_keys": 0,
+            "in_gate_keys": 0,
+            "true_in_gate_keys": 0,
+            "selected_true": 0,
+            "selected_wrong": 0,
+            "first_true_report_after_birth_seconds": {
+              "n": 0,
+              "min": null,
+              "median": null,
+              "p95": null,
+              "max": null
+            }
+          }
+        },
+        "first_recovered_true_report_after_birth_seconds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "p95": null,
+          "max": null
+        }
+      }
+    },
+    "open_entrants": {
+      "renewed": {
+        "births_with_keys": 0,
+        "births_with_true_keys": 0,
+        "births_with_true_in_gate_keys": 0,
+        "keys": 0,
+        "true_keys": 0,
+        "in_gate_keys": 0,
+        "true_in_gate_keys": 0,
+        "selected_true": 0,
+        "selected_wrong": 0,
+        "first_true_report_after_birth_seconds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "p95": null,
+          "max": null
+        }
+      },
+      "unseen": {
+        "births_with_keys": 46,
+        "births_with_true_keys": 3,
+        "births_with_true_in_gate_keys": 3,
+        "keys": 56,
+        "true_keys": 3,
+        "in_gate_keys": 3,
+        "true_in_gate_keys": 3,
+        "selected_true": 3,
+        "selected_wrong": 0,
+        "first_true_report_after_birth_seconds": {
+          "n": 3,
+          "min": 3.61899995803833,
+          "median": 14.240000009536743,
+          "p95": 15.41700005531311,
+          "max": 15.41700005531311
+        }
+      }
+    },
+    "waiting": {
+      "seconds": {
+        "n": 279,
+        "min": 10.013999938964844,
+        "median": 10.074000120162964,
+        "p95": 20.28599977493286,
+        "max": 20.57100009918213
+      },
+      "grid_seconds": {
+        "n": 279,
+        "min": 10,
+        "median": 10,
+        "p95": 21,
+        "max": 21
+      }
+    }
+  },
+  "qualification": {
+    "status": "not_qualified",
+    "scenes_with_returns": 3,
+    "nonworsening_scenes": 2,
+    "delta": {
+      "correct": -2,
+      "wrong": 4,
+      "reject": -2
+    },
+    "scene_deltas": {
+      "0": {
+        "correct": 0,
+        "wrong": 0,
+        "reject": 0
+      },
+      "3": {
+        "correct": -2,
+        "wrong": 4,
+        "reject": -2
+      },
+      "7": {
+        "correct": 0,
+        "wrong": 0,
+        "reject": 0
+      }
+    }
+  },
+  "clock": "ideal_measurement_time",
+  "fit_stop_seconds": 600,
+  "birth_max_age_seconds": 60,
+  "gate_metres": 4000,
+  "wait_limit_seconds": 30,
+  "administrative_end_seconds": 7200,
+  "grid_seconds_definition": "ceil(t1) - ceil(t0), using t1 snapshot",
+  "p95_definition": "nearest rank",
+  "wall_seconds": 3.2079486660077237
+}

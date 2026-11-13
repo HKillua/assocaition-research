@@ -1,0 +1,1500 @@
+{
+  "audit": "independent C37 clocks, C42 roles, C45 cache, C51 frozen scores and C52 donor/signed-margin arithmetic; no raw coordinate or label reread",
+  "checks": {
+    "scenes": 28,
+    "fixed_windows": 482,
+    "legal_rejoins": 416,
+    "public_dual_windows": 31,
+    "internal_dual_captures": 32,
+    "focal_report_clocks": 64,
+    "c51_raw_report_reconstructions": 64,
+    "window_decompositions": 32,
+    "reconstructed_report_views": 136,
+    "new_internal_decisions": 224,
+    "donor_track_time_checks": 48,
+    "action_arm_population_counts": 392
+  },
+  "donor_status": {
+    "too_few_neighbors": 54,
+    "neighbors_disagree": 7,
+    "supported": 1
+  },
+  "public_donor_records_without_key": 44,
+  "fixed_cohorts": {
+    "both_farther": 8,
+    "false_closer": 3,
+    "added_hit": 1
+  },
+  "comparisons": {
+    "primary": {
+      "full": {
+        "populations": [
+          28,
+          142
+        ],
+        "hits_false_vetoes": {
+          "original": [
+            0,
+            0
+          ],
+          "geometry_masked": [
+            13,
+            36
+          ],
+          "current": [
+            5,
+            1
+          ],
+          "native_masked": [
+            5,
+            4
+          ],
+          "native_actual": [
+            5,
+            9
+          ],
+          "native_increment": [
+            5,
+            10
+          ],
+          "native_confirmed": [
+            5,
+            7
+          ],
+          "pair_demeaned": [
+            5,
+            8
+          ],
+          "donor_confirmed": [
+            5,
+            1
+          ],
+          "matched_shrink": [
+            5,
+            1
+          ],
+          "donor_support_only": [
+            5,
+            1
+          ]
+        }
+      },
+      "dual_support": {
+        "populations": [
+          2,
+          9
+        ],
+        "hits_false_vetoes": {
+          "original": [
+            0,
+            0
+          ],
+          "geometry_masked": [
+            2,
+            6
+          ],
+          "current": [
+            2,
+            0
+          ],
+          "native_masked": [
+            2,
+            3
+          ],
+          "native_actual": [
+            2,
+            8
+          ],
+          "native_increment": [
+            2,
+            9
+          ],
+          "native_confirmed": [
+            2,
+            6
+          ],
+          "pair_demeaned": [
+            2,
+            7
+          ],
+          "donor_confirmed": [
+            2,
+            0
+          ],
+          "matched_shrink": [
+            2,
+            0
+          ],
+          "donor_support_only": [
+            2,
+            0
+          ]
+        }
+      },
+      "strict_donor_support": {
+        "populations": [
+          0,
+          0
+        ],
+        "hits_false_vetoes": {
+          "original": [
+            0,
+            0
+          ],
+          "geometry_masked": [
+            0,
+            0
+          ],
+          "current": [
+            0,
+            0
+          ],
+          "native_masked": [
+            0,
+            0
+          ],
+          "native_actual": [
+            0,
+            0
+          ],
+          "native_increment": [
+            0,
+            0
+          ],
+          "native_confirmed": [
+            0,
+            0
+          ],
+          "pair_demeaned": [
+            0,
+            0
+          ],
+          "donor_confirmed": [
+            0,
+            0
+          ],
+          "matched_shrink": [
+            0,
+            0
+          ],
+          "donor_support_only": [
+            0,
+            0
+          ]
+        }
+      },
+      "qualified_donor_support": {
+        "populations": [
+          0,
+          0
+        ],
+        "hits_false_vetoes": {
+          "original": [
+            0,
+            0
+          ],
+          "geometry_masked": [
+            0,
+            0
+          ],
+          "current": [
+            0,
+            0
+          ],
+          "native_masked": [
+            0,
+            0
+          ],
+          "native_actual": [
+            0,
+            0
+          ],
+          "native_increment": [
+            0,
+            0
+          ],
+          "native_confirmed": [
+            0,
+            0
+          ],
+          "pair_demeaned": [
+            0,
+            0
+          ],
+          "donor_confirmed": [
+            0,
+            0
+          ],
+          "matched_shrink": [
+            0,
+            0
+          ],
+          "donor_support_only": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "broad": {
+      "full": {
+        "populations": [
+          67,
+          308
+        ],
+        "hits_false_vetoes": {
+          "original": [
+            0,
+            0
+          ],
+          "geometry_masked": [
+            40,
+            89
+          ],
+          "current": [
+            8,
+            8
+          ],
+          "native_masked": [
+            11,
+            19
+          ],
+          "native_actual": [
+            12,
+            27
+          ],
+          "native_increment": [
+            9,
+            24
+          ],
+          "native_confirmed": [
+            9,
+            19
+          ],
+          "pair_demeaned": [
+            11,
+            23
+          ],
+          "donor_confirmed": [
+            8,
+            8
+          ],
+          "matched_shrink": [
+            8,
+            8
+          ],
+          "donor_support_only": [
+            8,
+            8
+          ]
+        }
+      },
+      "dual_support": {
+        "populations": [
+          8,
+          22
+        ],
+        "hits_false_vetoes": {
+          "original": [
+            0,
+            0
+          ],
+          "geometry_masked": [
+            7,
+            17
+          ],
+          "current": [
+            4,
+            2
+          ],
+          "native_masked": [
+            7,
+            13
+          ],
+          "native_actual": [
+            8,
+            21
+          ],
+          "native_increment": [
+            5,
+            18
+          ],
+          "native_confirmed": [
+            5,
+            13
+          ],
+          "pair_demeaned": [
+            7,
+            17
+          ],
+          "donor_confirmed": [
+            4,
+            2
+          ],
+          "matched_shrink": [
+            4,
+            2
+          ],
+          "donor_support_only": [
+            4,
+            2
+          ]
+        }
+      },
+      "strict_donor_support": {
+        "populations": [
+          0,
+          0
+        ],
+        "hits_false_vetoes": {
+          "original": [
+            0,
+            0
+          ],
+          "geometry_masked": [
+            0,
+            0
+          ],
+          "current": [
+            0,
+            0
+          ],
+          "native_masked": [
+            0,
+            0
+          ],
+          "native_actual": [
+            0,
+            0
+          ],
+          "native_increment": [
+            0,
+            0
+          ],
+          "native_confirmed": [
+            0,
+            0
+          ],
+          "pair_demeaned": [
+            0,
+            0
+          ],
+          "donor_confirmed": [
+            0,
+            0
+          ],
+          "matched_shrink": [
+            0,
+            0
+          ],
+          "donor_support_only": [
+            0,
+            0
+          ]
+        }
+      },
+      "qualified_donor_support": {
+        "populations": [
+          0,
+          0
+        ],
+        "hits_false_vetoes": {
+          "original": [
+            0,
+            0
+          ],
+          "geometry_masked": [
+            0,
+            0
+          ],
+          "current": [
+            0,
+            0
+          ],
+          "native_masked": [
+            0,
+            0
+          ],
+          "native_actual": [
+            0,
+            0
+          ],
+          "native_increment": [
+            0,
+            0
+          ],
+          "native_confirmed": [
+            0,
+            0
+          ],
+          "pair_demeaned": [
+            0,
+            0
+          ],
+          "donor_confirmed": [
+            0,
+            0
+          ],
+          "matched_shrink": [
+            0,
+            0
+          ],
+          "donor_support_only": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "broad_sparse": {
+      "full": {
+        "populations": [
+          32,
+          148
+        ],
+        "hits_false_vetoes": {
+          "original": [
+            0,
+            0
+          ],
+          "geometry_masked": [
+            15,
+            40
+          ],
+          "current": [
+            7,
+            2
+          ],
+          "native_masked": [
+            7,
+            5
+          ],
+          "native_actual": [
+            7,
+            10
+          ],
+          "native_increment": [
+            6,
+            11
+          ],
+          "native_confirmed": [
+            7,
+            8
+          ],
+          "pair_demeaned": [
+            7,
+            9
+          ],
+          "donor_confirmed": [
+            7,
+            2
+          ],
+          "matched_shrink": [
+            7,
+            2
+          ],
+          "donor_support_only": [
+            7,
+            2
+          ]
+        }
+      },
+      "dual_support": {
+        "populations": [
+          3,
+          9
+        ],
+        "hits_false_vetoes": {
+          "original": [
+            0,
+            0
+          ],
+          "geometry_masked": [
+            3,
+            6
+          ],
+          "current": [
+            3,
+            0
+          ],
+          "native_masked": [
+            3,
+            3
+          ],
+          "native_actual": [
+            3,
+            8
+          ],
+          "native_increment": [
+            2,
+            9
+          ],
+          "native_confirmed": [
+            3,
+            6
+          ],
+          "pair_demeaned": [
+            3,
+            7
+          ],
+          "donor_confirmed": [
+            3,
+            0
+          ],
+          "matched_shrink": [
+            3,
+            0
+          ],
+          "donor_support_only": [
+            3,
+            0
+          ]
+        }
+      },
+      "strict_donor_support": {
+        "populations": [
+          0,
+          0
+        ],
+        "hits_false_vetoes": {
+          "original": [
+            0,
+            0
+          ],
+          "geometry_masked": [
+            0,
+            0
+          ],
+          "current": [
+            0,
+            0
+          ],
+          "native_masked": [
+            0,
+            0
+          ],
+          "native_actual": [
+            0,
+            0
+          ],
+          "native_increment": [
+            0,
+            0
+          ],
+          "native_confirmed": [
+            0,
+            0
+          ],
+          "pair_demeaned": [
+            0,
+            0
+          ],
+          "donor_confirmed": [
+            0,
+            0
+          ],
+          "matched_shrink": [
+            0,
+            0
+          ],
+          "donor_support_only": [
+            0,
+            0
+          ]
+        }
+      },
+      "qualified_donor_support": {
+        "populations": [
+          0,
+          0
+        ],
+        "hits_false_vetoes": {
+          "original": [
+            0,
+            0
+          ],
+          "geometry_masked": [
+            0,
+            0
+          ],
+          "current": [
+            0,
+            0
+          ],
+          "native_masked": [
+            0,
+            0
+          ],
+          "native_actual": [
+            0,
+            0
+          ],
+          "native_increment": [
+            0,
+            0
+          ],
+          "native_confirmed": [
+            0,
+            0
+          ],
+          "pair_demeaned": [
+            0,
+            0
+          ],
+          "donor_confirmed": [
+            0,
+            0
+          ],
+          "matched_shrink": [
+            0,
+            0
+          ],
+          "donor_support_only": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "dual": {
+      "full": {
+        "populations": [
+          8,
+          22
+        ],
+        "hits_false_vetoes": {
+          "original": [
+            0,
+            0
+          ],
+          "geometry_masked": [
+            7,
+            17
+          ],
+          "current": [
+            4,
+            2
+          ],
+          "native_masked": [
+            7,
+            13
+          ],
+          "native_actual": [
+            8,
+            21
+          ],
+          "native_increment": [
+            5,
+            18
+          ],
+          "native_confirmed": [
+            5,
+            13
+          ],
+          "pair_demeaned": [
+            7,
+            17
+          ],
+          "donor_confirmed": [
+            4,
+            2
+          ],
+          "matched_shrink": [
+            4,
+            2
+          ],
+          "donor_support_only": [
+            4,
+            2
+          ]
+        }
+      },
+      "dual_support": {
+        "populations": [
+          8,
+          22
+        ],
+        "hits_false_vetoes": {
+          "original": [
+            0,
+            0
+          ],
+          "geometry_masked": [
+            7,
+            17
+          ],
+          "current": [
+            4,
+            2
+          ],
+          "native_masked": [
+            7,
+            13
+          ],
+          "native_actual": [
+            8,
+            21
+          ],
+          "native_increment": [
+            5,
+            18
+          ],
+          "native_confirmed": [
+            5,
+            13
+          ],
+          "pair_demeaned": [
+            7,
+            17
+          ],
+          "donor_confirmed": [
+            4,
+            2
+          ],
+          "matched_shrink": [
+            4,
+            2
+          ],
+          "donor_support_only": [
+            4,
+            2
+          ]
+        }
+      },
+      "strict_donor_support": {
+        "populations": [
+          0,
+          0
+        ],
+        "hits_false_vetoes": {
+          "original": [
+            0,
+            0
+          ],
+          "geometry_masked": [
+            0,
+            0
+          ],
+          "current": [
+            0,
+            0
+          ],
+          "native_masked": [
+            0,
+            0
+          ],
+          "native_actual": [
+            0,
+            0
+          ],
+          "native_increment": [
+            0,
+            0
+          ],
+          "native_confirmed": [
+            0,
+            0
+          ],
+          "pair_demeaned": [
+            0,
+            0
+          ],
+          "donor_confirmed": [
+            0,
+            0
+          ],
+          "matched_shrink": [
+            0,
+            0
+          ],
+          "donor_support_only": [
+            0,
+            0
+          ]
+        }
+      },
+      "qualified_donor_support": {
+        "populations": [
+          0,
+          0
+        ],
+        "hits_false_vetoes": {
+          "original": [
+            0,
+            0
+          ],
+          "geometry_masked": [
+            0,
+            0
+          ],
+          "current": [
+            0,
+            0
+          ],
+          "native_masked": [
+            0,
+            0
+          ],
+          "native_actual": [
+            0,
+            0
+          ],
+          "native_increment": [
+            0,
+            0
+          ],
+          "native_confirmed": [
+            0,
+            0
+          ],
+          "pair_demeaned": [
+            0,
+            0
+          ],
+          "donor_confirmed": [
+            0,
+            0
+          ],
+          "matched_shrink": [
+            0,
+            0
+          ],
+          "donor_support_only": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "both_farther": {
+      "full": {
+        "populations": [
+          0,
+          8
+        ],
+        "hits_false_vetoes": {
+          "original": [
+            0,
+            0
+          ],
+          "geometry_masked": [
+            0,
+            6
+          ],
+          "current": [
+            0,
+            0
+          ],
+          "native_masked": [
+            0,
+            4
+          ],
+          "native_actual": [
+            0,
+            8
+          ],
+          "native_increment": [
+            0,
+            8
+          ],
+          "native_confirmed": [
+            0,
+            8
+          ],
+          "pair_demeaned": [
+            0,
+            7
+          ],
+          "donor_confirmed": [
+            0,
+            0
+          ],
+          "matched_shrink": [
+            0,
+            0
+          ],
+          "donor_support_only": [
+            0,
+            0
+          ]
+        }
+      },
+      "dual_support": {
+        "populations": [
+          0,
+          8
+        ],
+        "hits_false_vetoes": {
+          "original": [
+            0,
+            0
+          ],
+          "geometry_masked": [
+            0,
+            6
+          ],
+          "current": [
+            0,
+            0
+          ],
+          "native_masked": [
+            0,
+            4
+          ],
+          "native_actual": [
+            0,
+            8
+          ],
+          "native_increment": [
+            0,
+            8
+          ],
+          "native_confirmed": [
+            0,
+            8
+          ],
+          "pair_demeaned": [
+            0,
+            7
+          ],
+          "donor_confirmed": [
+            0,
+            0
+          ],
+          "matched_shrink": [
+            0,
+            0
+          ],
+          "donor_support_only": [
+            0,
+            0
+          ]
+        }
+      },
+      "strict_donor_support": {
+        "populations": [
+          0,
+          0
+        ],
+        "hits_false_vetoes": {
+          "original": [
+            0,
+            0
+          ],
+          "geometry_masked": [
+            0,
+            0
+          ],
+          "current": [
+            0,
+            0
+          ],
+          "native_masked": [
+            0,
+            0
+          ],
+          "native_actual": [
+            0,
+            0
+          ],
+          "native_increment": [
+            0,
+            0
+          ],
+          "native_confirmed": [
+            0,
+            0
+          ],
+          "pair_demeaned": [
+            0,
+            0
+          ],
+          "donor_confirmed": [
+            0,
+            0
+          ],
+          "matched_shrink": [
+            0,
+            0
+          ],
+          "donor_support_only": [
+            0,
+            0
+          ]
+        }
+      },
+      "qualified_donor_support": {
+        "populations": [
+          0,
+          0
+        ],
+        "hits_false_vetoes": {
+          "original": [
+            0,
+            0
+          ],
+          "geometry_masked": [
+            0,
+            0
+          ],
+          "current": [
+            0,
+            0
+          ],
+          "native_masked": [
+            0,
+            0
+          ],
+          "native_actual": [
+            0,
+            0
+          ],
+          "native_increment": [
+            0,
+            0
+          ],
+          "native_confirmed": [
+            0,
+            0
+          ],
+          "pair_demeaned": [
+            0,
+            0
+          ],
+          "donor_confirmed": [
+            0,
+            0
+          ],
+          "matched_shrink": [
+            0,
+            0
+          ],
+          "donor_support_only": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "false_closer": {
+      "full": {
+        "populations": [
+          0,
+          3
+        ],
+        "hits_false_vetoes": {
+          "original": [
+            0,
+            0
+          ],
+          "geometry_masked": [
+            0,
+            3
+          ],
+          "current": [
+            0,
+            0
+          ],
+          "native_masked": [
+            0,
+            2
+          ],
+          "native_actual": [
+            0,
+            3
+          ],
+          "native_increment": [
+            0,
+            3
+          ],
+          "native_confirmed": [
+            0,
+            3
+          ],
+          "pair_demeaned": [
+            0,
+            3
+          ],
+          "donor_confirmed": [
+            0,
+            0
+          ],
+          "matched_shrink": [
+            0,
+            0
+          ],
+          "donor_support_only": [
+            0,
+            0
+          ]
+        }
+      },
+      "dual_support": {
+        "populations": [
+          0,
+          3
+        ],
+        "hits_false_vetoes": {
+          "original": [
+            0,
+            0
+          ],
+          "geometry_masked": [
+            0,
+            3
+          ],
+          "current": [
+            0,
+            0
+          ],
+          "native_masked": [
+            0,
+            2
+          ],
+          "native_actual": [
+            0,
+            3
+          ],
+          "native_increment": [
+            0,
+            3
+          ],
+          "native_confirmed": [
+            0,
+            3
+          ],
+          "pair_demeaned": [
+            0,
+            3
+          ],
+          "donor_confirmed": [
+            0,
+            0
+          ],
+          "matched_shrink": [
+            0,
+            0
+          ],
+          "donor_support_only": [
+            0,
+            0
+          ]
+        }
+      },
+      "strict_donor_support": {
+        "populations": [
+          0,
+          0
+        ],
+        "hits_false_vetoes": {
+          "original": [
+            0,
+            0
+          ],
+          "geometry_masked": [
+            0,
+            0
+          ],
+          "current": [
+            0,
+            0
+          ],
+          "native_masked": [
+            0,
+            0
+          ],
+          "native_actual": [
+            0,
+            0
+          ],
+          "native_increment": [
+            0,
+            0
+          ],
+          "native_confirmed": [
+            0,
+            0
+          ],
+          "pair_demeaned": [
+            0,
+            0
+          ],
+          "donor_confirmed": [
+            0,
+            0
+          ],
+          "matched_shrink": [
+            0,
+            0
+          ],
+          "donor_support_only": [
+            0,
+            0
+          ]
+        }
+      },
+      "qualified_donor_support": {
+        "populations": [
+          0,
+          0
+        ],
+        "hits_false_vetoes": {
+          "original": [
+            0,
+            0
+          ],
+          "geometry_masked": [
+            0,
+            0
+          ],
+          "current": [
+            0,
+            0
+          ],
+          "native_masked": [
+            0,
+            0
+          ],
+          "native_actual": [
+            0,
+            0
+          ],
+          "native_increment": [
+            0,
+            0
+          ],
+          "native_confirmed": [
+            0,
+            0
+          ],
+          "pair_demeaned": [
+            0,
+            0
+          ],
+          "donor_confirmed": [
+            0,
+            0
+          ],
+          "matched_shrink": [
+            0,
+            0
+          ],
+          "donor_support_only": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "added_hit": {
+      "full": {
+        "populations": [
+          1,
+          0
+        ],
+        "hits_false_vetoes": {
+          "original": [
+            0,
+            0
+          ],
+          "geometry_masked": [
+            1,
+            0
+          ],
+          "current": [
+            0,
+            0
+          ],
+          "native_masked": [
+            1,
+            0
+          ],
+          "native_actual": [
+            1,
+            0
+          ],
+          "native_increment": [
+            1,
+            0
+          ],
+          "native_confirmed": [
+            1,
+            0
+          ],
+          "pair_demeaned": [
+            1,
+            0
+          ],
+          "donor_confirmed": [
+            0,
+            0
+          ],
+          "matched_shrink": [
+            0,
+            0
+          ],
+          "donor_support_only": [
+            0,
+            0
+          ]
+        }
+      },
+      "dual_support": {
+        "populations": [
+          1,
+          0
+        ],
+        "hits_false_vetoes": {
+          "original": [
+            0,
+            0
+          ],
+          "geometry_masked": [
+            1,
+            0
+          ],
+          "current": [
+            0,
+            0
+          ],
+          "native_masked": [
+            1,
+            0
+          ],
+          "native_actual": [
+            1,
+            0
+          ],
+          "native_increment": [
+            1,
+            0
+          ],
+          "native_confirmed": [
+            1,
+            0
+          ],
+          "pair_demeaned": [
+            1,
+            0
+          ],
+          "donor_confirmed": [
+            0,
+            0
+          ],
+          "matched_shrink": [
+            0,
+            0
+          ],
+          "donor_support_only": [
+            0,
+            0
+          ]
+        }
+      },
+      "strict_donor_support": {
+        "populations": [
+          0,
+          0
+        ],
+        "hits_false_vetoes": {
+          "original": [
+            0,
+            0
+          ],
+          "geometry_masked": [
+            0,
+            0
+          ],
+          "current": [
+            0,
+            0
+          ],
+          "native_masked": [
+            0,
+            0
+          ],
+          "native_actual": [
+            0,
+            0
+          ],
+          "native_increment": [
+            0,
+            0
+          ],
+          "native_confirmed": [
+            0,
+            0
+          ],
+          "pair_demeaned": [
+            0,
+            0
+          ],
+          "donor_confirmed": [
+            0,
+            0
+          ],
+          "matched_shrink": [
+            0,
+            0
+          ],
+          "donor_support_only": [
+            0,
+            0
+          ]
+        }
+      },
+      "qualified_donor_support": {
+        "populations": [
+          0,
+          0
+        ],
+        "hits_false_vetoes": {
+          "original": [
+            0,
+            0
+          ],
+          "geometry_masked": [
+            0,
+            0
+          ],
+          "current": [
+            0,
+            0
+          ],
+          "native_masked": [
+            0,
+            0
+          ],
+          "native_actual": [
+            0,
+            0
+          ],
+          "native_increment": [
+            0,
+            0
+          ],
+          "native_confirmed": [
+            0,
+            0
+          ],
+          "pair_demeaned": [
+            0,
+            0
+          ],
+          "donor_confirmed": [
+            0,
+            0
+          ],
+          "matched_shrink": [
+            0,
+            0
+          ],
+          "donor_support_only": [
+            0,
+            0
+          ]
+        }
+      }
+    }
+  }
+}

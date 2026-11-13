@@ -1,0 +1,264 @@
+{
+  "status": "passed",
+  "method": "Read-only independent raw MTAD replay and explicit KF state/covariance recursion. Rejoined saved C37/C42/C45/C54 identity-free evidence, reconstructed every forecast path and score without importing the C55 implementation, then independently checked matched population hit/false-veto counts and the two focused active gate conditions.",
+  "counts": {
+    "public_new_actions_checked": 5784,
+    "frozen_scene_files": 28,
+    "frozen_public_evidence_checks": 31,
+    "native_batches_checked": 40340,
+    "raw_scenes_reopened": 7,
+    "internal_triggers_checked": 32,
+    "strict_prior_clock_checks": 512,
+    "scored_path_checks": 128,
+    "numerical_checks": 2624,
+    "joint_omission_additivity_checks": 128,
+    "actual_mask_increment_factorial_checks": 128,
+    "summary_hit_or_error_checks": 252
+  },
+  "gate": {
+    "checks": {
+      "keeps_unique_added_true": false,
+      "corrects_a_new_report_error": true,
+      "no_new_dual_errors": false,
+      "no_new_sparse_errors": true,
+      "dual_net_gain": false,
+      "sparse_noninferiority": true,
+      "positive_in_multiple_components": false
+    },
+    "passes": false,
+    "positive_components": 0,
+    "component_net_changes": {
+      "component-4c36c775b818b891dca3ff46": -1,
+      "component-5317b2d47b0ff76e5ff4bc60": 0,
+      "component-5f2aedadc99ed44ea4633c75": 0,
+      "component-8a28b16afefb7826fd7973df": 0,
+      "component-8ad8dcc9e0897e41bf85dce3": 0,
+      "component-9b9449afa258e2e53c16d960": 0,
+      "component-a51df20ce04238e7cf2bc17a": 0,
+      "component-abc1a2cc10831a510dffd3e3": 0,
+      "component-c8161c1679f5abb00c5cd1aa": 0,
+      "component-e3687e2a32b9939f07829f7b": 0,
+      "component-f16592d12000ffca0f115928": 0,
+      "component-ffc486623e4d904bd5798230": 0
+    },
+    "news_errors_actively_corrected": 1,
+    "news_errors_removed_including_fallback": 5
+  },
+  "focus": {
+    "new_report_driven": {
+      "windows": 5,
+      "common_support": 5,
+      "votes": {
+        "boundary_abstain": {
+          "0": 5
+        },
+        "boundary_assimilate": {
+          "-1": 5
+        },
+        "boundary_confirm_assimilate": {
+          "-1": 5
+        },
+        "boundary_confirm_skip_both": {
+          "1": 3,
+          "0": 1,
+          "-1": 1
+        },
+        "boundary_full_current_mask": {
+          "-1": 5
+        },
+        "boundary_mask_assimilate": {
+          "1": 3,
+          "-1": 2
+        },
+        "boundary_mask_skip_both": {
+          "-1": 5
+        },
+        "boundary_robust": {
+          "0": 4,
+          "-1": 1
+        },
+        "boundary_shape_only_mask": {
+          "-1": 5
+        },
+        "boundary_skip_both": {
+          "1": 4,
+          "-1": 1
+        },
+        "boundary_skip_release": {
+          "-1": 5
+        },
+        "boundary_skip_retain": {
+          "-1": 2,
+          "1": 3
+        }
+      },
+      "same_clock_true_incident_errors_m": {
+        "assimilate": [
+          534.8877,
+          954.5159,
+          297.1793,
+          184.0666,
+          247.9029
+        ],
+        "skip_release": [
+          534.8877,
+          954.5159,
+          297.1793,
+          184.0666,
+          247.9029
+        ],
+        "skip_retain": [
+          656.9189,
+          1358.2046,
+          344.5915,
+          112.6392,
+          432.2674
+        ],
+        "skip_both": [
+          656.9189,
+          1358.2046,
+          344.5915,
+          112.6392,
+          432.2674
+        ]
+      }
+    },
+    "original_geometry_wrong": {
+      "windows": 5,
+      "common_support": 5,
+      "votes": {
+        "boundary_abstain": {
+          "0": 5
+        },
+        "boundary_assimilate": {
+          "-1": 4,
+          "1": 1
+        },
+        "boundary_confirm_assimilate": {
+          "0": 1,
+          "-1": 3,
+          "1": 1
+        },
+        "boundary_confirm_skip_both": {
+          "0": 1,
+          "-1": 3,
+          "1": 1
+        },
+        "boundary_full_current_mask": {
+          "-1": 5
+        },
+        "boundary_mask_assimilate": {
+          "1": 5
+        },
+        "boundary_mask_skip_both": {
+          "1": 5
+        },
+        "boundary_robust": {
+          "0": 2,
+          "-1": 3
+        },
+        "boundary_shape_only_mask": {
+          "-1": 5
+        },
+        "boundary_skip_both": {
+          "-1": 4,
+          "1": 1
+        },
+        "boundary_skip_release": {
+          "-1": 4,
+          "1": 1
+        },
+        "boundary_skip_retain": {
+          "-1": 4,
+          "1": 1
+        }
+      },
+      "same_clock_true_incident_errors_m": {
+        "assimilate": [
+          317.7332,
+          244.7298,
+          233.7416,
+          109.9336,
+          130.9858
+        ],
+        "skip_release": [
+          317.7332,
+          244.7298,
+          233.7416,
+          109.9336,
+          130.9858
+        ],
+        "skip_retain": [
+          253.992,
+          378.9526,
+          194.8005,
+          94.1733,
+          105.6311
+        ],
+        "skip_both": [
+          253.992,
+          378.9526,
+          194.8005,
+          94.1733,
+          105.6311
+        ]
+      }
+    },
+    "added_hit": {
+      "windows": 1,
+      "common_support": 1,
+      "votes": {
+        "boundary_abstain": {
+          "0": 1
+        },
+        "boundary_assimilate": {
+          "-1": 1
+        },
+        "boundary_confirm_assimilate": {
+          "-1": 1
+        },
+        "boundary_confirm_skip_both": {
+          "-1": 1
+        },
+        "boundary_full_current_mask": {
+          "1": 1
+        },
+        "boundary_mask_assimilate": {
+          "1": 1
+        },
+        "boundary_mask_skip_both": {
+          "1": 1
+        },
+        "boundary_robust": {
+          "-1": 1
+        },
+        "boundary_shape_only_mask": {
+          "-1": 1
+        },
+        "boundary_skip_both": {
+          "-1": 1
+        },
+        "boundary_skip_release": {
+          "-1": 1
+        },
+        "boundary_skip_retain": {
+          "-1": 1
+        }
+      },
+      "same_clock_true_incident_errors_m": {
+        "assimilate": [
+          451.6051
+        ],
+        "skip_release": [
+          426.9392
+        ],
+        "skip_retain": [
+          451.6051
+        ],
+        "skip_both": [
+          426.9392
+        ]
+      }
+    }
+  }
+}

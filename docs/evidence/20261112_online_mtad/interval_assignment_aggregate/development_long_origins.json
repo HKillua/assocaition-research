@@ -1,0 +1,2027 @@
+{
+  "phase": "development",
+  "scenes": [
+    {
+      "component": "component-c8161c1679f5abb00c5cd1aa",
+      "sparse": false,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {
+          "0_to_2_complete": 1,
+          "2_to_0_complete": 1
+        },
+        "interval_swap": {
+          "0_to_2_complete": 1
+        },
+        "point_null": {
+          "2_to_0_incomplete": 1
+        },
+        "interval_null": {
+          "0_to_1_complete": 1
+        }
+      }
+    },
+    {
+      "component": "component-6b3c238ebcf1f3c07cf0e556",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 4,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 1692.968999862671,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 4,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 1692.968999862671,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {
+            "overlaps_long": 4,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 1692.968999862671,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 4,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 1692.968999862671,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 4,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 1692.968999862671,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {
+            "overlaps_long": 4,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 1692.968999862671,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {
+          "0_to_1_incomplete": 2
+        },
+        "interval_null": {
+          "0_to_1_incomplete": 2
+        }
+      }
+    },
+    {
+      "component": "component-8ad8dcc9e0897e41bf85dce3",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {
+          "2_to_0_complete": 1,
+          "0_to_2_complete": 1
+        },
+        "interval_swap": {
+          "2_to_0_complete": 1,
+          "0_to_2_complete": 1
+        },
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-f24f1a64b591544a871284bd",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-bed3d5a960ea9b52f944185f",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-6fb7e5c36b795834bb97c592",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-0b0e65ad5d79d6e032d0889a",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-fdbc675a9f9f6a7e1c67e3bb",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-730c48a331ac192d8b823213",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-5f2aedadc99ed44ea4633c75",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {
+          "0_to_2_complete": 1,
+          "2_to_0_complete": 2
+        },
+        "interval_swap": {
+          "0_to_2_complete": 2
+        },
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-c1a6cda61b669e76e0888803",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-0b9d7d23108cbf0a74ed5828",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 2,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 247.17799997329712,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 2,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 247.17799997329712,
+            "original_short": 23.456000328063965,
+            "outside_original_wrong": 13.607999801635742
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {
+            "overlaps_long": 2,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 247.17799997329712,
+            "original_short": 0.0,
+            "outside_original_wrong": 37.06400012969971
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 2,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 247.17799997329712,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 2,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 247.17799997329712,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {
+            "overlaps_long": 2,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 247.17799997329712,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {
+          "0_to_1_complete": 1
+        },
+        "interval_swap": {
+          "1_to_0_complete": 1
+        },
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-ffc486623e4d904bd5798230",
+      "sparse": false,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 14,
+            "right_censored": 0,
+            "overlaps_only_short": 6,
+            "overlaps_multiple_short": 6
+          },
+          "seconds": {
+            "original_long": 2639.108001232147,
+            "original_short": 307.775999546051,
+            "outside_original_wrong": 99.89000034332275
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 14,
+            "right_censored": 0,
+            "overlaps_only_short": 8,
+            "overlaps_multiple_short": 6
+          },
+          "seconds": {
+            "original_long": 2639.108001232147,
+            "original_short": 420.74000120162964,
+            "outside_original_wrong": 620.913999080658
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {
+            "overlaps_long": 20,
+            "right_censored": 0,
+            "overlaps_only_short": 2,
+            "overlaps_multiple_short": 2
+          },
+          "seconds": {
+            "original_long": 2806.702001094818,
+            "original_short": 377.5,
+            "outside_original_wrong": 496.5600004196167
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 14,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 2485.844000816345,
+            "original_short": 0.0,
+            "outside_original_wrong": 7.631999969482422
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 12,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 2506.14400100708,
+            "original_short": 0.0,
+            "outside_original_wrong": 7.631999969482422
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {
+            "overlaps_long": 10,
+            "right_censored": 0,
+            "overlaps_only_short": 2,
+            "overlaps_multiple_short": 2
+          },
+          "seconds": {
+            "original_long": 2360.5120005607605,
+            "original_short": 140.18600034713745,
+            "outside_original_wrong": 13.07800006866455
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {
+          "0_to_0_complete": 2,
+          "0_to_2_complete": 5,
+          "2_to_0_complete": 5,
+          "1_to_0_complete": 3,
+          "0_to_1_complete": 2
+        },
+        "interval_swap": {
+          "0_to_0_complete": 1,
+          "0_to_2_complete": 6,
+          "0_to_1_complete": 3,
+          "2_to_0_complete": 3,
+          "1_to_0_complete": 2
+        },
+        "point_null": {
+          "0_to_1_incomplete": 4,
+          "1_to_0_incomplete": 1,
+          "0_to_1_complete": 1,
+          "2_to_0_incomplete": 1,
+          "0_to_0_incomplete": 1
+        },
+        "interval_null": {
+          "0_to_1_incomplete": 3,
+          "2_to_0_complete": 1,
+          "1_to_0_incomplete": 1,
+          "0_to_1_complete": 1,
+          "2_to_0_incomplete": 1
+        }
+      }
+    },
+    {
+      "component": "component-6d46b58cb2c5d6878bed71f0",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-8a28b16afefb7826fd7973df",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {
+          "0_to_2_complete": 1
+        },
+        "interval_swap": {
+          "0_to_2_complete": 1
+        },
+        "point_null": {
+          "0_to_1_complete": 1,
+          "0_to_1_incomplete": 1
+        },
+        "interval_null": {
+          "0_to_1_complete": 2,
+          "0_to_1_incomplete": 2
+        }
+      }
+    },
+    {
+      "component": "component-ac135b85f256bd763aed311d",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-a51df20ce04238e7cf2bc17a",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 3,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 1070.2699999809265,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 3,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 1070.2699999809265,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {
+            "overlaps_long": 3,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 1070.2699999809265,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 3,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 1070.2699999809265,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 3,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 1070.2699999809265,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {
+            "overlaps_long": 3,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 1070.2699999809265,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {
+          "0_to_2_complete": 2,
+          "2_to_0_complete": 2
+        },
+        "interval_swap": {
+          "0_to_2_complete": 2,
+          "0_to_1_complete": 1
+        },
+        "point_null": {
+          "0_to_1_incomplete": 1
+        },
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-5364495b6e5883df8779c524",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-4c36c775b818b891dca3ff46",
+      "sparse": false,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 14,
+            "right_censored": 0,
+            "overlaps_only_short": 1,
+            "overlaps_multiple_short": 1
+          },
+          "seconds": {
+            "original_long": 2005.217999458313,
+            "original_short": 107.257000207901,
+            "outside_original_wrong": 32.748000144958496
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 13,
+            "right_censored": 0,
+            "overlaps_only_short": 4,
+            "overlaps_multiple_short": 4
+          },
+          "seconds": {
+            "original_long": 1969.2669994831085,
+            "original_short": 324.1750009059906,
+            "outside_original_wrong": 204.48799896240234
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {
+            "overlaps_long": 14,
+            "right_censored": 0,
+            "overlaps_only_short": 3,
+            "overlaps_multiple_short": 3
+          },
+          "seconds": {
+            "original_long": 2083.4179997444153,
+            "original_short": 265.32699966430664,
+            "outside_original_wrong": 149.18499994277954
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 14,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 2011.0439994335175,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 13,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 1920.9179995059967,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {
+            "overlaps_long": 13,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 1920.9179995059967,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {
+          "1_to_0_complete": 15,
+          "2_to_0_complete": 9,
+          "0_to_1_complete": 14,
+          "0_to_2_complete": 16
+        },
+        "interval_swap": {
+          "0_to_1_complete": 12,
+          "0_to_2_complete": 16,
+          "2_to_0_complete": 2,
+          "1_to_0_complete": 7
+        },
+        "point_null": {
+          "0_to_1_complete": 1,
+          "1_to_0_complete": 3,
+          "0_to_0_incomplete": 1,
+          "0_to_1_incomplete": 2
+        },
+        "interval_null": {
+          "0_to_1_complete": 1,
+          "1_to_0_complete": 3,
+          "0_to_1_incomplete": 5,
+          "0_to_0_incomplete": 4,
+          "1_to_0_incomplete": 1
+        }
+      }
+    },
+    {
+      "component": "component-5317b2d47b0ff76e5ff4bc60",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 7,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 664.7439999580383,
+            "original_short": 68.00300002098083,
+            "outside_original_wrong": 27.169999837875366
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 6,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 632.194000005722,
+            "original_short": 250.8900008201599,
+            "outside_original_wrong": 180.8599991798401
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {
+            "overlaps_long": 6,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 719.798999786377,
+            "original_short": 157.44999957084656,
+            "outside_original_wrong": 186.69500064849854
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 6,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 697.2599999904633,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 6,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 697.2599999904633,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {
+            "overlaps_long": 6,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 697.2599999904633,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {
+          "1_to_0_complete": 3,
+          "0_to_2_complete": 2,
+          "0_to_0_complete": 2,
+          "0_to_1_complete": 2,
+          "2_to_0_complete": 2
+        },
+        "interval_swap": {
+          "1_to_0_complete": 2,
+          "0_to_1_complete": 2,
+          "0_to_2_complete": 2,
+          "0_to_0_complete": 2
+        },
+        "point_null": {
+          "1_to_0_complete": 1
+        },
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-ceab64951a30f684b7a84bae",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-9e7036dffb28c24c629363a6",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-0edd6c90e78d7d840cc9637a",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-74e6aaca08d871c01ac5c399",
+      "sparse": false,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 2,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 588.1239998340607,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 2,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 588.1239998340607,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {
+            "overlaps_long": 2,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 588.1239998340607,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 2,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 588.1239998340607,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 2,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 588.1239998340607,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {
+            "overlaps_long": 2,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 588.1239998340607,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {},
+        "interval_swap": {},
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-9b9449afa258e2e53c16d960",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {
+            "overlaps_only_short": 2,
+            "overlaps_multiple_short": 2,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 50.25200080871582,
+            "outside_original_wrong": 127.70999908447266
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {
+            "overlaps_only_short": 6,
+            "overlaps_multiple_short": 6,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 497.82400131225586,
+            "outside_original_wrong": 309.90199851989746
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {
+            "overlaps_only_short": 4,
+            "overlaps_multiple_short": 4,
+            "right_censored": 0,
+            "overlaps_long": 2
+          },
+          "seconds": {
+            "original_long": 137.83799982070923,
+            "original_short": 274.3720006942749,
+            "outside_original_wrong": 395.5159993171692
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {
+          "0_to_1_complete": 4,
+          "0_to_2_complete": 3,
+          "2_to_0_complete": 3,
+          "1_to_0_complete": 3
+        },
+        "interval_swap": {
+          "0_to_1_complete": 3,
+          "0_to_2_complete": 3,
+          "2_to_0_complete": 3,
+          "1_to_0_complete": 4
+        },
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-f16592d12000ffca0f115928",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 71.67000007629395,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 71.67000007629395,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 71.67000007629395,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {
+            "overlaps_only_short": 1,
+            "overlaps_multiple_short": 1,
+            "right_censored": 0,
+            "overlaps_long": 1
+          },
+          "seconds": {
+            "original_long": 71.67000007629395,
+            "original_short": 164.17800045013428,
+            "outside_original_wrong": 52.73299956321716
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 71.67000007629395,
+            "original_short": 220.275000333786,
+            "outside_original_wrong": 108.621999502182
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {
+            "overlaps_long": 1,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 288.5810000896454,
+            "original_short": 70.00500011444092,
+            "outside_original_wrong": 41.98099970817566
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {
+          "0_to_2_complete": 2,
+          "2_to_0_complete": 2
+        },
+        "interval_swap": {
+          "0_to_2_complete": 2,
+          "2_to_0_complete": 1
+        },
+        "point_null": {
+          "2_to_0_incomplete": 1
+        },
+        "interval_null": {
+          "2_to_0_incomplete": 1
+        }
+      }
+    },
+    {
+      "component": "component-abc1a2cc10831a510dffd3e3",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {
+            "overlaps_only_short": 2,
+            "overlaps_multiple_short": 2,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 66.38400077819824,
+            "outside_original_wrong": 79.80999898910522
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {
+            "overlaps_only_short": 2,
+            "overlaps_multiple_short": 2,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 146.5300006866455,
+            "outside_original_wrong": 148.31999921798706
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {
+            "overlaps_long": 2,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 120.35799980163574,
+            "original_short": 40.22599983215332,
+            "outside_original_wrong": 134.2660002708435
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {},
+          "seconds": {
+            "original_long": 0.0,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {
+          "2_to_0_complete": 1,
+          "0_to_2_complete": 1
+        },
+        "interval_swap": {
+          "2_to_0_complete": 1,
+          "0_to_2_complete": 1
+        },
+        "point_null": {},
+        "interval_null": {}
+      }
+    },
+    {
+      "component": "component-e3687e2a32b9939f07829f7b",
+      "sparse": true,
+      "long_interval_origins": {
+        "point_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 7,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 1610.269999742508,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_kf": {
+          "episodes": {
+            "overlaps_long": 7,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 1610.269999742508,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "interval_swap_vs_point_swap": {
+          "episodes": {
+            "overlaps_long": 7,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 1610.269999742508,
+            "original_short": 0.0,
+            "outside_original_wrong": 0.0
+          }
+        },
+        "point_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 5,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 1610.269999742508,
+            "original_short": 210.4260003566742,
+            "outside_original_wrong": 72.08299994468689
+          }
+        },
+        "interval_null_vs_kf": {
+          "episodes": {
+            "overlaps_long": 5,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 1610.269999742508,
+            "original_short": 257.9530005455017,
+            "outside_original_wrong": 142.78499937057495
+          }
+        },
+        "interval_null_vs_point_null": {
+          "episodes": {
+            "overlaps_long": 5,
+            "right_censored": 0
+          },
+          "seconds": {
+            "original_long": 1840.0229997634888,
+            "original_short": 96.52000045776367,
+            "outside_original_wrong": 74.46499943733215
+          }
+        }
+      },
+      "distinct_action_outcomes": {
+        "point_swap": {
+          "0_to_2_complete": 1,
+          "2_to_0_complete": 1
+        },
+        "interval_swap": {
+          "0_to_2_complete": 1
+        },
+        "point_null": {
+          "2_to_0_incomplete": 3
+        },
+        "interval_null": {
+          "2_to_0_incomplete": 3,
+          "2_to_0_complete": 1
+        }
+      }
+    }
+  ]
+}

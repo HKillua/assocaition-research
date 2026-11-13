@@ -1,0 +1,10 @@
+{
+  "scenes": 28,
+  "windows": 482,
+  "strict_target_windows": 28,
+  "target_focal_edges": 56,
+  "correct_control_windows": 142,
+  "batches": 1477,
+  "report_comparisons": 1477,
+  "density_rechecks": 2954
+}

@@ -1,0 +1,13 @@
+{
+  "windows": 482,
+  "batches": 1477,
+  "anchored_batches": 1169,
+  "analytic_rechecks": 3507,
+  "correct_windows": 76,
+  "correct_anchored": 58,
+  "target_windows": 20,
+  "target_anchored": 18,
+  "new_wrong": 10,
+  "true_improved_new_wrong": 8,
+  "scenes": 28
+}

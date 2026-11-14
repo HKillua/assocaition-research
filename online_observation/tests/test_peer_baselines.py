@@ -3,13 +3,70 @@ import math
 from math import sqrt
 import unittest
 
-from online_observation.frechet_trajectory import fit_frechet_slots, frechet_centroid, trajectory_distance
+from online_observation.evaluation_data import ReferenceData
+from online_observation.frechet_trajectory import (
+    fit_frechet_slots, frechet_centroid, search_frechet_slots, trajectory_distance,
+)
 from online_observation.lindenmaier_association import (
     DiagonalState, ExistenceMass, SensorModel, fuse_pair, pair_log_likelihood_ratio, update_existence,
 )
 from online_observation.peer_identity import CandidateGroup, IdentityReader
-from online_observation.peer_prefix import LocalPrefix
-from online_observation.peer_replay import replay_frames
+from online_observation.peer_lindenmaier import LindenmaierArm
+from online_observation.peer_prefix import LocalPrefix, PrefixObservation
+from online_observation.peer_replay import ReplayFrame, replay_frames
+from online_observation.peer_score import score_peer_replay
+
+
+class PeerScoreTests(unittest.TestCase):
+    def test_exact_first_decisions_and_common_grid_score_different_clocks(self):
+        a, b, c = ("A", "1"), ("B", "2"), ("B", "3")
+        events = [(0.25, (a, b)), (0.75, (c,))]
+        labels = {a: "one", b: "two", c: "one"}
+        publications = [
+            dict(query_time=0.25, tracks=[dict(track_id="1", members=(a, b))]),
+            dict(query_time=0.75, tracks=[dict(track_id="1", members=(a, c)),
+                                         dict(track_id="2", members=(b,))]),
+        ]
+        score = score_peer_replay(events, publications, labels, stop=1.0)
+        native = score["native_births"]
+        self.assertEqual(native["first_decisions"], dict(correct=1, incorrect=2, independent=0, unpublished=0))
+        self.assertEqual(native["first_wrong_without_true_peer_at_release"], 2)
+        self.assertEqual(native["confirmed_within_seconds"]["20"], dict(confirmed=2, censored=1, unconfirmed=0))
+        self.assertTrue(score["population"]["is_sparse_scene"])
+        self.assertEqual(native["confirmation_wait_seconds"]["max"], 0.5)
+        self.assertEqual(score["integer_grid"]["pairs"]["cross_source"]["false_pairs"], 0)
+        self.assertEqual(score["false_chains"]["pair_seconds"], 0.5)
+
+    def test_frozen_membership_does_not_bridge_unpublished_report_updates(self):
+        a, b = ("A", "1"), ("B", "2")
+        labels = {a: "one", b: "two"}
+        events = [(0.25, (a, b)), (30.25, (a, b)), (80.25, (a, b)), (90.25, (a, b))]
+        publications = [dict(query_time=stamp, tracks=[dict(track_id="1", members=(a, b))])
+                        for stamp in (0.25, 30.25, 110.25)]
+        score = score_peer_replay(events, publications, labels, stop=130.25)
+        chains = score["false_chains"]
+        self.assertEqual(chains["chains"], 2)
+        self.assertEqual(chains["ends"], {"expiry": 1, "right_censored": 1})
+        self.assertEqual(chains["pair_seconds"], 110.0)
+        self.assertEqual(chains["over_60_seconds"], dict(chains=1, pair_seconds=90.0))
+        self.assertEqual(score["integer_grid"]["pairs"]["cross_source"]["false_pairs"], 110)
+
+    def test_reference_denominator_counts_unpublished_targets(self):
+        a, b = ("A", "1"), ("B", "2")
+        labels = {a: "one", b: "two"}
+        events = [(0.0, {a: (0.0, 0.0), b: (0.0, 0.0)})]
+        publications = [dict(query_time=0.0, service_seconds=0.125,
+                             tracks=[dict(track_id="1", members=(a,), position_m=(3.0, 4.0))])]
+        samples = ((100.0, 0.0, 0.0, None, None), (101.0, 0.0, 0.0, None, None))
+        reference = ReferenceData({"one": samples, "two": samples}, 100.0, 60.0)
+        score = score_peer_replay(events, publications, labels, stop=1.0, reference=reference,
+                                  include_birth_details=True)
+        self.assertEqual(score["position"]["support"]["reference_supported_target_seconds"], 4)
+        self.assertEqual(score["position"]["errors"]["all"]["count"], 2)
+        self.assertEqual(score["position"]["errors"]["single_source"]["mae_m"], 5.0)
+        self.assertEqual(score["service_seconds"]["release_to_ready"]["p95"], 0.125)
+        self.assertEqual([row["first_decision"] for row in score["birth_details"]],
+                         ["independent", "unpublished"])
 
 
 class IdentityReaderTests(unittest.TestCase):
@@ -268,6 +325,37 @@ class FrechetTrajectoryTests(unittest.TestCase):
             with self.subTest(slots=slots), self.assertRaises(ValueError):
                 fit_frechet_slots(left, left, slots, **options)
 
+    def test_set_search_retains_far_singletons_at_metric_boundary(self):
+        left, right = ({0: (0, 0)},), ({0: (22000, 0)},)
+        options = dict(cutoff=4000.0, cardinality_penalty=4000.0 / sqrt(2))
+        result = search_frechet_slots(left, right, **options)
+        self.assertEqual(result.slots, ((0, None), (None, 0)))
+        self.assertEqual(result.centers, left + right)
+        self.assertAlmostEqual(result.objective, options["cardinality_penalty"] ** 2 / 2)
+        _, empty_cost = fit_frechet_slots(left, right, (), **options)
+        _, fused_cost = fit_frechet_slots(left, right, [(0, 0)], **options)
+        self.assertAlmostEqual(empty_cost, fused_cost)
+        self.assertEqual(search_frechet_slots(left, (), **options).slots, ((0, None),))
+
+    def test_set_search_matches_geometry_and_masks_only_with_joint_support(self):
+        options = dict(cutoff=4000.0, cardinality_penalty=4000.0 / sqrt(2))
+        left = ({0: (0, 0)}, {0: (22000, 0)})
+        right = ({0: (22002, 0)}, {0: (4, 0)})
+        result = search_frechet_slots(left, right, **options)
+        self.assertEqual(set(result.slots), {(0, 1), (1, 0)})
+        self.assertAlmostEqual(result.objective, 2.5)
+        self.assertEqual(search_frechet_slots(left, right, **options), result)
+
+        # Three one-sided knots dominate the unmasked fit, but the coeval points agree.
+        sparse_left = ({0: (0, 0), 1: (0, 0)},)
+        sparse_right = ({1: (2, 0), 2: (2, 0), 3: (2, 0)},)
+        masked = search_frechet_slots(sparse_left, sparse_right, **options, unknown_mask=True)
+        self.assertEqual(masked.slots, ((0, 0),))
+        self.assertAlmostEqual(masked.objective, 1.0)
+        self.assertEqual(masked.centers, ({0: (0, 0), 1: (1, 0), 2: (2, 0), 3: (2, 0)},))
+        lacking_joint_support = search_frechet_slots(left[:1], ({1: (0, 0)},), **options, unknown_mask=True)
+        self.assertEqual(lacking_joint_support.slots, ((0, None), (None, 0)))
+
 
 class LindenmaierExistenceTests(unittest.TestCase):
     def test_fresh_sources_then_discounted_global_prior(self):
@@ -303,3 +391,49 @@ class LindenmaierExistenceTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "both masses have zero uncertainty"):
             update_existence(exists, (exists,), gamma=1)
         self.assertEqual(update_existence(exists, (absent,), gamma=0.9), absent)
+
+
+class LindenmaierArmTests(unittest.TestCase):
+    def test_feedback_changes_the_null_decision_only_after_confirmation(self):
+        a, b = ("A", "1"), ("B", "2")
+
+        def reading(east, stamp):
+            state = DiagonalState((east, 0, 0, 0), (22500, 144, 22500, 144))
+            return PrefixObservation(stamp, (east, 0), state)
+
+        pair_at_first = ReplayFrame(0, {a: reading(-700, 0), b: reading(-150, 0)}, ((0, (a, b)),))
+        self.assertEqual(len(LindenmaierArm(feedback=True).publish(pair_at_first)), 2)
+
+        final_ids = []
+        for feedback in (False, True):
+            arm = LindenmaierArm(feedback=feedback)
+            for stamp in (0, 1, 2):
+                initial, = arm.publish(ReplayFrame(stamp, {a: reading(0, stamp)}, ((stamp, (a,)),)))
+            self.assertTrue(arm.existence_by_id[initial.track_id].confirmed)
+            final = ReplayFrame(3, {a: reading(-700, 3), b: reading(-150, 3)}, ((3, (a, b)),))
+            groups = arm.publish(final)
+            expected = [(a, b)] if feedback else [(a,), (b,)]
+            self.assertEqual([item.candidate.members for item in groups], expected)
+            self.assertEqual(groups[0].track_id, initial.track_id)
+            self.assertEqual(arm.diagnostics["scored_pairs"], 1)
+            self.assertEqual(arm.diagnostics["scored_pairs_with_informative_prior"], int(feedback))
+            final_ids.append(groups[0].track_id)
+        self.assertEqual(*final_ids)
+
+    def test_boundary_keeps_singletons_and_never_reuses_a_report_as_evidence(self):
+        a, b, c = ("A", "1"), ("B", "2"), ("B", "3")
+        arm = LindenmaierArm(feedback=True)
+        events = [(0, {a: (0, 0), b: (0, 0), c: (0, 0)}),
+                  (10, {a: (0, 0), b: (0, 0), c: (0, 0)}), (90, {a: (0, 0)})]
+        frames = iter(replay_frames(events, interval_seconds=20))
+        first = arm.publish(next(frames))
+        self.assertEqual([item.candidate.members for item in first], [(a,), (b,), (c,)])
+        self.assertEqual(arm.diagnostics["positive_pairs_abstained_on_exact_tie"], 2)
+        self.assertEqual(arm.diagnostics["existence_report_updates"], 6)
+        before = arm.existence_by_id[first[0].track_id].probability
+        self.assertEqual(arm.publish(next(frames)), first)
+        after = arm.existence_by_id[first[0].track_id].probability
+        self.assertAlmostEqual(after, 0.5 + (before - 0.5) * 2 ** (-20 / 60))
+        self.assertEqual(arm.diagnostics["existence_report_updates"], 6)
+        self.assertEqual([len(arm.publish(frame)) for frame in frames], [3, 0, 1])
+        self.assertEqual(arm.diagnostics["existence_report_updates"], 7)

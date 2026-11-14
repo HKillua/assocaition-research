@@ -132,7 +132,11 @@ def _difference_variances(left, right, correlation):
 
 def fuse_pair(left: DiagonalState, right: DiagonalState, *, correlation: float) -> DiagonalState:
     """Apply equations (45–47) with the diagonal correlation model of equation (7)."""
-    difference_variances = _difference_variances(left, right, correlation)
+    return _fuse_with_variances(left, right, correlation,
+                                _difference_variances(left, right, correlation))
+
+
+def _fuse_with_variances(left, right, correlation, difference_variances):
     mean, variances = [], []
     for a, b, pa, pb, difference_variance in zip(
             left.mean, right.mean, left.variances, right.variances, difference_variances):
@@ -185,6 +189,16 @@ def _log_unassignment(sensor, local_prior, fused_prior):
     ))
 
 
+def _log_likelihood_ratio(distance, difference_variances, fused_prior,
+                          left_prior, right_prior, left_sensor, right_sensor):
+    match = math.fsum((
+        _log_gaussian(distance, difference_variances), fused_prior,
+        _log_density(left_sensor.tracking_probability), _log_density(right_sensor.tracking_probability),
+    ))
+    return match - _log_unassignment(left_sensor, left_prior, fused_prior) - _log_unassignment(
+        right_sensor, right_prior, fused_prior)
+
+
 def pair_log_likelihood_ratio(
     left: DiagonalState,
     right: DiagonalState,
@@ -210,13 +224,9 @@ def pair_log_likelihood_ratio(
     if distance >= distance_gate:
         return 0.0
 
-    fused = fuse_pair(left, right, correlation=correlation)
+    fused = _fuse_with_variances(left, right, correlation, difference_variances)
     fused_prior = _log_prior(fused, confirmed_states, state_volume, prior_gate)
     left_prior = _log_prior(left, confirmed_states, left_sensor.state_volume, prior_gate)
     right_prior = _log_prior(right, confirmed_states, right_sensor.state_volume, prior_gate)
-    match = math.fsum((
-        _log_gaussian(distance, difference_variances), fused_prior,
-        _log_density(left_sensor.tracking_probability), _log_density(right_sensor.tracking_probability),
-    ))
-    return match - _log_unassignment(left_sensor, left_prior, fused_prior) - _log_unassignment(
-        right_sensor, right_prior, fused_prior)
+    return _log_likelihood_ratio(distance, difference_variances, fused_prior,
+                                 left_prior, right_prior, left_sensor, right_sensor)

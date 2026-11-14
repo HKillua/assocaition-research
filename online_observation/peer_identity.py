@@ -53,6 +53,11 @@ class IdentityReader:
         self._last_id = 0
         self._memory: dict[str, CandidateGroup] = {}
 
+    @property
+    def remembered_ids(self) -> frozenset[str]:
+        """IDs retained by the last publication, including dormant tracks."""
+        return frozenset(self._memory)
+
     def publish(self, stamp: float, groups: Iterable[CandidateGroup]) -> tuple[IdentifiedGroup, ...]:
         """Publish one new frame in time order, including empty frames after expiry."""
         if not math.isfinite(stamp) or stamp <= self._clock:

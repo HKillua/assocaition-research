@@ -25,6 +25,10 @@ python -m unittest discover -s online_observation/tests
 
 这组测试覆盖当前同行基线的运算模块、回放与输入边界、指派和持续身份评分，使用 Python 标准库。已结案诊断的专用测试可从[此前版本](https://github.com/HKillua/assocaition-research/tree/31b527738317b5f9d852fe678b99baf16b62b108/online_observation/tests)查阅。
 
+## MTAD 同行适配开发比较
+
+`python -m online_observation.peer_experiment --help` 提供原 28 场的运行入口。使用 Level1 的有序分卷和一个新的私有输出目录。量测回放冻结所有发布后，才读取开发标签与参考位置。配置、逐场预测和逐场评分分别落盘。执行范围见[事前方案](docs/proposals/online_peer_adaptation_20261114.md#v12-原-28-场开发复建协议)。
+
 ## 严格输入与开发诊断
 
 以下为历史开发诊断和工程核验入口。新基线复建及科研运行按[研究状态](docs/research_status.md)和[完整流程](docs/research_workflow.md)确定。

@@ -20,15 +20,19 @@ python -m online_observation causal-replay \
 - JSONL 记录查询时刻、量测时刻、数据年龄、生命周期事件和逐秒计时。服务时间含交付、更新、预测和状态序列化。预读和排序单计，文件写入与设备传输在计时范围之外。排队是固定每秒释放一轮的串行模型。按协议的 `ticks` 核对结果完整性。
 
 ```bash
-python -m pip install -e '.[research]'
 python -m unittest discover -s online_observation/tests
 ```
+
+这组测试覆盖当前同行基线的运算模块、回放与输入边界、指派和持续身份评分，使用 Python 标准库。已结案诊断的专用测试可从[此前版本](https://github.com/HKillua/assocaition-research/tree/31b527738317b5f9d852fe678b99baf16b62b108/online_observation/tests)查阅。
 
 ## 严格输入与开发诊断
 
 以下为历史开发诊断和工程核验入口。新基线复建及科研运行按[研究状态](docs/research_status.md)和[完整流程](docs/research_workflow.md)确定。
 
 这些诊断从已到的位置、时间和片段等同性计算，量测速航既不参与预测，也不筛选位置。训练场的 A-B 标签和参考位置只进入评价。输入字段权限、真实回放结果和方法资格见[在线研究报告](docs/reports/2026-11-11-online-field-and-method-review.md)。
+
+<details>
+<summary>历史开发命令</summary>
 
 |入口|用途|
 |---|---|
@@ -69,3 +73,5 @@ python -m unittest discover -s online_observation/tests
 |`python -m online_observation.rejoin_async_innovation_diagnostic --help`|复算旧缓存形成的断口，在各条原生新报的时刻比较批前预测、实报和坐标遮蔽|
 |`python -m online_observation.rejoin_common_innovation_diagnostic --help`|固定双报原生时刻，复算公共与差分创新、同源留出与弃权对照|
 |`python -m online_observation.fusion_probe --help`|固定身份的逐秒位置控制及跨源权重比较|
+
+</details>

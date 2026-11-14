@@ -84,13 +84,16 @@ class GeometryArm:
 
 
 class FrechetArm:
-    """Read the present end of a three-grid trajectory consensus."""
+    """Read the present end of a causal Fréchet trajectory consensus."""
 
-    def __init__(self, *, unknown_mask):
+    def __init__(self, *, unknown_mask, history="full", capture_fit=False):
         self._identity = IdentityReader()
         self._frames = deque(maxlen=WINDOW_GRIDS)
         self._grid = 0
         self._unknown_mask = unknown_mask
+        self._history = history
+        self._capture_fit = capture_fit
+        self.snapshot = None
         self.diagnostics = Counter()
 
     def publish(self, frame):
@@ -105,20 +108,45 @@ class FrechetArm:
         for key, trajectory in trajectories.items():
             by_source.setdefault(key[0], {}).setdefault(tuple(trajectory.items()), []).append(key)
         groups = []
+        self.snapshot = None
+        self.diagnostics["active_fragments"] += len(trajectories)
         if len(by_source) == 2:
             # Geometric histories give a canonical order. Identical histories in
             # one source carry no evidence for a fragment-specific cross-link.
+            # All history arms use the same unfiltered order and ambiguity guard.
             sources = sorted(by_source.values(), key=lambda items: sorted(items))
             left, right = [
                 [(history, key) for history, keys in sorted(source.items()) for key in keys]
                 for source in sources
             ]
+            ordered = [[key for _, key in side] for side in (left, right)]
+            report_times = {}
+            if self._history == "unique" or self._capture_fit:
+                report_times = {
+                    key: {index: old.observations[key].observed_at for index, old in self._frames
+                          if key in old.observations} for key in trajectories
+                }
+            scored = [
+                [_history_knots(trajectories[key], report_times.get(key), self._grid, self._history)
+                 for key in side] for side in ordered
+            ]
+            self.diagnostics["eligible_pairs"] += len(left) * len(right)
+            if self._history != "full":
+                for row, first in enumerate(scored[0]):
+                    for col, second in enumerate(scored[1]):
+                        shared = len(first.keys() & second.keys())
+                        original = len(trajectories[ordered[0][row]].keys()
+                                       & trajectories[ordered[1][col]].keys())
+                        self.diagnostics["pairs_with_reduced_overlap"] += shared < original
+                        self.diagnostics["removed_common_knots"] += original - shared
             fit = search_frechet_slots(
-                [dict(history) for history, _ in left],
-                [dict(history) for history, _ in right],
+                *scored,
                 cutoff=CUTOFF_M, cardinality_penalty=CARDINALITY_M,
                 seed=SEARCH_SEED, max_sweeps=SEARCH_SWEEPS, unknown_mask=self._unknown_mask,
             )
+            if self._capture_fit:
+                self.snapshot = dict(keys=ordered, trajectories=scored, slots=fit.slots,
+                                     tags=[[report_times[key] for key in side] for side in ordered])
             for (a, b), center in zip(fit.slots, fit.centers):
                 if a is None or b is None:
                     continue
@@ -131,11 +159,22 @@ class FrechetArm:
                     self.diagnostics["no_current_center_pairs"] += 1
                     continue
                 active = first_key, second_key
-                overlap = trajectories[active[0]].keys() & trajectories[active[1]].keys()
+                overlap = scored[0][a].keys() & scored[1][b].keys()
                 self.diagnostics["paired_common_grids"] += len(overlap)
                 groups.append(_group(frame, active, center[self._grid]))
         self.diagnostics["paired_groups"] += len(groups)
         return self._identity.publish(frame.stamp, _finish_groups(frame, groups, _state_position))
+
+
+def _history_knots(trajectory, tags, current, history):
+    if history == "full":
+        return trajectory
+    if history == "current":
+        return {current: trajectory[current]}
+    if history == "unique":
+        newest = {tag: knot for knot, tag in tags.items()}
+        return {knot: trajectory[knot] for knot in newest.values()}
+    raise ValueError(f"unknown history policy {history}")
 
 
 @dataclass(frozen=True)
@@ -303,7 +342,7 @@ def _paired_births(control, candidate):
     return dict(kept=kept, lost=lost, gained=gained)
 
 
-def _summarize(output, scenes, components):
+def _summarize(output, scenes, components, comparisons=COMPARISONS):
     reports = {}
     for scene in scenes:
         raw = json.loads((output / f"{scene}.json").read_text(encoding="utf-8"))
@@ -316,7 +355,7 @@ def _summarize(output, scenes, components):
             arms={name: _scene_summary(score) for name, score in scores.items()},
             paired_first=[
                 dict(control=control, candidate=candidate, **_paired_births(scores[control], scores[candidate]))
-                for control, candidate in COMPARISONS
+                for control, candidate in comparisons
             ],
         )
     _write_json(output / "scene_summary.json", reports)

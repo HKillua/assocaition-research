@@ -10,6 +10,7 @@ from online_observation.frechet_trajectory import (
 from online_observation.lindenmaier_association import (
     DiagonalState, ExistenceMass, SensorModel, fuse_pair, pair_log_likelihood_ratio, update_existence,
 )
+from online_observation.peer_experiment import FrechetArm
 from online_observation.peer_identity import CandidateGroup, IdentityReader
 from online_observation.peer_lindenmaier import LindenmaierArm
 from online_observation.peer_prefix import LocalPrefix, PrefixObservation
@@ -237,6 +238,22 @@ class LindenmaierAssociationTests(unittest.TestCase):
 
 
 class FrechetTrajectoryTests(unittest.TestCase):
+    def test_history_arms_fix_candidate_order_and_keep_latest_native_grid(self):
+        left, right = ("A", "1"), ("B", "1")
+        events = [(0, {left: (0, 0), right: (10, 0)}),
+                  (45, {left: (3, 0)}), (65, {right: (12, 0)})]
+        arms = [FrechetArm(unknown_mask=True, history=policy, capture_fit=True)
+                for policy in ("full", "current", "unique")]
+        for frame in replay_frames(events, interval_seconds=20):
+            for arm in arms:
+                arm.publish(frame)
+            snapshots = [arm.snapshot for arm in arms]
+            self.assertTrue(all(row["keys"] == snapshots[0]["keys"] for row in snapshots))
+            if frame.stamp == 60:
+                self.assertEqual(snapshots[0]["tags"], [[{1: 0, 2: 0, 3: 45}], [{1: 0, 2: 0, 3: 0}]])
+                self.assertEqual([list(side[0]) for side in snapshots[1]["trajectories"]], [[3], [3]])
+                self.assertEqual([list(side[0]) for side in snapshots[2]["trajectories"]], [[2, 3], [3]])
+
     def test_distance_counts_missing_and_caps_large_residual(self):
         first = {0: (0, 0), 1: (0, 0), 3: (0, 0)}
         second = {0: (3, 4), 2: (0, 0), 3: (20, 0)}

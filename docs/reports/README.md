@@ -2,6 +2,7 @@
 
 当前研究目标见[在线研究状态](../research_status.md)，实际执行见[在线交接](../../HandOver/Handover.md)。
 
+- [MTAD Fréchet 当前格与原生报文去重消融](2026-11-14-online-peer-history-ablation.md)
 - [MTAD 冻结长错链去向与报文支撑](2026-11-14-online-peer-chain-lineage.md)
 - [MTAD 原 28 场同行适配与同延迟比较](2026-11-14-online-peer-adaptation.md)
 - [在线观测基线重启审计](2026-11-14-online-baseline-restart-audit.md)

@@ -29,6 +29,8 @@ python -m unittest discover -s online_observation/tests
 
 `python -m online_observation.peer_experiment --help` 提供原 28 场的运行入口。使用 Level1 的有序分卷和一个新的私有输出目录。量测回放冻结所有发布后，才读取开发标签与参考位置。配置、逐场预测和逐场评分分别落盘。执行范围见[事前方案](docs/proposals/online_peer_adaptation_20261114.md#v12-原-28-场开发复建协议)。
 
+`python -m online_observation.peer_history_experiment --help` 提供同 20 秒的 Fréchet 历史格消融入口。`--frozen` 接收上述 v1.2 原 28 场完整私有结果，用于验证原三格发布与读取焦点场的当前几何对照。 [运行记录](docs/reports/2026-11-14-online-peer-history-ablation.md)
+
 ## 严格输入与开发诊断
 
 以下为历史开发诊断和工程核验入口。新基线复建及科研运行按[研究状态](docs/research_status.md)和[完整流程](docs/research_workflow.md)确定。

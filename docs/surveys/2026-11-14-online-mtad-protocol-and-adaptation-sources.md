@@ -48,6 +48,18 @@
 
 CDP-WGL 刊版 §3.2 式 (6) 与文字的密度方向差异仍在。两个同源非中心点可各自到对侧中心，当前簇的同源互斥未显式保证。算法 2–3 的历史边降至零后缺失撤回，两簇重新分开时可能读出同一历史标签。Draves §III-C 的双源根只准扩展新的来源，A1/B1 根无法继承同源新片 A2，单源时也无根。两者分别保留历史标签和跨批假设机制价值。新找到 Steuernagel FUSION 2026 的双遍指派 Python 直接接收代价矩阵，源码单行／单列分支绕过一般的代价上限，恰是稀疏输入需要明确的行为。 [CDP-WGL 刊版](https://hoa-van.nguyen-au.com/files/hoa_j9_distr.pdf) · [Draves 原文](https://arxiv.org/html/2610.20290v1#S3) · [Steuernagel 会程](https://fusion2026.isif.org/fusion2026/accepted-papers.html) · [固定源码](https://github.com/Fusion-Goettingen/FUSION_2026_Steuernagel_FastAssociation/blob/98643632013a3f3f4d257118449cd0706d9533f7/mot/utilities/association_strategies.py#L8-L66)
 
+## 补核在线协议与作者代码
+
+2026-11-14 使用 [AnySearch 3.1.1](https://github.com/anysearch-ai/anysearch-skill/tree/main) 的公开接口。查 `academic` 和 `code` 子域后，英文 MTAD 在线前缀与融合、中文 MTAD 在线异步、MTAD DOI 前向引用、Lindenmaier／Nguyen 作者实现四组各返回 8 条，按 DOI 与原文去重。条数含错命中。另查 2025–2026 海事异步数据处理、作者代码及 IEEE Sensors Journal、IEEE TSP 相邻工作。两套已选方法的源机制能从论文重建，本轮未核到公开的原系统代码。
+
+| 来源及阅读定位 | 直接证据 DE | 适配判断 AI 与待核 UN |
+|---|---|---|
+| **TSA-cTFER 与 TMTAFF**，复核前者 §§5.2、5.4.1、算法 1–3 及后者 §§3.1、4–5。 | 前者将两源按 20 秒递送，报告成功边的确认等待。后者以完整轨输入 TCM、TAM 和 TFM，整场评分，讨论中才提出用近期数据和过去状态处理在线约束。其数据声明链接 MTAD。 | 20 秒用于共同发布和同延迟对照，首报、全部未确认和跨窗 ID 另计。TMTAFF 可参考关联至融合的接口，当前未核到作者权重或严格前缀发布。 [TSA-cTFER 原文](https://doi.org/10.3390/rs16183380) · [TMTAFF 原文](https://doi.org/10.3390/app16147251) |
+| **DTWCM，Wan 等，IJTST 2025 卷期**，原文 §§2.1–2.3、3.1–3.4；补核作者固定版本 `d465caa`。 | 原实验从 Cui 等的母 AIS 抽 10 场，二次分源抽样并给经纬、速航与时间加噪。表 2 给整轨关联 97.33%，无首版 ID 或状态发布评价。作者 README 声明提供 4 个实验场的加工样例。脚本输入完整端点与原速航，交集至少 120 秒。式 (24–26) 为至多一次，脚本行 179–182 将双方每轨的指派数限定为 1，两侧人口不同会导致不可行。固定根目录未见许可证文件。 | 可以研究仅用已到轨迹、相同等待下的异步相似度。原速航、120 秒整段交集和全配条件均不能用于本轮首报适配。保留为相似机制来源。 [刊版](https://doi.org/10.1016/j.ijtst.2024.03.001) · [固定源码](https://github.com/SkiWWWW/Track-to-Track-Association-Algorithm-of-DTWCM/blob/d465caa60a42ad569c70bceede88287b27bac36d/DTWCMalgorithm.py#L117-L184) · [作者说明](https://github.com/SkiWWWW/Track-to-Track-Association-Algorithm-of-DTWCM/blob/d465caa60a42ad569c70bceede88287b27bac36d/README.md) |
+| **其他海上输入参照**，Shi 等 2026 §§4.3、5.1，Zhao 等 2026 §§3.2.1–3.2.2，Li 等 2026 §§2.2.1、3.1。 | Shi 在岸基雷达／AIS 上将约 1 秒与 30 秒采样对齐并筛选高质量样点。Zhao 用近 5 分钟和 AIS 原速航构建共时图。Li 按单船轨迹构重叠窗口，场景来自船模仿真。 | 提供因果外推和异步窗口的对照线索。三项未核到用 MTAD 原包从首报发布持续 ID 与融合状态。 [Shi](https://doi.org/10.3390/s26072255) · [Zhao](https://doi.org/10.1049/itr2.70166) · [Li 刊版](https://www.sys-ele.com/CN/article/downloadArticleFile.do?attachType=PDF&id=10896) |
+
+本次源机制补核覆盖 Lindenmaier §II-A、§III-B/C、§IV 和 Nguyen v3 §III、§IV、§VI 及数学附录。Lindenmaier 的出生、杂波密度使用状态空间体积，源跟踪概率、报告存在概率和信任度分别进入不同运算。Nguyen §IV-B 式 (27) 按 `1/κ` 加权，中心的两源权重取决于当前输出槽数及每源人口。Mode C 的原连接点继续适用，新增协议限制与运算验收见[适配设计](../proposals/online_peer_adaptation_20261114.md#v11-适配补核与软件核验)。 [Lindenmaier 全文](https://www.researchgate.net/publication/389845267_A_Robust_and_Runtime-Efficient_Track-to-Track_Fusion_for_Automotive_Perception_Systems) · [Nguyen 作者稿 §IV](https://arxiv.org/html/2504.20391v3#S4)
+
 ## 来源分析交接
 
 `ANALYSIS_PACKAGE` `AP-ONLINE-MTAD-PROTOCOL-20261114`，契约 v2.0，`partial`。数据论文／竞赛、`AP-TSACTFER-ONLINE-20261112`、MH-T2TA、CIAG、Temporal-MPRF、MIS-GNN、IAGM-TAN、CA-LSTM、PTFM、TMTAFF、陈等按上表定位。问题是原协议在各决策时刻能见什么、评价了什么。候选现象是整段端点、双侧进入分母与仅计成功等待会提高可比性门槛。未知为作者现场输入和逐次输出资产。另见[出处索引](source-provenance.md)。

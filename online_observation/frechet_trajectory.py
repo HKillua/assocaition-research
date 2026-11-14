@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from collections.abc import Mapping
+from collections.abc import Mapping, Sequence
 from math import dist, fsum, isfinite, sqrt
 from numbers import Integral
 
@@ -157,3 +157,77 @@ def frechet_centroid(
         if previous - objective <= tolerance:
             break
     return fitted
+
+
+def fit_frechet_slots(
+    left: Sequence[Trajectory],
+    right: Sequence[Trajectory],
+    slots: Sequence[tuple[int | None, int | None]],
+    *,
+    cutoff: float,
+    cardinality_penalty: float,
+) -> tuple[tuple[dict[int, Point], ...], float]:
+    """Fit ordered active trajectories and return their mean squared OSPA cost.
+
+    Each slot contains the indices of its assigned left and right trajectories.
+    ``None`` denotes a virtual assignment. The supplied assignment saturates the
+    smaller cardinality on each side, as in Nguyen et al. Definition 5. Slots
+    require at least one real assignment. This fits the centers using Eq. 27 and
+    scores the supplied assignment using Eq. 18, without searching assignments.
+    The cost is an equal-source average in squared position units.
+    """
+    _validate_cutoff(cutoff)
+    if (not isfinite(cardinality_penalty) or cardinality_penalty <= 0
+            or not cardinality_penalty <= cutoff <= sqrt(2) * cardinality_penalty):
+        raise ValueError("require 0 < cardinality_penalty <= cutoff <= sqrt(2) * cardinality_penalty")
+    squared_cutoff = cutoff * cutoff
+    if not isfinite(squared_cutoff) or squared_cutoff == 0:
+        raise ValueError("squared cutoff must be finite and positive")
+
+    count = len(slots)
+    assigned = (set(), set())
+    sizes = (len(left), len(right))
+    for left_index, right_index in slots:
+        if left_index is None and right_index is None:
+            raise ValueError("an active slot needs a real assignment")
+        for index, size, used in zip((left_index, right_index), sizes, assigned):
+            if index is None:
+                continue
+            if isinstance(index, bool) or not isinstance(index, Integral) or not 0 <= index < size:
+                raise ValueError("assignment index outside its source")
+            if index in used:
+                raise ValueError("a source trajectory cannot be assigned twice")
+            used.add(index)
+    if any(len(used) != min(count, size) for size, used in zip(sizes, assigned)):
+        raise ValueError("assignment must saturate the smaller cardinality for each source")
+
+    left_samples = tuple(_samples(trajectory) for trajectory in left)
+    right_samples = tuple(_samples(trajectory) for trajectory in right)
+    left_size, right_size = sizes
+    left_denominator, right_denominator = max(count, left_size), max(count, right_size)
+    centers = []
+    left_losses = []
+    right_losses = []
+    for left_index, right_index in slots:
+        if left_index is None:
+            center = frechet_centroid(right_samples[right_index], cutoff=cutoff)
+        elif right_index is None:
+            center = frechet_centroid(left_samples[left_index], cutoff=cutoff)
+        else:
+            first, second = left_samples[left_index], right_samples[right_index]
+            center = frechet_centroid(first, second, cutoff=cutoff,
+                                      weights=(1 / left_denominator, 1 / right_denominator))
+            left_losses.append(_normalized_trajectory_loss(center, first, cutoff))
+            right_losses.append(_normalized_trajectory_loss(center, second, cutoff))
+        centers.append(center)
+
+    squared_penalty = cardinality_penalty * cardinality_penalty
+    cost = fsum(
+        (squared_cutoff * (fsum(losses) / denominator)
+         + squared_penalty * (abs(count - size) / denominator)) / 2
+        for size, denominator, losses in (
+            (left_size, left_denominator, left_losses), (right_size, right_denominator, right_losses),
+        )
+        if denominator
+    )
+    return tuple(centers), cost

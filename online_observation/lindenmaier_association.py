@@ -6,6 +6,7 @@ global states predicted to that time, and declared sensor model parameters.
 
 from __future__ import annotations
 
+from collections.abc import Iterable
 from dataclasses import dataclass
 from itertools import chain
 import math
@@ -42,6 +43,84 @@ class SensorModel:
         densities = (self.birth_density, self.clutter_density)
         if not all(math.isfinite(value) and value >= 0 for value in densities):
             raise ValueError("birth and clutter densities must be finite and nonnegative")
+
+
+@dataclass(frozen=True)
+class ExistenceMass:
+    """Belief mass over existence, nonexistence and the unresolved pair.
+
+    The default mass is vacuous evidence. An unobserved source supplies no
+    mass of its own. Recording a misdetection requires an observed opportunity.
+    """
+
+    exists: float = 0.0
+    absent: float = 0.0
+    unknown: float = 1.0
+
+    def __post_init__(self):
+        masses = self.exists, self.absent, self.unknown
+        if (not all(math.isfinite(mass) and 0 <= mass <= 1 for mass in masses)
+                or not math.isclose(math.fsum(masses), 1.0, rel_tol=0, abs_tol=1e-12)):
+            raise ValueError("existence masses must be finite, nonnegative and sum to one")
+
+    @classmethod
+    def from_local(cls, *, existence_probability: float, tracking_probability: float,
+                   trust: float) -> ExistenceMass:
+        """Convert the caller's local probabilities to a mass (Eqs. 18–20)."""
+        probabilities = existence_probability, tracking_probability, trust
+        if not all(math.isfinite(value) and 0 <= value <= 1 for value in probabilities):
+            raise ValueError("local existence, tracking and trust probabilities must be in [0, 1]")
+        commitment = tracking_probability * trust
+        return cls(commitment * existence_probability,
+                   commitment * (1 - existence_probability), 1 - commitment)
+
+    @property
+    def probability(self) -> float:
+        """Pignistic existence probability with equal unresolved shares (Eq. 28)."""
+        return self.exists + self.unknown / 2
+
+
+def _dempster_fusion(first: ExistenceMass, second: ExistenceMass) -> ExistenceMass:
+    # Sum nonconflicting intersections directly instead of subtracting conflict from one.
+    exists = first.exists * (second.exists + second.unknown) + first.unknown * second.exists
+    absent = first.absent * (second.absent + second.unknown) + first.unknown * second.absent
+    unknown = first.unknown * second.unknown
+    total = math.fsum((exists, absent, unknown))
+    if total == 0:
+        raise ValueError("Dempster fusion is undefined for total conflict")
+    return ExistenceMass(exists / total, absent / total, unknown / total)
+
+
+def update_existence(prior: ExistenceMass, fresh_source_masses: Iterable[ExistenceMass],
+                     *, gamma: float) -> ExistenceMass:
+    """Discount prior mass and apply the two-stage update from Section III-C.
+
+    Eq. 24 combines current source masses and Eqs. 48–51 combine the result
+    with the prior discounted by Eqs. 25–27. The caller supplies the discount
+    factor for the actual elapsed time, with gamma=1 at zero elapsed time.
+    Supply only fresh source evidence, once per source. An empty iterable
+    leaves just the discounted prior. Both cumulative inputs with zero
+    unknown mass are undefined without extra relative-evidence weights.
+    """
+    if not math.isfinite(gamma) or not 0 <= gamma <= 1:
+        raise ValueError("gamma must be in [0, 1]")
+    discounted = ExistenceMass(gamma * prior.exists, gamma * prior.absent,
+                               (1 - gamma) + gamma * prior.unknown)
+    meta = ExistenceMass()
+    for source in fresh_source_masses:
+        meta = _dempster_fusion(meta, source)
+
+    # Scale both uncertainty weights before multiplication for near-dogmatic masses.
+    scale = max(meta.unknown, discounted.unknown)
+    if scale == 0:
+        raise ValueError("cumulative fusion is undefined when both masses have zero uncertainty")
+    meta_weight = meta.unknown / scale
+    prior_weight = discounted.unknown / scale
+    unknown = meta_weight * discounted.unknown
+    total = math.fsum((meta_weight, prior_weight, -unknown))
+    exists = meta.exists * prior_weight + discounted.exists * meta_weight
+    absent = meta.absent * prior_weight + discounted.absent * meta_weight
+    return ExistenceMass(exists / total, absent / total, unknown / total)
 
 
 def _difference_variances(left, right, correlation):

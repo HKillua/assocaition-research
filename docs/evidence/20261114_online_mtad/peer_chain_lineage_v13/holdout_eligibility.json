@@ -1,0 +1,44 @@
+{
+  "plan": "IDEA-ONLINE-PEER-HOLDOUT-20261114-v1.4",
+  "qualification": "ineligible_all_previously_evaluated_offline",
+  "level": "Level1",
+  "scenes": {
+    "289": "component-af180e4359fc6179dc953abd",
+    "360": "component-838f461c2fa673cec73e6eec",
+    "513": "component-39700d452c77592c9710a4a3",
+    "653": "component-82e7d43aadb6fd94c06dd59c",
+    "1269": "component-6028e2a87c5080933ca43688",
+    "1439": "component-d55a6ae3aba2d301e18b7bb6",
+    "1443": "component-298647699bcb31c22e6d6486",
+    "1688": "component-2ed927e972728bc356c12808",
+    "1969": "component-fd21cc3cb5062bc4ac714c48",
+    "1973": "component-9baed8fceea6e36d36670d72",
+    "2058": "component-e22e9c22f92b827381bb3826",
+    "2466": "component-1070a982af22fe711ec54707",
+    "2552": "component-beda66e7862b7ad41c56bbe0",
+    "2887": "component-f8c66e2fcefd475704ce0e25",
+    "3001": "component-82e7d43aadb6fd94c06dd59c",
+    "3106": "component-d7e1edcac43af8cea1439d22",
+    "3158": "component-625df624f8d7ccd747b0fb7a",
+    "3226": "component-2cb8b923f6d897035b2f7d5d",
+    "3690": "component-7768e375a15e957a64adf43f",
+    "4180": "component-3b96b9d2dc7cd7d338d73571",
+    "4220": "component-d81c15506dffe8152eec8216",
+    "4375": "component-498d663197c599b9cbd593dc",
+    "4403": "component-64405ee1d117aafaa886aff7",
+    "4652": "component-13b9f23e5ea0d47a945d6296",
+    "4721": "component-c51f4d33c1386a4db8329685"
+  },
+  "component_count": 24,
+  "cross_route_exposure": {
+    "matched_scenes": 25,
+    "matched_components": 24,
+    "qualifying_scenes": 0,
+    "qualifying_components": 0,
+    "source": "REC-OFFLINE-REGISTERED-HOLDOUT-FUSION-20261112 / C107 isolated roster",
+    "corroboration": [
+      "C113",
+      "REC-TMTAFF-PAIR-RELATIVE-HOLDOUT-20261112 / C119"
+    ]
+  }
+}

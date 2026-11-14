@@ -2,6 +2,7 @@
 
 当前研究目标见[在线研究状态](../research_status.md)，实际执行见[在线交接](../../HandOver/Handover.md)。
 
+- [MTAD 原 28 场同行适配与同延迟比较](2026-11-14-online-peer-adaptation.md)
 - [在线观测基线重启审计](2026-11-14-online-baseline-restart-audit.md)
 - [MTAD 接回前的单轨预测偏差与连续报文](2026-11-14-online-rejoin-track-history.md)
 - [MTAD 固定接回前的后报与单次更新消融](2026-11-14-online-rejoin-next-report.md)

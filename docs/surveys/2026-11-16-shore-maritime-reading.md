@@ -2,6 +2,28 @@
 
 2026-11-16。阶段为来源分析。核心场景是岸上处理港区、近海或入海航道的交通态势，同一水域中的多个传感器可观测到同一艘船，报文允许异步到达。问题是以真实已到证据持续发布船舶状态和身份，面向有交叠、单侧可见、脱报、遮挡和新船进入的场景。既有 MTAD 是航迹级开发资源，本轮同时寻找可取得的岸基实测及有原文支持的海事仿真。 [飞书《视频文案》](https://my.feishu.cn/wiki/OHs3w9meHiQ3OXk4XC7ctFPXnxd) · [《科研问题清单》目录](https://my.feishu.cn/wiki/YOcWwbmpHihq8NkAMKWcfBWXnO7) · [清单正文](https://my.feishu.cn/wiki/TWXBw9US4iloe8kN2IpcAFiBnyc)
 
+
+## 详细分析与交接
+
+本页为冻结目录。详细分析按编号导航，保留各篇原始实验单位、输入、对照、数值及未知条件。按正文和代码重核改正的旧条目见下表。
+
+- [S01–S25 · 岸基数据、仿真、近岸观测](2026-11-16-shore-analysis-01-25.md)
+- [S26–S50 · 固定台站、异构传感器及测量偏差](2026-11-16-shore-analysis-26-50.md)
+- [S51–S64、S89–S100 · 海事实测与跨设置追踪机制](2026-11-16-shore-analysis-51-64-89-100.md)
+- [S65–S88 · MTAD 和派生航迹研究](2026-11-16-shore-analysis-65-88.md)
+- [Mode C · 问题、现象、机制及证据矩阵](2026-11-16-mode-c-shore-maritime.md)
+
+本轮交接包 `AP-ONLINE-SHORE-DETAILED-20261116` 同时作为 `analysis_id` 和 `package_id`，`ANALYSIS_PACKAGE`，契约 `research-pipeline-contract v1.0`，生成日期 2026-11-16，综合状态 `partial`。来源版本与证据定位按 S01–S100，从四份逐篇分析可到各原件。
+
+| 交接字段 | 位置 |
+|---|---|
+| 研究问题、研究类型、对象、设计与样本 | 各篇的问题与设计。 |
+| 输入可用性、介入／计算流程、指标、结果及不确定性 | 各篇的方法与输入、结果与原文定位。保留同文对照，原文未给区间时按点估计。 |
+| 主张、证据、实现、偏差与适配边界 | 各篇的 SC／AI 和可复现性。实际限制含数据公开与申请条件、不同设备、地区、人口和真值构造。 |
+| 具体问题及观察候选 | 共见与单侧的可核性、共享报告与时偏、已发版本与终局计分、额外传感器退化。分别由 S01/S30、S50/S90、S66/S96 和 S29/S37 支持局部边界。 |
+| 待核与 missing_evidence | 各篇 UN。集中缺逐报到达、独立跨源全局身份真值、完整配置和许可，以及不同指标的共同评分记录。 |
+| next_skill | Deep Read Mode C，结果已链接。 |
+
 ## 检索与收录
 
 按岸基雷达／AIS／相机、双 HFSWR、海事数据集与仿真、MTAD 实际使用、可迁移在线航迹级方法并行查找。优先 2025–2026 正式出版与作者版本，沿论文引文回查必要的近邻或早期实装。核对出版方、作者稿、机构原件、官方资料与作者仓；按论文的 DOI 或稳定主标识去重，论文的预印本、刊版、仓库和数据记录只算一项。区分在线发表与最终卷期，跨年条目写明两个年份。正式发表优先用卷期年份，当前仅有在线刊版或预印本用其确认年份。每篇登记核到的方法或数据、结果段、局部边界及可核来源。仅读摘要的条目不计正文核读；数据集、代码或比赛规则单列，关联论文各自计一次。历史已有方法和结果定位的逐篇材料按需回读并标为既有核读。同 MTAD 的部分检索以 AnySearch 的学术搜索扩展，进入下表前回到论文或作者原件。
@@ -28,7 +50,7 @@
 
 - `ANALYSIS_PACKAGE` `AP-ONLINE-SHORE-MARITIME-20261116`，状态为 `partial`。研究问题、复现性判断、阅读位置和版本以本文及逐篇表为索引。设计单位包括报文、同船两源航迹、整场和循环扫描，原文结果各按其分母解读。未给置信区间的结果仅记作者报告点值。
 - 待核问题是岸站重复共见时，跨源证据有多大独立性，只有一侧时能否保留身份，以及失源后确认何时才有足够证据。原文观察包括 M2 速度统计排除首分钟、WHUT 初始视觉轨生成晚造成漏融合、GMvA 删除源记录后显著下降。其成因及 MTAD 可迁移性待下一阶段核验。
-- `missing_evidence` 为 HAXR 的完整多站身份真值、MTDSP 的公开未对齐全候选、首报与到达时标、若干软件的授权以及下列条目正文。下一阶段为 Mode C，此次停在来源分析。
+- `missing_evidence` 为 HAXR 的完整多站身份真值、MTDSP 的公开未对齐全候选、首报与到达时标、若干软件的授权以及下列条目正文。原核读轮止于来源分析。本轮 Mode C 矩阵见上方。
 
 ### 只核到摘要、部分页或发布说明
 
@@ -36,7 +58,7 @@
 
 ## 100 篇核读记录
 
-本轮新读或独立重核 **64 篇**，汇入 **36 篇**已有逐篇核读，后者包括 24 篇同 MTAD 及其派生论文。合计 **100 篇**，其中 2025 年 39 篇、2026 年 42 篇，其他 19 篇。按已核发表年份归类，预印本注明版本，少数在线与卷期跨年见表。
+首次建立书目时，新读或独立重核 **64 篇**，汇入 **36 篇**已有逐篇核读，后者包括 24 篇同 MTAD 及其派生论文。合计 **100 篇**，其中 2025 年 39 篇、2026 年 42 篇，其他 19 篇。按已核发表年份归类，预印本注明版本，少数在线与卷期跨年见表。
 
 ### 本轮新读与独立重核
 
@@ -65,15 +87,15 @@
 | 19 | [Kiefer 等，MaCVi 2025](https://openaccess.thecvf.com/content/WACV2025W/MaCVi/papers/Kiefer_3rd_Workshop_on_Maritime_Computer_Vision_MaCVi_2025_Challenge_Results_WACVW_2025_paper.pdf)，2025 | **海事视觉参照**。§§2、3.2–3.4、表 2–4；LaRS 分割和障碍物识别有公开评价协议，嵌入赛有 ≥30 FPS 硬件要求，小目标、反射和少见低光仍有失败。 | [赛方索引](https://macvi.org/dataset)，可借部署时钟和分层，视觉分割不提供跨源持续 ID。 |
 | 20 | [MaCVi 2026 Challenge Overview](https://arxiv.org/html/2604.13244v1)，2026 | **海事视觉参照**。§§2–3、附录 A；图像浮标关联电子海图，训练/验证/测试为 4285/904/924，测试封存。几何投影与分配带来增量，另有热成像及多模态分割。 | [组织方](https://macvi.org/workshop/macvi26)，浮标地图是已知静态参照，与盲船舶跨源身份不同。 |
 | 21 | [MOS-Ship / MOS-DETR](https://www.mdpi.com/2072-4292/18/2/274)，2026 | **海面遥感**。§§2–4、表 3–5；空间对齐光学/SAR，给光学人工加云雾作受控退化，合并分类与定向框。阈值敏感性中 IoU 从 .1 到 .5，准确率 77.7% 到 67.3%。 | 单次图像目标检测；人工合成天气需和真实浓雾区分。 |
-| 22 | [Galdelli 等，HS3-S2 船舶检测及 AIS 匹配](https://iris.univpm.it/retrieve/fc1116c6-5db7-4482-9ae9-d98048dbea3c/Galdelli_Multimodal-AI-enhanced-ship-detection_2025.pdf)，2025 | **海面遥感**。§§3–4、图 3、表 2–4；检测器接卫星图像，再针对采集时刻用 AIS 推算搜索范围，训练70/15/15。影像检出但无匹配进入后续分析。 | 作者公开图像集，检测与 AIS 对照是过境任务；无岸基连续端点发布。 |
+| 22 | [Galdelli 等，HS3-S2 船舶检测及 AIS 匹配](https://iris.univpm.it/retrieve/fc1116c6-5db7-4482-9ae9-d98048dbea3c/Galdelli_Multimodal-AI-enhanced-ship-detection_2025.pdf)，2025 | **海面遥感**。§§3–4、图 3、表 2–4；检测器接卫星图像，再针对采集时刻用 AIS 推算搜索范围，训练70/15/15。影像检出但无匹配进入后续分析。 | 部分图像资源公开，完整评估数据依声明需申请。§5.5 为 6 次过境与地面 AIS 对照，持续发布未测。 |
 | 23 | [NaviAIS / NaviLane](https://arxiv.org/html/2607.18887v1)，2026 | **海事轨迹参照**。§§III–IV、表 II；NOAA ENC 导出矢量航道与 AIS 场景，含时间／有效性掩码；轨迹生成、修正、排名分开。测试分多时距看位置误差。 | 单 AIS 多船预测，交通几何可作仿真母真值旁证，缺独立两传感器检出。 |
 | 24 | [Mix&Fix-Net](https://arxiv.org/html/2608.19580v1)，2026 | **海事预测参照**。§§3.2–3.3、4.1、4.6，表 3–4；固定海港视频用 YOLO11/ByteTrack 提取轨迹，另在独立 AIS 数据上跑预测。VVR 非共享轨的规范化 FDE .0269 对 WPMixer .0305。作者显式标明随机重叠切窗的泄漏风险。 | [作者 VVR 发布](https://github.com/Secure-and-Intelligent-Systems-Lab/Route-Prediction-Model)；同船跨源同时对照不在协议中。 |
 | 25 | [张永贺等，海上多目标航迹关联的最近邻算法](https://www.spacejournal.cn/shht/en/article/pdf/preview/10.19328/j.cnki.2096-8655.2025.05.006.pdf)，2025 | **海事仿真**。§§1–3；天基传感器按访问间隔出点，以速航约束预测灰区。80×80 km、30 船同一总体的场景配置中关联对率 27.12–93.46%，高速度和长间隔降低关联。 | 有海上噪声、人口和采样间隔消融先例。时钟是天基分钟级复访，无岸基布设或作者仓核验。 |
 | 26 | [李鑫晟等，多源卫星数据融合跟踪](https://www.spacejournal.cn/shht/cn/article/pdf/preview/10.19328/j.cnki.2096-8655.2026.01.006.pdf)，2026 | **海事仿真**。§§2、3.2–3.4、表 1–2；AIS 母真值造多来源位置，CNN/注意力估融合点，GNN 配时间相邻的轨与点，比较三种船密度和匈牙利／最近邻。中间真值和传感器特征来源应分离。 | 可借多源合成、错配和轨迹指标构造；检索未见可核作者实现。 |
 | 27 | [Cope King 等，岸基雷达兼 AIS 速度误差](https://www.mdpi.com/1424-8220/25/6/1676)，2025 | **岸基实测**。§§2.2.1–2.3.1、3.2–3.3，表 5。10 个岸基 M2 站点，AIS 和雷达局部航迹在收报时写入 SQL 并关联。精度评估仅取已配对且超过五分钟的长轨，剔除雷达首分钟与急机动；3,097 条轨中 95% 速度误差在 1.8 节内。 | 数据需申请匿名版。关联器未公开，可做部署先例，不能支持首报、持续 ID 或错漏配精度。 |
 | 28 | [Fowdur 等，DLR Dataset 2 与 JPDA](https://www.mdpi.com/1424-8220/21/14/4641)，2021 | **船载实测**。§§2–4；三组船雷达数据给出极坐标/ENU 检测及 AIS 插值参考。以改过的质心 JPDA 比常数模型，参考位置插到雷达 1 Hz 用于事后评价。 | 与 HAXR 是不同发布，DLR 明示 [Dataset 2 需要申请](https://www.dlr.de/en/kn/about-us/departments/nautical-systems/real-world-marine-radar-datasets-for-target-tracking)。 |
-| 29 | [Fowdur 等，海事雷达椭圆扩展跟踪](https://www.mdpi.com/2072-4292/15/10/2503)，2023 | **船载实测**。§§3–5；最近邻／概率关联对多个椭圆扩展目标，拟合方位和尺度。原仿真与实船量测验证强调形状及测量坐标转换。 | 纯雷达前端参考，目标状态输入需扩展尺度，非岸基航迹至航迹。 |
-| 30 | [刘宁波等，MTDSP 多源观测数据集](https://doi.org/10.12000/JR25001)，2025 | **岸基实测**。数据采集、自动入库与匹配小节及表 1–9；HH/VV 雷达、可见光、红外、AIS 记录同船及局部气象，建立跨模态匹配与切片；研究结果为散射与多源特征统计。 | 有机构检索／导出流程；普通访问者能否取得未经预对齐的整段报告、许可与范围待核。与 MTAD 是两套不同数据。 |
+| 29 | [Fowdur 等，海事雷达椭圆扩展跟踪](https://www.mdpi.com/2072-4292/15/10/2503)，2023 | **三部固定岸站实测**。§§4.6、5.1–5.3、6.1，汉堡港三站雷达以 ASTERIX 点和 PAKF-JPDA 中心化跟踪椭圆扩展目标。纳入噪声较大的第三站后形状估计可能退化。 | 量测级融合先例。独立船舶对应真值、原始采集文件与 HAXR 重合情况未核。 |
+| 30 | [刘宁波等，MTDSP 多源观测数据集](https://doi.org/10.12000/JR25001)，2025 | **岸基实测**。数据采集、自动入库与匹配小节及表 1–9；HH/VV 雷达、可见光、红外、AIS 记录同船及局部气象，建立跨模态匹配与切片；研究结果为散射与多源特征统计。 | ScienceDB 可公开抽取，抽查两包的雷达航迹标志为 0，原始未对齐的全候选与独立全局真值尚待核。MTDSP 与 MTAD 是两套不同数据。 [数据 DOI](https://doi.org/10.57760/sciencedb.radars.00046) |
 | 31 | [海上多源特征提取与相关性，MTDSP](https://jeit.ac.cn/cn/article/doi/10.11999/JEIT250200?viewType=HTML)，2025 | **岸基实测**。§§2–4；雷达、可见光、红外取九类物理特征，按船、姿态等看 Spearman 与显著性。船体形状属性和相对距离引起模态相关或差异，输入来自已匹配目标。 | 同 MTDSP 测量族；为异质源误差及特征参考，实验未给盲跨源持续关联。 |
 | 32 | [Surface Vessels Detection and Tracking Method and Datasets with Multi-Source Data Fusion in Real-World Complex Scenarios](https://www.mdpi.com/1424-8220/25/7/2179)，2025 | **长江固定台站 AIS／雷达／视频**。§§3.2.3、3.3.1–3.3.2、4.1、4.4、表 5。固定点距水面 20 m，实录 12 个月共 22 段。先配 AIS–雷达和雷达–视觉，再给剩余 AIS–视觉分配，按雷达刷新发布并回填漏检。§4.4 首个视觉轨形成慢是漏融合来源，多数表列场融合准确度超过 .9。 | 仓只核到说明与部分数据入口。跨源原生收包、整套算法及按船隔离未核。 |
 | 33 | [Graph Neural Network‐Enabled Robust AIS/Radar Data Association for Intelligent Monitoring of Ship Safety](https://ietresearch.onlinelibrary.wiley.com/doi/full/10.1049/itr2.70166)，2026 | **珠江口固定岸基 radar／AIS**。§3.1.2 Eq.3, §§3.2–3.3, §4.1/4.2/4.3 Tables 3–5, Data Availability。最后 AIS 位置和速航外推，一层 GCN 求联合结构残差及全局指派。实测 GM-ACC 86.04%，仅线性 81.30%，仅 GCN 44.41%。 | §4.1 明述当前离线，GM-ACC 只覆盖真配对的检出比例。数据需申请，源码未核。 |
@@ -93,7 +115,7 @@
 | 47 | [Real-Time Fusion of Visual and Chart Data for Enhanced Maritime Vision](https://arxiv.org/html/2507.13880)，2026 | **船载视频／海图**。§3 chart-object transformer, §4.2–4.5 tables and ablations。固定海图标志作注意力查询，4/64 采样点为 25.95/22.83 FPS，F1 .839/.893。 | [CVPR MaCVi workshop 正式文](https://openaccess.thecvf.com/content/CVPR2026W/MaCVi/papers/Kreis_Real-Time_Fusion_of_Visual_and_Chart_Data_for_Enhanced_Maritime_CVPRW_2026_paper.pdf)。静态浮标、速度／召回参照。 |
 | 48 | [ShipMOT: A Robust and Reliable CNN-NSA Filter Framework for Marine Radar Target Tracking](https://www.mdpi.com/2079-9292/14/8/1492)，2025 | **单海事雷达**。§3 CNN-NSA, §4.2.1/4.2.2 Tables 1–3。用 CNN-NSA 估计更新噪声。Radar-Track HOTA 比 OC-SORT 高 1.74 个百分点、ID 切换少 25。与 UKF 比，NSA 略损 HOTA 而快。 | 检测置信及边界框非 MTAD 字段，原始数据与完整实现未核。区别于视觉 ShipsMOT。 |
 | 49 | [Image and AIS Data Fusion Technique for Maritime Computer Vision Applications](https://www.inf.uni-hamburg.de/en/inst/ab/cv/media/guelsoylu-vessel-identification-macvi-wacv-2024.pdf)，2024 | **固定／云台相机与 AIS**。§3.2–3.4, §4.1–4.2 Eq.2 and Tables 2–3。单应几何后就近配对，表 3 固定相机 85.06%、转动相机 39.24%；无 AIS 和超视场信号影响误配。 | [作者实现及数据入口](https://github.com/egulsoylu/image-ais-fusion)。严格因果回放未评。 |
-| 50 | [A Study on AIS Positional Error Analysis and Transmission Frequency Requirements of Attitude Data for Future Vessel Monitoring](https://doi.org/10.1017/S0373463325000232)，2025 | **真实航行 AIS／姿态对比**。§2.1, §3.1 Fig.6/Table 4, §4。三条分析航行的最优移时为 16–19.5 s，最大横向时空定位误差达 117.1 m；观测到供应商流合并重复消息。 | 到达、量测时标和重复来源要分别判断。非主动雷达关联协议。 |
+| 50 | [A Study on AIS Positional Error Analysis and Transmission Frequency Requirements of Attitude Data for Future Vessel Monitoring](https://doi.org/10.1017/S0373463325000232)，2025 | **真实航行 AIS／姿态对比**。§2.1, §3.1 Fig.6/Table 4, §4。三条分析航行的最优移时为 16–19.5 s，最大沿航迹误差达 117.1 m；观测到供应商流合并重复消息。 | 到达、量测时标和重复来源要分别判断。非主动雷达关联协议。 |
 | 51 | [Gaudin、Tourneret 与 Yıldırım，EUSIPCO，Online EM for Track-to-Track Association and Spoofing Detection Using AIS and Radar Data](https://eurasip.org/Proceedings/Eusipco/Eusipco2026/pdfs/0001041.pdf)，2026 | §§II–V 与作者实现。AIS 自报轨与雷达观测，top-k 指派后递推估计角偏和关联边缘后验。一个合成数据集，40 目标 × 5,000 步。作者公开代码快照保留所有权利，MATLAB R2022b+、Statistics and Machine Learning Toolbox、Sensor Fusion and Tracking Toolbox。默认在线只见当前两源观测与过去状态，L_smooth=0，真值用在数据生成和指标，另有独立 oracle 参考臂。原协议同步、完整、已知目标数和序列长度，空配、异步及持续 ID 未验证。MTAD 可独立实现 top-k 与递推偏置。 | [会议论文](https://eurasip.org/Proceedings/Eusipco/Eusipco2026/pdfs/0001041.pdf) · [正式议程](https://cmsworkshops.com/eusipco2026/view_paper.php?PaperNum=1515&SessionID=1061) · [作者代码快照](https://github.com/sinanyildirim/online-em-t2t-ais-radar/tree/282fafe5be9491ab54014b7290137a2ab75238de) |
 | 52 | [Herrmann 等，A Scalable Hybrid Track-Before-Detect Tracking System: Application to Coastal Maritime Radar Surveillance](https://arxiv.org/html/2508.16169v1)，2025 | §§III–IV。固定海岸 Trondheim Fjord 雷达实采 250 帧、2.5 s/帧，两合作船装 GNSS，另有交通 AIS；算法的两路输入来自同一雷达的阈前和阈后信息。用 GNSS/AIS 插值形成评分参考，雷达观察到部分没有参考的船。现成数据和代码未核。可作为真实海岸测量与漏参照证据。 | [作者全文](https://arxiv.org/html/2508.16169v1) |
 | 53 | [Rodriguez 等，Frontiers in Mammal Science，Using a shore-based radar system to improve whale-vessel strike risk assessments at the entrance to San Francisco Bay](https://doi.org/10.3389/fmamm.2026.1888831)，2026 | §2.2.1、§§4.1–5 及数据声明。实测固定岸基 M2 雷达、AIS 和岸边白天视频。设备保留两源局部 ID，双侧轨在多于 20 对共见时配对，每对须满足 100 m／15 s／1.5 kn／10°。研究回顾时又人工排双计与分类；发布时钟、空配错误和持续 ID 无单独评估。数据需申请。 | [正文](https://doi.org/10.3389/fmamm.2026.1888831) |
@@ -116,7 +138,7 @@
 | 序号 | 论文 | 正文所见 | 适配边界与可复现性 |
 |---:|---|---|---|
 | 65 | [Cui 等，MTAD 源论文](https://doi.org/10.11999/JEIT221202)，JEIT，§§2.5–2.6、4.1–4.2，2023 | 历史原文复核。真实 AIS 母轨经过地理栅格裁剪、时空扰动、断片及误差加工，制成有参考的模拟两源。示例整场邻近关联看端点与时域交集。 | 不是两套实测港口雷达。实际收包、雷达轮次、物理漏检机会和视场未提供；数据条目 [ScienceDB](https://www.scidb.cn/en/detail?dataSetId=c7d8dc56fe854ec2b084d075feb887fd) 及 [DataCite 登记](https://api.datacite.org/dois/10.57760/sciencedb.18596) 双验标题与作者，数据 DOI 10.57760/sciencedb.18596 与文章 DOI 分立。比赛规则不是学术方法论文，单列。 |
-| 66 | [TSA-cTFER](https://doi.org/10.3390/rs16183380)，Remote Sensing，§§4–5、算法1–3、表1–2及§6，2024 | 已重新读取出版方§4、§5；5000场按4000/500/500，两源10/20秒，模拟每20秒递送；虚节点 Hungarian 后易/难分流，易 M/N=3/6 确认，难边可超时。ITSA PCA/PFA/平均正确确认等待为94.59%/3.49%/131.00s，MSTSA94.25%/3.06%/246.95s。§6原文已指出初错可传播至后续一对一竞争。 | 现有最直接的同 MTAD 前缀关联／等待协议。评分真值用完整片段条件；未给持久全局 ID 或融合状态。未核专用作者代码、权重、具体原包 Level／场景清单、两类超时完整值。 |
+| 66 | [TSA-cTFER](https://doi.org/10.3390/rs16183380)，Remote Sensing，§§4–5、算法1–3、表1–2及§6，2024 | 已重新读取出版方§4、§5；5000场按4000/500/500，两源10/20秒，模拟每20秒递送；Hungarian 后先过滤再易/难分流，§2 以虚轨解释未配边，§4.2 的实际算法未显式构造虚轨，易 M/N=3/6 确认，难边可超时。ITSA PCA/PFA/平均正确确认等待为94.59%/3.49%/131.00s，MSTSA94.25%/3.06%/246.95s。§6原文已指出初错可传播至后续一对一竞争。 | 现有最直接的同 MTAD 前缀关联／等待协议。评分真值用完整片段条件；未给持久全局 ID 或融合状态。未核专用作者代码、权重、具体原包 Level／场景清单、两类超时完整值。 |
 | 67 | [TMTAFF](https://doi.org/10.3390/app16147251)，Applied Sciences，§2、§3.1、表1–3、§§4–5，2026 | 本轮重新打开原刊§3.1、§§4–5；3000场随机70/10/20，正对训练、潜特征补全、成对关联、顺序递归融合，末态评分。ITSA94.58±.21/3.59±.07%，MSTSA93.91±.26/4.47±.15%（场均正确/错配）；经纬 mME 6.24、5.88×10⁻⁴度，是论文有符号误差定义，不是位置 MAE。 | 明确离线，融合可能读取当前时刻之后观测；滚动参照和上一结果反馈是未来工作。数据开放声明只有数据；未核代码、固定场名单、递归回送资产。 |
 | 68 | [PTFM](https://doi.org/10.3390/electronics14173461)，Electronics，§3.1.1–3.6表2及数据声明，2025 | 历史完整原文。约1.8万组预先关联双源与 AIS 真值，先取共同覆盖；位置 MAE 1.1136→.3542 km，速度 MAE 1.1998→2.6786 m/s，航向 MAE 21.873→86.130°（基础对自适应权重）。 | 已知真关联的完整段融合；没有从首报、竞争错误及单侧覆盖的综合协议。数据可得，代码/权重未核。 |
 | 69 | [陈等交互式关联融合](https://doi.org/10.3969/j.issn.1671-0673.2025.05.015)，pp610、614／§§2–5表4，2025 | 历史9页全文。5000训练场用于调参及关联评价；20秒重采样、长片段优先、端点 DTW、手工后处理；MSTSA84.58/14.89%（对照80.83/28.09），位置融合只有图例。 | 作者承认系统不能实时关联，人工操作和完整片段输入；原文无可复用代码或定量位置真值比较。 |

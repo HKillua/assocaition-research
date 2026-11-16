@@ -8,9 +8,6 @@ version = "0.1.0"
 description = "Causal MTAD replay, association and fusion research"
 requires-python = ">=3.10"
 
-[project.optional-dependencies]
-research = ["numpy>=1.26,<3", "torch>=2.5,<2.11"]
-
 [tool.setuptools]
 packages = ["online_observation"]
 

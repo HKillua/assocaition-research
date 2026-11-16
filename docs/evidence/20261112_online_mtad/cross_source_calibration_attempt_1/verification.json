@@ -1,9 +1,0 @@
-{
-  "batches": 1477,
-  "decompositions": 2954,
-  "graph_references": 2244,
-  "motion_references": 272,
-  "target_windows": 20,
-  "target_pre_rejoin_batches": 38,
-  "scenes": 28
-}

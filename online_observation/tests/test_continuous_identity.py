@@ -1,11 +1,12 @@
 """Check continuous identity publication and scoring."""
+import json
 import math
 from pathlib import Path
 from tempfile import TemporaryDirectory
 import unittest
 from unittest.mock import patch
 
-from online_observation import continuous_factorial as factorial
+from online_observation import peer_history_experiment as history
 from online_observation.continuous_metrics import evaluate_publications
 from online_observation.continuous_tracker import ContinuousTracker, LocalTrack
 from online_observation.stream import EARTH_RADIUS_M
@@ -71,32 +72,34 @@ class ContinuousTrackerTests(unittest.TestCase):
 class ScoringOrderTests(unittest.TestCase):
     def test_all_arms_and_scenes_predicted_before_labels(self):
         calls = []
-        raw = [{"source": "A", "batch": "a", "time": "0", "lat": "0", "lon": "0"},
-               {"source": "B", "batch": "b", "time": "1.2", "lat": "0", "lon": "0"}]
-        mapping = {("A", "a"): "1-2", ("B", "b"): "1-2"}
-
-        def measurements(_archive, _manifest, scene, *, required_split):
-            calls.append(("prediction", scene))
-            self.assertEqual(required_split, "T_core")
-            return raw
+        scenes = ["1", "2"]
+        components = {"1": "x", "2": "y"}
 
         def labels(_archive, _manifest, scene):
+            self.assertTrue((output / "predictions_complete.json").is_file())
             calls.append(("scoring", scene))
-            return mapping
+
+        def predict(_events, _output, _frozen, scene, _deadline):
+            calls.append(("prediction", scene))
 
         with TemporaryDirectory() as directory:
             root = Path(directory)
-            manifest = root / "manifest.json"
-            manifest.write_text('{"components":{"1":"x","2":"y"}}', encoding="utf-8")
-            with (patch.object(factorial, "ROSTER", {"sample": ("1", "2")}),
-                  patch.object(factorial, "read_archive_rows", side_effect=measurements),
-                  patch.object(factorial, "read_labels", side_effect=labels)):
-                result = factorial._run((), manifest, root)
+            frozen, output = root / "frozen", root / "output"
+            frozen.mkdir()
+            (frozen / "configuration.json").write_text(json.dumps(dict(
+                plan="IDEA-ONLINE-PEER-ADAPTATION-20261114-v1.2", scenes=scenes, components=components,
+            )), encoding="utf-8")
+            (frozen / "complete.json").touch()
+            with (patch.object(history, "_scene_roster", return_value=(scenes, components)),
+                  patch.object(history, "_native_events", return_value=()),
+                  patch.object(history, "_predict", side_effect=predict),
+                  patch.object(history, "read_labels", side_effect=labels),
+                  patch.object(history, "read_references"),
+                  patch.object(history, "_score_scene"),
+                  patch.object(history, "_summarize")):
+                history.main(["--archive", "unused.zip", "--frozen", str(frozen), "--output", str(output)])
+            self.assertTrue((output / "complete.json").is_file())
         self.assertEqual(calls, [("prediction", "1"), ("prediction", "2"), ("scoring", "1"), ("scoring", "2")])
-        for arm in result["aggregate"].values():
-            self.assertEqual(arm["counts"]["ticks"], 6)
-            self.assertEqual(arm["pairs"]["cross_source"]["correct_pairs"], 2)
-            self.assertEqual(arm["births"]["first_correct_by_seconds"]["1"], 2)
 
 
 def snapshot(query_time, *groups):

@@ -1,6 +1,6 @@
 # MTAD 在线多传感器基线重新筛选
 
-2026-11-14，来源初筛与旧候选复核。当前研究阶段见[研究状态](../research_status.md)，回退依据见[审计](../reports/2026-11-14-online-baseline-restart-audit.md)。
+2026-11-14，来源初筛与旧候选复核。当前研究阶段见[研究状态](../research_status.md)，回退依据见[审计](https://github.com/HKillua/assocaition-research/blob/d9eaeaa3e5e4de9d80aee56dfc242068843dc5af/docs/reports/2026-11-14-online-baseline-restart-audit.md)。
 
 ## 比较任务与依据
 

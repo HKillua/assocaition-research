@@ -1,5 +1,6 @@
 # 在线文献与证据矩阵
 
+- [岸基海上多传感器态势感知 100 篇核读](2026-11-16-shore-maritime-reading.md)
 - [近期基线重新筛选与 Mode C](2026-11-14-online-baseline-reselection.md)
 - [同 MTAD 数据的作者协议与两套在线系统适配条件](2026-11-14-online-mtad-protocol-and-adaptation-sources.md)
 

@@ -5,7 +5,7 @@
 
 ## 详细分析与交接
 
-本页为冻结目录。详细分析按编号导航，保留各篇原始实验单位、输入、对照、数值及未知条件。按正文和代码重核改正的旧条目见下表。
+本页记录固定的 100 篇书目。逐篇笔记的阅读深度不一，覆盖全文技术审读、相关方法和结果段的定向核读，以及沿用已有的原文定位。100 篇是笔记覆盖数，全文阅读范围以实际留存的审读记录为准。
 
 - [S01–S25 · 岸基数据、仿真、近岸观测](2026-11-16-shore-analysis-01-25.md)
 - [S26–S50 · 固定台站、异构传感器及测量偏差](2026-11-16-shore-analysis-26-50.md)
@@ -23,6 +23,19 @@
 | 具体问题及观察候选 | 共见与单侧的可核性、共享报告与时偏、已发版本与终局计分、额外传感器退化。分别由 S01/S30、S50/S90、S66/S96 和 S29/S37 支持局部边界。 |
 | 待核与 missing_evidence | 各篇 UN。集中缺逐报到达、独立跨源全局身份真值、完整配置和许可，以及不同指标的共同评分记录。 |
 | next_skill | Deep Read Mode C，结果已链接。 |
+
+## 阅读深度抽查
+
+2026-11-16。以原文、已有技术审读与作者实现抽查下列 11 篇的关键结论。S03、S11、S25 也尝试重开原件，所用入口访问受限，仍采用留存的原文定位。其余条目的全文、附录与代码覆盖仍须按各条记录判断。
+
+| 条目 | 实际重核与阅读深度 |
+|---|---|
+| S01 HAXR | 通读四页论文并回看数据说明。§III 式 (7) 的新观测权重为 1−λ，§IV 图 4 按单站一小时手标像元评 F1。“弱多项式估计”已更正为“多项分布弱估计”。 [原文](https://elib.dlr.de/225803/1/MARESEC_2026_DLR_KN_NAS_VLS.pdf) · [数据](https://zenodo.org/records/19824555) |
+| S12 DeuteroNoise | 原笔记沿用既有正文定位及作者样例。本轮找到正式期刊版的机构存档，补读 §§4–5。689.70 小时属于原始录音，11.73 小时属于验证过的带标签船声，标注时剔除了多船重叠与身份歧义。图 4 为数据架构，录音实例另见图 8。 [存档正式版](https://boa.unimib.it/retrieve/d5750c52-16e3-44ac-a933-2316c2997ca8/Nou-Plana%20et%20al-2026-Applied%20Acoustics-VoR.pdf) |
+| S27/S29/S35/S50 | 定向复核原结果。分别核得两种速度误差均为 P95，汉堡 5 m 结果限于图示案例，NavEYE 用运动学预测做 1 秒对齐且未交代报文截止，以及 117.1 m 为沿航迹误差的一个峰值。 [S27](https://doi.org/10.3390/s25061676) · [S29](https://doi.org/10.3390/rs15102503) · [S35](https://arxiv.org/html/2607.03915) · [S50](https://doi.org/10.1017/S0373463325000232) |
+| S52 Herrmann 等 | 原笔记只写了表 II 的门限和参照局限。本轮重查 §IV-C 表 III 和图 9，补回 99／151 扫建成稳定轨、短轨反例和高阈值漏检分项。 [原文](https://arxiv.org/html/2508.16169v1) |
+| S66/S83 | S66 复核 §4.2 指派顺序、式 (33) 和表 2。S83 比对作者稿 §2.2–2.3 和固定源码。交集恰为 120 秒仍合格。代码约束要求两源轨都恰好配一次，轨数不等时无可行解。 [S66](https://doi.org/10.3390/rs16183380) · [S83 论文](https://doi.org/10.1016/j.ijtst.2024.03.001) · [S83 固定代码](https://github.com/SkiWWWW/Track-to-Track-Association-Algorithm-of-DTWCM/blob/d465caa60a42ad569c70bceede88287b27bac36d/DTWCMalgorithm.py#L135-L184) |
+| S98/S100 | S98 有既有 17 页作者 v3 的全文技术审读，本轮核表 III–V。S100 定向重查 §VI 图 6–7 和表 III 的扩张窗、终局误差和整场耗时，补回各方法的标准差及 Gibbs／贪心比较。 [S98](https://arxiv.org/html/2506.18124v3) · [S100](https://arxiv.org/html/2504.20391v3) |
 
 ## 检索与收录
 
@@ -66,8 +79,8 @@
 
 | 序号 | 论文 | 正文所见 | 适配边界与可复现性 |
 |---:|---|---|---|
-| 1 | [Moreira / HAXR 多站港区雷达](https://elib.dlr.de/225803/1/MARESEC_2026_DLR_KN_NAS_VLS.pdf)，2026 | **岸基实测**。§§II–IV、Fig. 4–5；13 部 X 波段固定站部分交叠，三个非连续小时，转一圈约 2.3–3.3 秒。单站一小时人工像元评价中，弱多项式背景估计的极坐标读出较稳定。没有跨雷达全局 ID 基准。 | [Zenodo 版本](https://zenodo.org/records/19824555) 可下文件，[LGPL-3.0 读取库](https://github.com/DLR-KN/haxr/blob/main/LICENSE) 构造的滑动圈相邻强重叠；AIS 分站文件是同一广播流经变换和按覆盖筛选。 |
-| 2 | [Fowdur 等，分布式雷达逐时背景扣除](https://elib.dlr.de/219382/1/Unsupervised_Adaptive_Background_Subtraction_in_Distributed_Radar_Target_Tracking_Systems.pdf)，2025 | **岸基仿真＋实测**。§§III–IV、Figs. 4–5；弱多项式估计静态背景，仿真有静态与移动雷达，收敛前误检更多。汉堡港 1.5 小时雷达无标签，只定性看吊机动态回波和大船雷达阴影。 | 方程可照读；未核作者跟踪源码。 |
+| 1 | [Moreira / HAXR 多站港区雷达](https://elib.dlr.de/225803/1/MARESEC_2026_DLR_KN_NAS_VLS.pdf)，2026 | **岸基实测**。§§II–IV、Fig. 4–5；13 部 X 波段固定站部分交叠，三个非连续小时，转一圈约 2.3–3.3 秒。单站一小时人工像元评价中，多项分布弱估计在极坐标上的逐帧像元 F1 较稳定。没有跨雷达全局 ID 基准。 | [Zenodo 版本](https://zenodo.org/records/19824555) 可下文件，[LGPL-3.0 读取库](https://github.com/DLR-KN/haxr/blob/main/LICENSE) 构造的滑动圈相邻强重叠；AIS 分站文件是同一广播流经变换和按覆盖筛选。 |
+| 2 | [Fowdur 等，分布式雷达逐时背景扣除](https://elib.dlr.de/219382/1/Unsupervised_Adaptive_Background_Subtraction_in_Distributed_Radar_Target_Tracking_Systems.pdf)，2025 | **岸基仿真＋实测**。§§III–IV、Figs. 4–5；用多项分布弱估计静态背景，仿真有静态与移动雷达，收敛前误检更多。汉堡港 1.5 小时雷达无标签，只定性看吊机动态回波和大船雷达阴影。 | 方程可照读；未核作者跟踪源码。 |
 | 3 | [Luis Bustamante 等，Player](https://e-archivo.uc3m.es/rest/api/core/bitstreams/1e9f8a4d-c4e1-4b2d-afaf-206654514db2/content)，2017 | **岸基仿真**。§§2、4、6.1–6.4；对同船分别生成固定雷达、AIS 站、PTZ 相机报告，来源各自周期和覆盖，外部融合器可接实时事件。示例含交叉船、撤去观测的续轨和高负载。 | [作者 Java 仓](https://github.com/alvarolb/player-tool) 有源码和发布物；JavaFX/地图依赖和授权文件待核。案例为仿真设计先例。 |
 | 4 | [Lesy 等，ASVSim](https://doi.org/10.1109/ACCESS.2026.3687084)，2026 | **海事仿真**。刊版 §§III–VII；船舶动力、港区/运河环境，LiDAR 反射栅格加距离和角度相关 PSF 近似海事雷达，并可生成相机/真值。实验面向分割与导航。 | [MIT 作者仓](https://github.com/BavoLesy/ASVSim) 需 Unreal 5.5.4，继承外部世界传感器接口；未核固定多站雷达＋AIS 发布脚本。 |
 | 5 | [Pham 等，ShipNaviSim](https://www.ifaamas.org/Proceedings/aamas2025/pdfs/p1641.pdf)，2025 | **海事仿真**。§§3、5.2–5.4；新加坡海峡两年 AIS＋电子海图。单目标测试 BC-5histL 到达率 76.83%，多智能体 self-play 58.92% 以所有受控船均到达为分母。评航行交互。 | [作者代码](https://github.com/quanganh1999/ShipNaviSim) 含合成 AIS 示例，可作交通轨迹来源；没有独立观测通道。 |
@@ -77,7 +90,7 @@
 | 9 | [Ramirez-Torres 等，Marlinks-NS DAS 数据](https://arxiv.org/html/2607.28306v1)，2026 | **近海实测**。§§2.1–2.7、4.4、6–7；10 天 74,771 标签窗，250 通道配置全局检测 F1 89.43%，1000 m 内距线 MAE 171.01 m。AIS 是标签来源，仅评有无与距缆距离。 | [CC BY 数据和示例](https://doi.org/10.5281/zenodo.15611778) · [GPL 代码](https://github.com/UAH-PSI/das-vessel-detection)，不含多源持续 ID。 |
 | 10 | [Ramirez-Torres 等，海缆 DAS 检测与定位](https://arxiv.org/html/2509.11614v2)，2025 | **近海实测**。§§IV–VI；将 AIS 用于地理标注，64,417 个位置中多数船 1–3 分钟才报告，逐日分折评价；窗口后的多时间/通道总体 F1 可超 90%，另报距离误差。窗口后处理和船只复现跨日应核。 | 与 2026 数据稿是同一 Marlinks 测量族、两篇不同成果；[作者源码与 10 分钟示例](https://github.com/UAH-PSI/das-vessel-detection)。 |
 | 11 | [Paap 等，近岸光纤船只定位](https://doi.org/10.1016/j.apor.2025.104422)，2025 | **近海实测**。§§3–5、Fig. 11/Table 4；相干叠加和聚类定位北海、俄勒冈的三条船；例如拖船 DAS/AIS 速度 1.5/1.7 m/s。DAS 左右镜像中以 AIS 选择较近结果。 | 俄勒冈子集公开，荷兰子集另有权限；精度是有 AIS 辅助的局部定位，不测自主身份。 |
-| 12 | [DeuteroNoise，近岸多海盆噪声](https://doi.org/10.1016/j.apacoust.2026.111239)，2026 | **近海实测**。§§3–4、Fig. 4、可用性声明；60 秒 AIS 与水听器段匹配，人工复听校验。粒度是单次经过的声音和身份，面向生态噪声。 | 文末写数据申请，开放 API/可视化不视作完整原始数据或作者跟踪代码。 |
+| 12 | [DeuteroNoise，近岸多海盆噪声](https://doi.org/10.1016/j.apacoust.2026.111239)，2026 | **近海实测**。§§4.2–4.4、5.3–5.4，以 60 秒拉取的 AIS 辅助切片和人工复核。689.70 小时是连续校准录音，11.73 小时为剔除重叠和歧义后的已验证船声。 | 文末写数据申请，开放 API/可视化不视作完整原始数据或作者跟踪代码。 |
 | 13 | [Averty 等，MMDEC 英吉利海峡](https://tristanaverty.github.io/assets/pdf/averty2026mmdec.pdf)，2026 | **海面遥感**。Data Description、Methods、表 1；Sentinel-1 图块、SatShipAI 独立船检与 AIS、海洋要素结合，以时空对照分析 AIS 缺失和交通。单过境匹配无法提供连续地面雷达节拍。 | 开放文件格式和数据，可作遥感场景参照。 |
 | 14 | [Wang 等，HOSS ReID](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Cross-modal_Ship_Re-Identification_via_Optical_and_SAR_Imagery_A_Novel_ICCV_2025_paper.pdf)，2025 | **海面遥感**。ICCV §§3–5、表 1；光学/SAR 船舶图像共 1832 张，449 条有身份对象，另加 163 干扰目标。TransOSS 学跨模态表示，评检索，不输出连续态势。 | 数据资源单列，模型所需影像/尺寸不是 MTAD 输入。 |
 | 15 | [AIS 位置精度的岸基 LiDAR 验证](https://doi.org/10.3390/jmse14201879)，2026 | **岸基实测**。§§3–6；固定岸上 LiDAR 经 RTK 标定，测壳体几何、AIS 天线点与时间对齐误差；另用 ARPA 对照。主要对象为内河单船，并非跨源盲关联。 | 标定/物理误差参考；湿表面回波和时钟来源不能从 MTAD 还原。 |
@@ -155,7 +168,7 @@
 | 80 | [EMT2TA](https://doi.org/10.1109/LSP.2024.3398267)，IEEE SPL，§III.A表II/III，2024 | 历史5页正式全文。MTAD 中断和跨源，位置样本加入检索、运动与空间先验，表III跨源正确关联94%、错配13%、用时553s；正文同页写15%，保留歧义。 | 整段检索和后判别；没有冻结首报/持续 ID/融合，作者仓未核。 |
 | 81 | [RegError/XGBoost](https://doi.org/10.1109/ICSIDP62679.2024.10868870)，ICSIDP（入库2025），§IV 表I，2024 | 本轮核IEEE摘要与历史6页正式全文。5000场、90/10，三个阈值 XGB 正确率95.22/98.28/99.60%，同时错误率19.65/23.44/28.60%；使用Hausdorff、窗口的速度/航向和轨几何。 | 分类整段判决；剔除低速及不规则数据并重拟合并非普遍收益。没有在线发布、源代码或分场拆分细节。 |
 | 82 | [FLNN](https://doi.org/10.1109/JSEN.2025.3578322)，IEEE Sensors J，§IV.G及表VI/VII，2025 | 历史13页正式全文。本身训练为自建仿真；用 MTAD 作外部关联，只保留真值匹配的共见目标并3秒插值，MAPS预设等目标数。作者仿真人口融合F1 95.1%、单模糊88.4%、单神经89.6%，应与外测结果分开。 | 标签入人口与已知目标数，不能作为首报未知漏报对照；无作者代码核实。 |
-| 83 | [DTW-CM](https://doi.org/10.1016/j.ijtst.2024.03.001)，IJTST（在线 2024），作者 pre-proof §§2–3表2，2025 | 复用14页作者稿及可核源。Cui母AIS10场二次重采样和加噪，平均关联97.33%。[作者实现固定版本](https://github.com/SkiWWWW/Track-to-Track-Association-Algorithm-of-DTWCM/blob/d465caa60a42ad569c70bceede88287b27bac36d/DTWCMalgorithm.py#L117-L184) | 代码按一条共同DTW路径，论文列各属性独立；代码=1容量 vs 文中≤1；原需120秒交集和速度/航向，未见许可证。这是可读实现和离线算法参照。 |
+| 83 | [DTW-CM](https://doi.org/10.1016/j.ijtst.2024.03.001)，IJTST（在线 2024），作者 pre-proof §§2–3表2，2025 | 复用14页作者稿及可核源。Cui母AIS10场二次重采样和加噪，平均关联97.33%。[作者实现固定版本](https://github.com/SkiWWWW/Track-to-Track-Association-Algorithm-of-DTWCM/blob/d465caa60a42ad569c70bceede88287b27bac36d/DTWCMalgorithm.py#L117-L184) | 代码按一条共同DTW路径，论文列各属性独立；论文允许每轨至多配一次，公开代码要求恰配一次，两源轨数不等时无可行解。交集至少 120 秒，需速度和航向，许可未核。这是可读实现和离线算法参照。 |
 | 84 | [FESR-LSTM](https://doi.org/10.1109/MESA70578.2026.11684178)，MESA，§V.A表II–V，2026 | 历史6页全文；差分、共时间端点、全窗组统计、低通FFT；10/15/20/30/50点 F1 .7186/.8152/.8571/.9069/.9749。 | 完整窗与作者计算实时是不同问题；整窗领用、局部路由状态未明，未核代码或持久发布。 |
 | 85 | [MOH-Transformer](https://doi.org/10.1109/GAIIS69281.2026.11519369)，GAIIS，§IV.A表2/3图3，2026 | 历史5页全文。MTAD 6000场背景，完整段速度航向、路径长度和端点等构成11维段级统计，使用MMSI标正负；F1 .9556，去整段统计 .9058；22真目标例输出23。 | 只能等待全段取得这些统计，划分／场ID未知，未核代码；同名开源 MoH 仓不归作者。 |
 | 86 | [AG-TPS-TAN](https://doi.org/10.3390/s26030774)，Sensors，§§3–4表5–7，2026 | 本轮重新打开原刊，复用完整 XML。MTAD运动外合成 PW/PRI/RF 等脉冲；50目标理想关联指标 AA .6383，轨迹单模态 .3240，噪声与 30% lost/spurious 下 .5263。 | 脉冲不是原 MTAD 量测字段，无法当当前位置-only 方法分数；无作者代码核实。 |

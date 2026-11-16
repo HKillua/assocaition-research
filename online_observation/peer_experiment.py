@@ -17,7 +17,7 @@ from time import perf_counter
 from .continuous_assignment import solve_global
 from .continuous_tracker import NULL_COST, RADIUS_M
 from .evaluation_data import read_labels, read_references
-from .frechet_trajectory import search_frechet_slots
+from .frechet_trajectory import _common_position, _normalized_point_loss, search_frechet_slots
 from .measurements import read_archive_rows
 from .peer_identity import CandidateGroup, IdentityReader
 from .peer_lindenmaier import LindenmaierArm, PROXY_SETTINGS
@@ -87,6 +87,8 @@ class FrechetArm:
     """Read the present end of a causal Fréchet trajectory consensus."""
 
     def __init__(self, *, unknown_mask, history="full", capture_fit=False):
+        if history in ("decay", "conflict_decay") and not unknown_mask:
+            raise ValueError("history decay requires the common-grid mask")
         self._identity = IdentityReader()
         self._frames = deque(maxlen=WINDOW_GRIDS)
         self._grid = 0
@@ -94,6 +96,7 @@ class FrechetArm:
         self._history = history
         self._capture_fit = capture_fit
         self.snapshot = None
+        self.candidate_order = ()
         self.diagnostics = Counter()
 
     def publish(self, frame):
@@ -109,6 +112,7 @@ class FrechetArm:
             by_source.setdefault(key[0], {}).setdefault(tuple(trajectory.items()), []).append(key)
         groups = []
         self.snapshot = None
+        self.candidate_order = ()
         self.diagnostics["active_fragments"] += len(trajectories)
         if len(by_source) == 2:
             # Geometric histories give a canonical order. Identical histories in
@@ -120,18 +124,22 @@ class FrechetArm:
                 for source in sources
             ]
             ordered = [[key for _, key in side] for side in (left, right)]
+            self.candidate_order = tuple(tuple(side) for side in ordered)
+            weighted = self._history in ("decay", "conflict_decay")
+            history = "unique" if weighted else self._history
             report_times = {}
-            if self._history == "unique" or self._capture_fit:
+            if history == "unique" or self._capture_fit:
                 report_times = {
                     key: {index: old.observations[key].observed_at for index, old in self._frames
                           if key in old.observations} for key in trajectories
                 }
             scored = [
-                [_history_knots(trajectories[key], report_times.get(key), self._grid, self._history)
+                [_history_knots(trajectories[key], report_times.get(key), self._grid, history)
                  for key in side] for side in ordered
             ]
+            decay = self._decay_flags(frame, scored, ordered) if weighted else None
             self.diagnostics["eligible_pairs"] += len(left) * len(right)
-            if self._history != "full":
+            if history != "full":
                 for row, first in enumerate(scored[0]):
                     for col, second in enumerate(scored[1]):
                         shared = len(first.keys() & second.keys())
@@ -143,7 +151,13 @@ class FrechetArm:
                 *scored,
                 cutoff=CUTOFF_M, cardinality_penalty=CARDINALITY_M,
                 seed=SEARCH_SEED, max_sweeps=SEARCH_SWEEPS, unknown_mask=self._unknown_mask,
+                history_decay=decay, current_grid=self._grid if decay is not None else None,
             )
+            if weighted:
+                left_count = max(len(fit.slots), len(left))
+                right_count = max(len(fit.slots), len(right))
+                divisor = math.gcd(left_count, right_count)
+                source_weights = (1 / (left_count // divisor), 1 / (right_count // divisor))
             if self._capture_fit:
                 self.snapshot = dict(keys=ordered, trajectories=scored, slots=fit.slots,
                                      tags=[[report_times[key] for key in side] for side in ordered])
@@ -161,9 +175,76 @@ class FrechetArm:
                 active = first_key, second_key
                 overlap = scored[0][a].keys() & scored[1][b].keys()
                 self.diagnostics["paired_common_grids"] += len(overlap)
-                groups.append(_group(frame, active, center[self._grid]))
+                position = center[self._grid]
+                if weighted:
+                    position = _common_position(
+                        scored[0][a][self._grid], scored[1][b][self._grid],
+                        *source_weights, CUTOFF_M,
+                    )
+                groups.append(_group(frame, active, position))
         self.diagnostics["paired_groups"] += len(groups)
         return self._identity.publish(frame.stamp, _finish_groups(frame, groups, _state_position))
+
+    def _decay_flags(self, frame, scored, ordered):
+        if self._history == "decay":
+            flags = tuple(tuple(True for _ in side) for side in scored)
+        elif len(self._frames) == 1:
+            flags = tuple(tuple(False for _ in side) for side in scored)
+        else:
+            previous = self._frames[-2][1].stamp
+            fresh = {
+                (side, index) for side, keys in enumerate(ordered) for index, key in enumerate(keys)
+                if frame.observations[key].observed_at > previous
+            }
+            flags, components = _conflict_decay(scored, self._grid, fresh)
+            self.diagnostics["conflict_frames"] += bool(components)
+            self.diagnostics["conflict_components"] += components
+        self.diagnostics["weighted_tracks"] += sum(map(sum, flags))
+        return flags
+
+
+def _conflict_decay(scored, grid, fresh):
+    """Mark endpoints in alternating disagreements supported by a new report."""
+    left, right = scored
+    flagged = set()
+    components = 0
+    if fresh:
+        current, history = [], []
+        for first in left:
+            now, past = [], []
+            for second in right:
+                shared = first.keys() & second.keys()
+                values = {
+                    k: _normalized_point_loss(first[k], second[k], CUTOFF_M) for k in shared
+                }
+                now.append(values[grid])
+                past.append(math.fsum(values.values()) / len(values))
+            current.append(now)
+            history.append(past)
+        null = ([0.5] * len(left), [0.5] * len(right))
+        short = set(solve_global(current, *null).pairs)
+        long = set(solve_global(history, *null).pairs)
+        adjacency = {}
+        for a, b in short ^ long:
+            adjacency.setdefault((0, a), set()).add((1, b))
+            adjacency.setdefault((1, b), set()).add((0, a))
+        visited = set()
+        for node in adjacency:
+            if node in visited:
+                continue
+            component = {node}
+            pending = [node]
+            while pending:
+                neighbors = adjacency[pending.pop()] - component
+                component.update(neighbors)
+                pending.extend(neighbors)
+            visited.update(component)
+            if component & fresh and any(len(adjacency[vertex]) == 2 for vertex in component):
+                flagged.update(component)
+                components += 1
+    flags = tuple(tuple((side, i) in flagged for i in range(len(tracks)))
+                  for side, tracks in enumerate(scored))
+    return flags, components
 
 
 def _history_knots(trajectory, tags, current, history):

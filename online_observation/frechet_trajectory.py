@@ -13,6 +13,7 @@ from .continuous_assignment import solve_global
 Point = tuple[float, float]
 Trajectory = Mapping[int, Point]
 Slot = tuple[int | None, int | None]
+HistoryDecay = tuple[tuple[bool, ...], tuple[bool, ...]]
 
 
 @dataclass(frozen=True)
@@ -54,6 +55,15 @@ def _normalized_trajectory_loss(left: Trajectory, right: Trajectory, cutoff: flo
         for knot in left_knots & right_knots
     )
     return (len(left_knots ^ right_knots) + overlap_loss) / union_size
+
+
+def _decay_weights(shared: set[int]) -> tuple[dict[int, float], float]:
+    # The factor from the current grid to the latest shared grid cancels after
+    # normalization. Anchoring here keeps at least one weight representable.
+    latest = max(shared)
+    # Powers at or below this exponent round to zero in binary64.
+    weights = {knot: 2.0 ** -min(latest - knot, 1075) for knot in shared}
+    return weights, fsum(weights.values())
 
 
 def trajectory_distance(left: Trajectory, right: Trajectory, *, cutoff: float) -> float:
@@ -222,11 +232,26 @@ def fit_frechet_slots(
 
 
 class _SlotObjective:
-    def __init__(self, left, right, cutoff, cardinality_penalty, unknown_mask):
+    def __init__(self, left, right, cutoff, cardinality_penalty, unknown_mask, *,
+                 history_decay: HistoryDecay | None = None, current_grid: int | None = None):
         _validate_set_cost(cutoff, cardinality_penalty)
         self.left = tuple(dict(sorted(_samples(sample).items())) for sample in left)
         self.right = tuple(dict(sorted(_samples(sample).items())) for sample in right)
         self.sizes = (len(self.left), len(self.right))
+        if history_decay is None:
+            history_decay = ((False,) * self.sizes[0], (False,) * self.sizes[1])
+        if (tuple(map(len, history_decay)) != self.sizes
+                or any(not isinstance(flag, bool) for side in history_decay for flag in side)):
+            raise ValueError("history decay flags must be Boolean and match each source's trajectories")
+        self._history_decay = history_decay
+        self._decay_enabled = any(map(any, history_decay))
+        if self._decay_enabled:
+            if not unknown_mask:
+                raise ValueError("history decay requires the unknown mask")
+            if isinstance(current_grid, bool) or not isinstance(current_grid, Integral):
+                raise ValueError("history decay requires the integer current grid")
+            if any(knot > current_grid for side in (self.left, self.right) for track in side for knot in track):
+                raise ValueError("history decay cannot use knots after the current grid")
         self.cutoff = cutoff
         self.squared_cutoff = cutoff * cutoff
         self.squared_penalty = cardinality_penalty * cardinality_penalty
@@ -234,12 +259,16 @@ class _SlotObjective:
         self._pair_fits = {}
         self._cross_losses = {}
 
-    def loss(self, first: Trajectory, second: Trajectory) -> float:
+    def loss(self, first: Trajectory, second: Trajectory, *, decay: bool = False) -> float:
         if not self.unknown_mask:
             return _normalized_trajectory_loss(first, second, self.cutoff)
         shared = first.keys() & second.keys()
         if not shared:
             return 1.0
+        if decay and len(shared) > 1:
+            weights, total = _decay_weights(shared)
+            return fsum(weights[knot] * _normalized_point_loss(first[knot], second[knot], self.cutoff)
+                        for knot in shared) / total
         return fsum(_normalized_point_loss(first[knot], second[knot], self.cutoff)
                     for knot in shared) / len(shared)
 
@@ -249,20 +278,28 @@ class _SlotObjective:
     def cross_loss(self, left: int, right: int) -> float:
         key = (left, right)
         if key not in self._cross_losses:
-            self._cross_losses[key] = self.loss(self.left[left], self.right[right])
+            first, second = self.left[left], self.right[right]
+            left_decay, right_decay = self._history_decay[0][left], self._history_decay[1][right]
+            loss = self.loss(first, second, decay=left_decay)
+            if left_decay != right_decay:
+                loss = (loss + self.loss(first, second, decay=right_decay)) / 2
+            self._cross_losses[key] = loss
         return self._cross_losses[key]
+
+    def track_loss(self, center: Trajectory, side: int, index: int) -> float:
+        source = self.left if side == 0 else self.right
+        return self.loss(center, source[index], decay=self._history_decay[side][index])
 
     def center_loss(self, slot: Slot, center: Trajectory, side: int, index: int) -> float:
         left, right = slot
         if slot[side] == index and None in slot:
             return 0.0
-        if right is None:
-            if side == 1:
+        if not self._decay_enabled:
+            if right is None and side == 1:
                 return self.cross_loss(left, index)
-        elif left is None and side == 0:
-            return self.cross_loss(index, right)
-        source = self.left if side == 0 else self.right
-        return self.loss(center, source[index])
+            if left is None and side == 0:
+                return self.cross_loss(index, right)
+        return self.track_loss(center, side, index)
 
     def pair_fit(self, left_index, right_index, left_denominator, right_denominator):
         divisor = gcd(left_denominator, right_denominator)
@@ -273,10 +310,22 @@ class _SlotObjective:
             if self.unknown_mask:
                 center = first | second
                 shared = first.keys() & second.keys()
-                for knot in shared:
-                    center[knot] = _common_position(first[knot], second[knot], *weights, self.cutoff)
+                left_decay = self._history_decay[0][left_index]
+                right_decay = self._history_decay[1][right_index]
+                if left_decay == right_decay or len(shared) < 2:
+                    for knot in shared:
+                        center[knot] = _common_position(first[knot], second[knot], *weights, self.cutoff)
+                else:
+                    time_weights, total = _decay_weights(shared)
+                    unit = 1 / len(shared)
+                    for knot in shared:
+                        decayed = time_weights[knot] / total
+                        point_weights = (weights[0] * (decayed if left_decay else unit),
+                                         weights[1] * (decayed if right_decay else unit))
+                        center[knot] = _common_position(first[knot], second[knot], *point_weights, self.cutoff)
                 common_center = {knot: center[knot] for knot in shared}
-                left_loss, right_loss = self.loss(common_center, first), self.loss(common_center, second)
+                left_loss = self.loss(common_center, first, decay=left_decay)
+                right_loss = self.loss(common_center, second, decay=right_decay)
                 center = dict(sorted(center.items()))
             else:
                 center = frechet_centroid(first, second, cutoff=self.cutoff, weights=weights)
@@ -355,9 +404,9 @@ def _add_slots(fit: _SlotObjective, current: FrechetSetFit, random: Random) -> F
     """Probe unassigned and capped inputs as in Algorithm 4."""
     left_unused, right_unused = _unassigned(current.slots, fit.sizes)
     left_donors = left_unused + [left for (left, _), center in zip(current.slots, current.centers)
-                                 if left is not None and fit.loss(center, fit.left[left]) == 1.0]
+                                 if left is not None and fit.track_loss(center, 0, left) == 1.0]
     right_donors = right_unused + [right for (_, right), center in zip(current.slots, current.centers)
-                                   if right is not None and fit.loss(center, fit.right[right]) == 1.0]
+                                   if right is not None and fit.track_loss(center, 1, right) == 1.0]
     donors = [(0, index) for index in left_donors] + [(1, index) for index in right_donors]
     random.shuffle(donors)
 
@@ -387,8 +436,7 @@ def _add_slots(fit: _SlotObjective, current: FrechetSetFit, random: Random) -> F
                       if slot[side] == index and None not in slot), None)
         if donor is None:
             continue
-        source = fit.left if side == 0 else fit.right
-        if fit.loss(current.centers[donor], source[index]) != 1.0:
+        if fit.track_loss(current.centers[donor], side, index) != 1.0:
             continue
         slots = list(current.slots)
         left, right = slots[donor]
@@ -483,6 +531,8 @@ def search_frechet_slots(
     seed: int = 20,
     max_sweeps: int = 2,
     unknown_mask: bool = False,
+    history_decay: HistoryDecay | None = None,
+    current_grid: int | None = None,
 ) -> FrechetSetFit:
     """Bounded two-source greedy search over feasible active slots (Alg. 2–5).
 
@@ -497,10 +547,15 @@ def search_frechet_slots(
     In the explicit unknown-mask ablation, one-sided knots remain available in
     centers and only shared knots contribute position costs. A pair with no
     shared knots is forbidden. These scores change Eq. 2's metric.
+
+    With the unknown mask, each enabled track uses geometric decay by grid age
+    normalized over its shared knots. Flags follow the input order within each
+    source. Disabling all flags keeps the original objective and search path.
     """
     if isinstance(max_sweeps, bool) or not isinstance(max_sweeps, Integral) or max_sweeps < 1:
         raise ValueError("max_sweeps must be a positive integer")
-    fit = _SlotObjective(left, right, cutoff, cardinality_penalty, unknown_mask)
+    fit = _SlotObjective(left, right, cutoff, cardinality_penalty, unknown_mask,
+                         history_decay=history_decay, current_grid=current_grid)
     singletons = fit.evaluate(tuple((index, None) for index in range(len(left)))
                               + tuple((None, index) for index in range(len(right))))
     if not left or not right:

@@ -10,7 +10,7 @@ from online_observation.frechet_trajectory import (
 from online_observation.lindenmaier_association import (
     DiagonalState, ExistenceMass, SensorModel, fuse_pair, pair_log_likelihood_ratio, update_existence,
 )
-from online_observation.peer_experiment import FrechetArm
+from online_observation.peer_experiment import FrechetArm, _conflict_decay
 from online_observation.peer_identity import CandidateGroup, IdentityReader
 from online_observation.peer_lindenmaier import LindenmaierArm
 from online_observation.peer_prefix import LocalPrefix, PrefixObservation
@@ -238,6 +238,17 @@ class LindenmaierAssociationTests(unittest.TestCase):
 
 
 class FrechetTrajectoryTests(unittest.TestCase):
+    def test_only_new_report_inside_competing_component_enables_decay(self):
+        def trajectory(*xs):
+            return {grid: (x, 0) for grid, x in enumerate(xs, 1)}
+
+        left = [trajectory(0, 0, 0), trajectory(1000, 1000, 1000), trajectory(9000, 9000, 9000)]
+        right = [trajectory(0, 0, 1000), trajectory(1000, 1000, 0), trajectory(9000, 9000, 9000)]
+        self.assertEqual(_conflict_decay((left, right), 3, {(0, 0)}),
+                         (((True, True, False), (True, True, False)), 1))
+        self.assertEqual(_conflict_decay((left, right), 3, {(0, 2)}),
+                         (((False, False, False), (False, False, False)), 0))
+
     def test_history_arms_fix_candidate_order_and_keep_latest_native_grid(self):
         left, right = ("A", "1"), ("B", "1")
         events = [(0, {left: (0, 0), right: (10, 0)}),

@@ -25,8 +25,8 @@ WRONG_EXTENSION = frozenset(("3062", "4409"))
 @dataclass
 class _ChainAudit:
     chain: Chain
+    comparison_endpoint_seconds: dict[str, Counter]
     source_seconds: Counter = field(default_factory=Counter)
-    comparison_endpoint_seconds: dict = field(default_factory=lambda: {CURRENT: Counter(), UNIQUE: Counter()})
     changed_pair_seconds: float = 0.0
     previous_dispute: tuple | None = None
 
@@ -41,6 +41,7 @@ class _ChainAudit:
 
 def audit_focus(
     scene: str, frames_by_arm: Mapping[str, Sequence[FrozenFrame]], labels: Mapping[Fragment, str], stop: float,
+    *, additional_arms: Sequence[str] = (),
 ) -> dict:
     """Audit focal wrong chains in the same fixed-release population.
 
@@ -48,13 +49,16 @@ def audit_focus(
     the original masked arm replaced its partner with a true one. Reverse
     scenes follow masked-arm long false chains and separate state same-edge
     long/short exposure from intervals where the state chose something else.
+    Additional arms are scored on these same original intervals.
     Only ``disputes`` carries member keys and exact times. Its ``entered``
     marks a new region of unchanged original matching for a focal chain.
     """
     if scene not in TRUE_REPLACEMENT | WRONG_EXTENSION:
         raise ValueError("expected a prospectively selected focal scene")
-    if set(frames_by_arm) != set(ARMS):
-        raise ValueError("expected the four frozen history comparison arms")
+    expected_arms = (*ARMS, *additional_arms)
+    if len(set(expected_arms)) != len(expected_arms) or set(frames_by_arm) != set(expected_arms):
+        raise ValueError("expected the frozen history comparison arms and any declared additional arms")
+    compared_arms = (CURRENT, UNIQUE, *additional_arms)
     forward = scene in TRUE_REPLACEMENT
     direction = "state_to_mask" if forward else "mask_to_state"
     origin, comparator = (STATE, MASK) if forward else (MASK, STATE)
@@ -66,7 +70,8 @@ def audit_focus(
     if any(key not in labels for report in reports for key in report):
         raise ValueError("frozen member has no post-replay label")
 
-    original = [_ChainAudit(chain) for chain in false_chains(reference, labels, stop) if _long(chain)]
+    original = [_ChainAudit(chain, {arm: Counter() for arm in compared_arms})
+                for chain in false_chains(reference, labels, stop) if _long(chain)]
     by_edge = defaultdict(list)
     for item in original:
         by_edge[item.chain.edge].append(item)
@@ -114,7 +119,7 @@ def audit_focus(
                     continue
 
                 item.changed_pair_seconds += seconds
-                for arm in (CURRENT, UNIQUE):
+                for arm in compared_arms:
                     alternate = frames_by_arm[arm][index]
                     for endpoint in eligible:
                         original_peer = edge[1] if endpoint == edge[0] else edge[0]
@@ -140,7 +145,7 @@ def audit_focus(
     focal_seconds = math.fsum(item.changed_pair_seconds for item in original)
     long_seconds = math.fsum(item.chain.end - item.chain.start for item in original)
     original_relation = Counter()
-    results = {arm: Counter() for arm in (CURRENT, UNIQUE)}
+    results = {arm: Counter() for arm in compared_arms}
     for item in original:
         _same_seconds(math.fsum(item.source_seconds.values()), item.chain.end - item.chain.start)
         original_relation.update(item.source_seconds)

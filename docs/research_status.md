@@ -11,7 +11,10 @@
 - 固定书目 S01–S100 已逐篇精读可取得的完整正文，记录每篇的版本、推导、实验、反例和作者代码的固定入口。少数公开转写无法核完整原表，另发补充材料和复现缺口逐篇标明。Deep Read 矩阵新增 E35–E40，分别记录后到 AIS、报文时点的预测、评分真值插值、终局回估和公开实现与论文的不一致。 [100 篇逐篇精读](surveys/2026-11-16-shore-maritime-reading.md#详细分析与交接) · [Deep Read 矩阵](surveys/2026-11-16-mode-c-shore-maritime.md)
 - 两套近期系统已完成原 28 个 MTAD 开发场的共同协议比较。Nguyen 未知掩码保留为开发候选，同 20 秒下相对状态对照错漏配更少，确认覆盖有损失，稀疏长错链收益集中于 4827。Lindenmaier 的冻结源概率代理与统计门配方已结束，保留开发失败证据。 [来源与 MTAD 协议](surveys/2026-11-14-online-mtad-protocol-and-adaptation-sources.md) · [同行比较](reports/2026-11-14-online-peer-adaptation.md)
 - 固定候选、20 秒与 Fréchet 求解器的三臂开发消融已完成。去重臂保住两个焦点场的全部原真替换，稀疏长错链少 79.507 秒，错漏配及 ID 换手略增，保留为机制对照。两处续错可观察到局部排序与成组代价的影响，去重未改变受检排序。 [三臂实验与归因](reports/2026-11-14-online-peer-history-ablation.md)
+- 固定候选、Fréchet、20 秒与 ID 读出的五臂比较已完成。冲突衰减在 4409 恢复 160 真端点秒，4827、4979 同真搭档保留率为 99.30%、97.14%。3062 增加 460 另一假边端点秒；稀疏长错链比统一衰减多 120 配对秒，错漏配和持续 ID 未过与去重臂的护栏。按事前规则结束这套历史衰减配方。 [事前 Idea](proposals/online_conflict_history_20261116.md) · [五臂实验与归因](reports/2026-11-16-online-conflict-history.md)
 
 ## 下一步
 
-候选评审建议优先检验同一竞争分量下，调整历史证据能否保住真替换，同时缩短稀疏长错链。C01 用于统一首报及发布评价，内部可撤销假设与发布更正另作机制对照。当前在方案评审阶段。 [三套方案与评审](proposals/online_direction_review_20261116.md)Level1 曾筛出的 25 场／24 个共享 A 组件均有历史暴露，已核范围内没有可作为全项目未见的合格组件。原 28 场仅作开发验证，T_test 封存。 [连接点与边界](surveys/2026-11-16-mode-c-shore-maritime.md#c--可移交连接点) · [留场资格核查](reports/2026-11-14-online-peer-chain-lineage.md#新留场资格)
+先保留 C01 的统一评价和本轮负结果。如果 C03 再立题，先找能区分真替换和换另一条假边的新增证据。C04 的内部可撤销假设与发布更正仍是独立问题，需要另定同延迟对照。 [三套方案与评审](proposals/online_direction_review_20261116.md) · [证据回流](surveys/2026-11-16-mode-c-shore-maritime.md#本轮开发证据回流)
+
+Level1 曾筛出的 25 场／24 个共享 A 组件均有历史暴露，已核范围内没有可作为全项目未见的合格组件。原 28 场仅作开发验证，T_test 封存。 [留场资格核查](reports/2026-11-14-online-peer-chain-lineage.md#新留场资格)
